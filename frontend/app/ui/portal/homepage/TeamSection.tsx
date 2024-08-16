@@ -21,7 +21,7 @@ export default function TeamSection() {
                 Get to know the awesome group behind the Computer Science Club! We are a team of dedicated and passionate students, working together to make this club the best it can be.
                 <br />
                 <br />
-                Beyond the Executive Board, we are always looking to expand our team with talented members who want to get involved. There are open roles such as Web Developer, Event Coordinator, Graphic Designer, Photographer, and more. If you are passionate about contributing to the BC tech community, we'd love to have you join us!
+                Beyond the Executive Board, we are always looking to expand our team with talented members who want to get involved. There are open roles such as Web Developer, Event Coordinator, Graphic Designer, Photographer, and more. If you are passionate about contributing to the BC tech community, we would love to have you join us!
               </p>
               <div className="mt-10 flex">
                 <a href="/team" className="text-sm font-semibold leading-6 text-indigo-400">

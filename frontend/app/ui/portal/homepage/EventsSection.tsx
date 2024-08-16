@@ -28,7 +28,7 @@ export default function TeamSection() {
             <div className="w-full flex-auto">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Club events</h2>
               <p className="mt-6 text-lg leading-8">
-                At the Computer Science Club, we're committed to fostering a dynamic and engaging community through a series of events and workshops designed to enhance your learning experience and professional growth.
+                At the Computer Science Club, we are committed to fostering a dynamic and engaging community through a series of events and workshops designed to enhance your learning experience and professional growth.
                 Our events offer opportunities to connect, learn, and collaborate with fellow members and industry professionals.
               </p>
               <ul
