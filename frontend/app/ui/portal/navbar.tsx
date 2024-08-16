@@ -1,5 +1,6 @@
 'use client';
 
+import Image from "next/image";
 import { useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
@@ -20,9 +21,11 @@ export default function NavBar() {
         <div className="flex lg:flex-1">
           <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Brooklyn College Computer Science Club</span>
-            <img
+            <Image
               alt="computer science club logo"
-              src="/images/logo/club-logo.png"
+              src="/club-logo.png"
+              width={130}
+              height={129}
               className="h-8 w-auto"
             />
           </a>
@@ -56,9 +59,11 @@ export default function NavBar() {
           <div className="flex items-center justify-between">
             <a href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Brooklyn College Computer Science Club</span>
-              <img
+              <Image
                 alt="computer science club logo"
                 src="/images/logo/club-logo.png"
+                width={130}
+                height={129}
                 className="h-8 w-auto"
               />
             </a>

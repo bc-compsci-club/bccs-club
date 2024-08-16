@@ -1,3 +1,5 @@
+import Image from 'next/image';
+import eventPic from '../../../images/club-event/project-sharing.jpg';
 import { CheckCircleIcon } from '@heroicons/react/20/solid'
 
 const benefits = [
@@ -16,10 +18,11 @@ export default function TeamSection() {
         <div className="mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="mx-auto flex max-w-2xl flex-col gap-16 bg-white/5 px-6 py-16 ring-1 ring-white/10 sm:rounded-3xl sm:p-8 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:py-20 xl:gap-x-20 xl:px-20">
             <div className="w-full flex-none lg:max-w-sm order-last">
-              <img
+              <Image
                 alt="events of computer science club"
-                src="/images/club-event/project-sharing.jpg"
+                src={eventPic}
                 className="h-96 w-full rounded-2xl object-cover shadow-xl lg:aspect-square lg:h-auto"
+                placeholder="blur"
               />
             </div>
             <div className="w-full flex-auto">
