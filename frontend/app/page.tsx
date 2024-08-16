@@ -1,6 +1,8 @@
-import TeamSection from "./ui/portal/homepage/TeamSection";
-import EventsSection from "./ui/portal/homepage/EventsSection";
-import ResourcesSection from "./ui/portal/homepage/ResourcesSection";
+import Image from 'next/image';
+import bcPic from './images/brooklyn-college/bc-library-4to3.jpg';
+import TeamSection from './ui/portal/homepage/TeamSection';
+import EventsSection from './ui/portal/homepage/EventsSection';
+import ResourcesSection from './ui/portal/homepage/ResourcesSection';
 
 export default function Home() {
   return (
@@ -24,15 +26,13 @@ export default function Home() {
                 >
                   Join the Club
                 </a>
-                {/* <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
-                  Learn more <span aria-hidden="true">→</span>
-                </a> */}
               </div>
             </div>
-            <img
+            <Image
               alt="Brooklyn College Library"
-              src="/images/brooklyn-college/bc-library-4to3.jpg"
+              src={bcPic}
               className="mt-10 aspect-[3/2] w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-4"
+              placeholder="blur"
             />
           </div>
         </div>
