@@ -6,6 +6,8 @@ import Image from 'next/image';
 import avatarPic from '../../../images/team/avatar.jpg';
 import qingquanLiPic from '../../../images/team/qingquan-li.jpg';
 import megiMuratiPic from '../../../images/team/megi-murati.jpg';
+import annaBelenkoPic from '../../../images/team/anna-belenko.jpg';
+
 
 const members = [
   {
@@ -32,8 +34,10 @@ const members = [
   {
     name: 'Anna Belenko',
     role: 'Secretary',
-    photo: avatarPic,
+    photo: annaBelenkoPic,
     linkedinUrl: 'https://www.linkedin.com/in/annabelenko/',
+    githubUrl: 'https://github.com/annabelenko',
+    personalWebsiteUrl: 'https://annabelenko.com/',
   },
   {
     name: 'Kevin Liu',
