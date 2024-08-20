@@ -21,7 +21,7 @@ export default function TeamSection() {
                 Get to know the awesome group behind the Computer Science Club! We are a team of dedicated and passionate students, working together to make this club the best it can be.
                 <br />
                 <br />
-                Beyond the Executive Board, we are always looking to expand our team with talented members who want to get involved. There are open roles such as Web Developer, Event Coordinator, Graphic Designer, Photographer, and more. If you are passionate about contributing to the BC tech community, we would love to have you join us!
+                Beyond the Executive Board, we are always looking to expand our team with talented members who want to get involved. There are open roles such as Web Developer, Event Coordinator, Graphic Designer, and more. If you are passionate about contributing to the BC tech community, we would love to have you join us!
               </p>
               <div className="mt-10 flex">
                 <a href="/team" className="text-sm font-semibold leading-6 text-indigo-400">
@@ -38,12 +38,13 @@ export default function TeamSection() {
           <div
             style={{
               clipPath:
-                'polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)',
+                'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
             }}
-            className="aspect-[1318/752] w-[82.375rem] flex-none bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-25"
+            className="aspect-[1318/752] w-[82.375rem] flex-none bg-gradient-to-r from-[#ff80b5] to-[#9089fc] opacity-20"
           />
         </div>
+
       </div>
     </div>
-  )
+  );
 }

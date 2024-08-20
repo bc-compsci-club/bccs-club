@@ -61,7 +61,7 @@ export default function NavBar() {
               <span className="sr-only">Brooklyn College Computer Science Club</span>
               <Image
                 alt="computer science club logo"
-                src="/images/logo/club-logo.png"
+                src="/club-logo.png"
                 width={130}
                 height={129}
                 className="h-8 w-auto"
