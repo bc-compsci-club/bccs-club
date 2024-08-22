@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Brooklyn College Computer Science Club",
-  description: "By the BC tech community, for the BC tech community.",
+  description: "Computer Science Club at Brooklyn College",
 };
 
 export default function RootLayout({
