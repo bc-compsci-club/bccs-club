@@ -6,7 +6,7 @@ The BC Computer Science Club website is an open source project and everyone in t
 - [Getting Started](#getting-started)
 - [Using GitHub Issues](#using-github-issues)
 - [Making Changes](#making-changes)
-- [Submitting Pull Requests](#submitting-pull-requests)
+- [Submitting a Pull Request](#submitting-a-pull-request)
 - [Code Review Process](#code-review-process)
 - [License](#license)
 
@@ -46,13 +46,14 @@ Note: We use two primary (protected) branches in the [upstream repository](https
     ```sh
     git checkout -b feature/your-feature-name # Create a new branch for your feature from the dev branch
     ```
-3. **Make your changes**: Implement your changes (update the codebase) in the new branch.
-4. **Commit your changes**: Write clear and concise commit messages. Reference the related issue in your commit message.
+3. **Install dependencies**: Follow the instructions in the README file of the specific project you are working on to install the necessary dependencies.
+4. **Make your changes**: Implement your changes (update the codebase) in the new branch.
+5. **Commit your changes**: Write clear and concise commit messages. Reference the related issue in your commit message.
     ```sh
     git add . # Stage all your changes
-    git commit -m "Brief description of your changes (#11)" # Commit your changes. The "#11" references the related issue
+    git commit -m "Brief description of your changes (#11)" # Commit your changes. The "#11" references the related GitHub Issue
     ```
-5. **Push your branch to your fork**:
+6. **Push your branch to your fork**:
     ```sh
     # Pull the latest changes from the upstream dev branch
     # This is optional but recommended.
@@ -63,7 +64,7 @@ Note: We use two primary (protected) branches in the [upstream repository](https
     git push origin feature/your-feature-name # Push your branch to your fork
     ```
 
-## Submitting Pull Requests
+## Submitting a Pull Request
 
 1. **Create a pull request**: Go to your fork on GitHub and create a pull request to merge your fork's branch into the upstream repository's `dev` branch.
 2. **Add pull request description**: Provide a clear and detailed description or a screenshot of your changes. Reference the related issue (e.g., the pull request title can be `Create the home page (#11)`).

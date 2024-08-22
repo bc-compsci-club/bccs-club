@@ -3,11 +3,11 @@ import { BsGithub } from "react-icons/bs";
 import { BsGlobe2 } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
 import Image from 'next/image';
-import avatarPic from '../../../images/team/avatar.jpg';
-import qingquanLiPic from '../../../images/team/qingquan-li.jpg';
-import megiMuratiPic from '../../../images/team/megi-murati.jpg';
-import annaBelenkoPic from '../../../images/team/anna-belenko.jpg';
-
+import qingquanLiPic from '../../../images/team/excutive-board-2024-2025/qingquan-li.jpg';
+import megiMuratiPic from '../../../images/team/excutive-board-2024-2025/megi-murati.jpg';
+import faizanKhanPic from '../../../images/team/excutive-board-2024-2025/faizan-khan.jpg';
+import annaBelenkoPic from '../../../images/team/excutive-board-2024-2025/anna-belenko.jpg';
+import kevinLiuPic from '../../../images/team/excutive-board-2024-2025/kevin-liu.jpg';
 
 const members = [
   {
@@ -28,8 +28,10 @@ const members = [
   {
     name: 'Faizan Khan',
     role: 'Treasurer',
-    photo: avatarPic,
+    photo: faizanKhanPic,
     linkedinUrl: 'https://www.linkedin.com/in/faizan-khan234/',
+    githubUrl: 'https://github.com/jellyfishing2346',
+    instagramUrl: 'https://www.instagram.com/faizizizan/',
   },
   {
     name: 'Anna Belenko',
@@ -42,8 +44,9 @@ const members = [
   {
     name: 'Kevin Liu',
     role: 'Club Connector',
-    photo: avatarPic,
+    photo: kevinLiuPic,
     linkedinUrl: 'https://www.linkedin.com/in/kevin-liu10252003/',
+    githubUrl: 'https://github.com/Kevinrocks100',
   },
 ]
 
