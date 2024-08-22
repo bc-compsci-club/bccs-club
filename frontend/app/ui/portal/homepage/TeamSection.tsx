@@ -24,7 +24,7 @@ export default function TeamSection() {
                 Beyond the Executive Board, we are always looking to expand our team with talented members who want to get involved. There are open roles such as Web Developer, Event Coordinator, Graphic Designer, and more. If you are passionate about contributing to the BC tech community, we would love to have you join us!
               </p>
               <div className="mt-10 flex">
-                <a href="/team" className="text-sm font-semibold leading-6 text-indigo-400">
+                <a href="/team" className="text-sm font-semibold leading-6 text-bc-red hover:text-bc-yellow">
                   Meet the team <span aria-hidden="true">&rarr;</span>
                 </a>
               </div>

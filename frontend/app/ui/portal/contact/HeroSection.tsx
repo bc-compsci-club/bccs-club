@@ -16,21 +16,11 @@ export default function HeroSection() {
       <div className="mx-auto max-w-2xl py-20 sm:py-24 lg:py-28">
         <div className="text-center">
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-            Meet the Team
+            Get in Touch
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            We are a team of dedicated and passionate students, working together to make the Computer Science Club at Brooklyn College the best it can be. There are open roles such as Web Developer, Event Coordinator, Graphic Designer, and more. If you are passionate about contributing to the BC tech community, we would love to have you join us!
+            We are here to assist with any questions you have. Feel free to reach out to us by email (bc.cis.club&#64;gmail.com) or connect with us on social media. You are also welcome to visit us during the Club Hours (to be announced) in Room 0317, located in the Ingersoll Hall basement. We look forward to connecting with you!
           </p>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSd-QOpqbNHQpoczTruptSHyWFzRUkj6xtIbw1kI0rSNr_rHcg/viewform?usp=sf_link"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-semibold leading-6 text-bc-red hover:text-bc-yellow"
-            >
-              Join the Team <span aria-hidden="true">→</span>
-            </a>
-          </div>
         </div>
       </div>
     </div>

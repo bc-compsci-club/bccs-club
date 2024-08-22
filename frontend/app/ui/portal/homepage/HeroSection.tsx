@@ -3,7 +3,7 @@ import bcPic from '../../../images/brooklyn-college/bc-library-4to3.jpg';
 
 export default function HeroSection() {
   return (
-    <div className="relative isolate overflow-hidden bg-gradient-to-b from-indigo-100/20">
+    <div className="relative isolate overflow-hidden bg-gradient-to-b from-bc-red/15">
       <div className="mx-auto max-w-7xl px-6 pt-28 sm:pt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-x-16 lg:gap-y-6 xl:grid-cols-1 xl:grid-rows-1 xl:gap-x-8">
           <h1 className="max-w-2xl text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl lg:col-span-2 xl:col-auto">
@@ -18,7 +18,7 @@ export default function HeroSection() {
                 href="https://www.clubs.brooklyn.cuny.edu/ComputerScienceClub/club_signup"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="rounded-md bg-bc-red px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-bc-yellow hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bc-red"
               >
                 Join the Club
               </a>
