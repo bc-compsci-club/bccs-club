@@ -42,7 +42,7 @@ export default function TeamSection() {
                 ))}
               </ul>
               <div className="mt-10 flex">
-                <a href="/resources" className="text-sm font-semibold leading-6 text-indigo-400">
+                <a href="/resources" className="text-sm font-semibold leading-6 text-bc-red hover:text-bc-yellow">
                   Check out the resources <span aria-hidden="true">&rarr;</span>
                 </a>
               </div>

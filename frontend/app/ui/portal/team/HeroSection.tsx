@@ -1,6 +1,6 @@
 export default function HeroSection() {
   return (
-    <div className="relative isolate px-6 pt-14 lg:px-8">
+    <div className="relative isolate px-6 pt-14 lg:px-8 bg-gradient-to-b from-bc-red/15">
       <div
         aria-hidden="true"
         className="absolute inset-x-0 -top-16 -z-10 flex transform-gpu justify-center overflow-hidden blur-3xl"
@@ -22,19 +22,11 @@ export default function HeroSection() {
             We are a team of dedicated and passionate students, working together to make the Computer Science Club at Brooklyn College the best it can be. There are open roles such as Web Developer, Event Coordinator, Graphic Designer, and more. If you are passionate about contributing to the BC tech community, we would love to have you join us!
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
-            {/* <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSd-QOpqbNHQpoczTruptSHyWFzRUkj6xtIbw1kI0rSNr_rHcg/viewform?usp=sf_link"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-            >
-              Join the Team
-            </a> */}
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSd-QOpqbNHQpoczTruptSHyWFzRUkj6xtIbw1kI0rSNr_rHcg/viewform?usp=sf_link"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-semibold leading-6 text-gray-900"
+              className="text-sm font-semibold leading-6 text-bc-red hover:text-bc-yellow"
             >
               Join the Team <span aria-hidden="true">→</span>
             </a>
