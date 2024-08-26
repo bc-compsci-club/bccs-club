@@ -18,7 +18,7 @@ export default function HeroSection() {
                 href="https://www.clubs.brooklyn.cuny.edu/ComputerScienceClub/club_signup"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-md bg-bc-red px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-bc-yellow hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bc-red"
+                className="rounded-md px-3.5 py-2.5 text-sm font-semibold bg-transparent text-bc-red border border-bc-red hover:bg-bc-yellow hover:border-transparent"
               >
                 Join the Club
               </a>
