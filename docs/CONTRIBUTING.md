@@ -67,7 +67,7 @@ Note: We use two primary (protected) branches in the [upstream repository](https
 ## Submitting a Pull Request
 
 1. **Create a pull request**: Go to your fork on GitHub and create a pull request to merge your fork's branch into the upstream repository's `dev` branch.
-2. **Add pull request description**: Provide a clear and detailed description or a screenshot of your changes. Reference the related issue (e.g., the pull request title can be `Create the home page (#11)`).
+2. **Add pull request description**: Provide a clear and detailed description or a screenshot of your changes. Reference the related issue (e.g., you can put `Closes #11` in the description of your pull request to automatically close the issue once the pull request is merged).
 3. **Request reviewers**: Add at least one reviewer to your pull request.
 4. **Label the pull request**: Use appropriate labels to categorize the pull request (e.g., `feature`, `bug`, `documentation`).
 

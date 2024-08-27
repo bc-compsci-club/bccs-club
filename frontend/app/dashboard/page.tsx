@@ -1,4 +1,4 @@
-// Dashboard for the excutive board members to manage the club website,
+// Dashboard for the executive board members to manage the club website,
 // including updating the website content, posting events, and managing
 // the club members, etc.
 export default function Page() {

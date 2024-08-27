@@ -3,11 +3,11 @@ import { BsGithub } from "react-icons/bs";
 import { BsGlobe2 } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
 import Image from 'next/image';
-import qingquanLiPic from '../../../images/team/excutive-board-2024-2025/qingquan-li.jpg';
-import megiMuratiPic from '../../../images/team/excutive-board-2024-2025/megi-murati.jpg';
-import faizanKhanPic from '../../../images/team/excutive-board-2024-2025/faizan-khan.jpg';
-import annaBelenkoPic from '../../../images/team/excutive-board-2024-2025/anna-belenko.jpg';
-import kevinLiuPic from '../../../images/team/excutive-board-2024-2025/kevin-liu.jpg';
+import qingquanLiPic from '../../../images/team/executive-board-2024-2025/qingquan-li.jpg';
+import megiMuratiPic from '../../../images/team/executive-board-2024-2025/megi-murati.jpg';
+import faizanKhanPic from '../../../images/team/executive-board-2024-2025/faizan-khan.jpg';
+import annaBelenkoPic from '../../../images/team/executive-board-2024-2025/anna-belenko.jpg';
+import kevinLiuPic from '../../../images/team/executive-board-2024-2025/kevin-liu.jpg';
 
 const members = [
   {
@@ -56,7 +56,7 @@ export default function MembersSection() {
       <div className="mx-auto max-w-7xl px-6 text-center lg:px-8">
         <div className="mx-auto max-w-2xl">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Excutive Board
+            Executive Board
           </h2>
         </div>
         <ul
@@ -133,7 +133,7 @@ export default function MembersSection() {
       </div>
       <div
         aria-hidden="true"
-        className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+        className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80 pointer-events-none"
       >
         <div
           style={{
