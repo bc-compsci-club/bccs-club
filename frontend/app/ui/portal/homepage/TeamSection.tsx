@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import teamPic from '../../../images/team/excutive-board-2024-2025/executive-board-2024-2025-02.jpg';
+import teamPic from '../../../images/team/executive-board-2024-2025/executive-board-2024-2025-02.jpg';
 
 export default function TeamSection() {
   return (
@@ -33,7 +33,7 @@ export default function TeamSection() {
         </div>
         <div
           aria-hidden="true"
-          className="absolute inset-x-0 -top-16 -z-10 flex transform-gpu justify-center overflow-hidden blur-3xl"
+          className="absolute inset-x-0 -top-16 -z-10 flex transform-gpu justify-center overflow-hidden blur-3xl pointer-events-none"
         >
           <div
             style={{

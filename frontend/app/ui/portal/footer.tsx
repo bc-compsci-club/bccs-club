@@ -12,12 +12,12 @@ const navigation = {
     },
     {
       name: 'Instagram',
-      href: 'https://www.instagram.com/bc_compsci/',
+      href: 'https://www.instagram.com/bccs.club/',
       icon: BsInstagram,
     },
     {
       name: 'Discord',
-      href: 'https://discord.gg/5V9pRuU4CX',
+      href: 'https://discord.gg/C77eXN8bHT',
       icon: BsDiscord,
     },
     {

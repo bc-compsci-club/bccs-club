@@ -11,7 +11,7 @@ export default function Page() {
           <h2 className="mb-3 text-2xl font-semibold">
             LinkedIn{" "}
             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              →
+              -&gt;
             </span>
           </h2>
           <p className="m-0 max-w-[30ch] text-sm opacity-50">
@@ -20,7 +20,7 @@ export default function Page() {
         </a>
 
         <a
-          href="https://www.instagram.com/bc_compsci/"
+          href="https://www.instagram.com/bccs.club/"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-bc-yellow"
           target="_blank"
           rel="noopener noreferrer"
@@ -28,7 +28,7 @@ export default function Page() {
           <h2 className="mb-3 text-2xl font-semibold">
             Instagram{" "}
             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              →
+              -&gt;
             </span>
           </h2>
           <p className="m-0 max-w-[30ch] text-sm opacity-50">
@@ -37,7 +37,7 @@ export default function Page() {
         </a>
 
         <a
-          href="https://discord.gg/5V9pRuU4CX"
+          href="https://discord.gg/C77eXN8bHT"
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-bc-yellow"
           target="_blank"
           rel="noopener noreferrer"
@@ -45,7 +45,7 @@ export default function Page() {
           <h2 className="mb-3 text-2xl font-semibold">
             Discord{" "}
             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              →
+              -&gt;
             </span>
           </h2>
           <p className="m-0 max-w-[30ch] text-sm opacity-50">
@@ -62,7 +62,7 @@ export default function Page() {
           <h2 className="mb-3 text-2xl font-semibold">
             GitHub{" "}
             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              →
+              -&gt;
             </span>
           </h2>
           <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
