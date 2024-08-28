@@ -24,6 +24,7 @@ const members = [
     role: 'Vice President',
     photo: megiMuratiPic,
     linkedinUrl: 'https://www.linkedin.com/in/megi-murati/',
+    githubUrl: 'https://github.com/megimurati/',
   },
   {
     name: 'Faizan Khan',
