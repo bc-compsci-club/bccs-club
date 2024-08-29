@@ -1,6 +1,7 @@
 import { BsLinkedin } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
 import { BsDiscord } from "react-icons/bs";
+import { BsWhatsapp } from "react-icons/bs";
 import { BsGithub } from "react-icons/bs";
 
 const navigation = {
@@ -19,6 +20,11 @@ const navigation = {
       name: 'Discord',
       href: 'https://discord.gg/C77eXN8bHT',
       icon: BsDiscord,
+    },
+    {
+      name: 'WhatsApp',
+      href: 'https://chat.whatsapp.com/ISU51DWQHSL0wQ7SoEAKa0',
+      icon: BsWhatsapp,
     },
     {
       name: 'GitHub',
