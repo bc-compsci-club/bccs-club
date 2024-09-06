@@ -3,11 +3,11 @@ import resourcePic from '../../../images/club-event/company-visit.jpg'
 import { CheckCircleIcon } from '@heroicons/react/20/solid'
 
 const benefits = [
-  'Fellowship Programs',
   'Internship Opportunities',
-  'Open Source Contributions',
-  'Tech Skill Workshops',
-  'Alumni Career Stories',
+  'Fellowship Programs',
+  'Apprenticeship Programs',
+  'Tech Interview Preparation',
+  'Student Developer Programs',
   'And much more...',
 ]
 
