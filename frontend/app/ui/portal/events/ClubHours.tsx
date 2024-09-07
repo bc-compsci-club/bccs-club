@@ -16,7 +16,7 @@ export default function Page() {
               <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
                 <div className="flex">
                   <span className="w-24">Tuesday</span>
-                  <span>12:30 PM - 03:30 PM</span>
+                  <span>01:00 PM - 03:30 PM</span>
                 </div>
                 <div className="flex">
                   <span className="w-24">Wednesday</span>
