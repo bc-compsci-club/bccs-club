@@ -1,5 +1,3 @@
-import { PaperClipIcon } from '@heroicons/react/20/solid'
-
 export default function Example() {
   return (
     <div className="mx-auto max-w-4xl px-6 lg:px-8 py-8">
@@ -39,7 +37,7 @@ export default function Example() {
               <dd className="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
                 <p>Our Club Hours are divided into two exciting sections:</p>
                 <p className="font-medium mt-1">Section 1: Coding & Collaboration</p>
-                <p>This is where we dive into technical activities. Whether you're looking to contribute to our club's open-source projects and gain valuable team experience for your resume, or want to tackle Leetcode problems together, this section is all about building your skills and working as a team.</p>
+                <p>This is where we dive into technical activities. Whether you&apos;re looking to contribute to our club&apos;s open-source projects and gain valuable team experience for your resume, or want to tackle Leetcode problems together, this section is all about building your skills and working as a team.</p>
                 <p className="font-medium mt-1">Section 2: Fun & Friendship</p>
                 <p>In this section, we focus on connecting with each other. You can share your experiences, discuss personal side projects, or just enjoy casual conversations and make new friends within the tech community.</p>
               </dd>
