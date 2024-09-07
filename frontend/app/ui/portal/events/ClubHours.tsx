@@ -1,4 +1,4 @@
-export default function Example() {
+export default function Page() {
   return (
     <div className="mx-auto max-w-4xl px-6 lg:px-8 py-8">
       <div className="overflow-hidden shadow-lg rounded-lg">
