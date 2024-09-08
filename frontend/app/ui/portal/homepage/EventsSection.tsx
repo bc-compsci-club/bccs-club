@@ -3,12 +3,12 @@ import eventPic from '../../../images/club-event/project-sharing.jpg';
 import { CheckCircleIcon } from '@heroicons/react/20/solid'
 
 const benefits = [
-  'Internship Experience Sharing',
-  'Coffee and Code Night',
-  'Hackathon',
-  'Tech Trek',
+  'Alumni Talk series',
   'Tech Talk Series',
-  'Project Showcases',
+  'Hackathon',
+  'Company Visits',
+  'Club Hours',
+  'And much more...',
 ]
 
 export default function TeamSection() {
