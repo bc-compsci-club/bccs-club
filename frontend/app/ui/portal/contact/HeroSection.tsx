@@ -19,7 +19,7 @@ export default function HeroSection() {
             Get in Touch
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            We are here to assist with any questions you have. Feel free to reach out to us by email (bc.cis.club&#64;gmail.com) or connect with us on social media. You are also welcome to visit us during the Club Hours (to be announced) in Room 0317, located in the Ingersoll Hall basement. We look forward to connecting with you!
+            We are here to assist with any questions you have. Feel free to reach out to us by email (bc.cis.club&#64;gmail.com) or connect with us on social media. You are also welcome to visit us during the <a href="/events" className="text-bc-red hover:text-bc-yellow">Club Hours</a> in Room 0317, located in the Ingersoll Hall basement. We look forward to connecting with you!
           </p>
         </div>
       </div>

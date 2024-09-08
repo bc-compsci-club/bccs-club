@@ -26,7 +26,7 @@ export default function HeroSection() {
               href="https://github.com/bc-compsci-club/bccs-club"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm font-semibold leading-6 text-bc-red hover:text-bc-yellow break-words"
+              className="text-sm font-semibold leading-6 text-bc-red hover:text-bc-yellow"
             >
               Contribute on GitHub <span aria-hidden="true">→</span>
             </a>
