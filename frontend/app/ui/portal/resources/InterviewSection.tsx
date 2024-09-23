@@ -19,6 +19,10 @@ const items = [
     title: "LeetCode - Algorithm Practices",
     link: "https://leetcode.com/",
   },
+  {
+    title: "Final Round - AI Mock Interview",
+    link: "https://www.finalroundai.com",
+  },
 ]
 
 export default function Page() {
