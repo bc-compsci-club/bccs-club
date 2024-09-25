@@ -3,61 +3,35 @@ import { BsGithub } from "react-icons/bs";
 import { BsGlobe2 } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
 import Image from 'next/image';
-import qingquanLiPic from '../../../images/team/executive-board-2024-2025/qingquan-li.jpg';
-import megiMuratiPic from '../../../images/team/executive-board-2024-2025/megi-murati.jpg';
-import faizanKhanPic from '../../../images/team/executive-board-2024-2025/faizan-khan.jpg';
-import annaBelenkoPic from '../../../images/team/executive-board-2024-2025/anna-belenko.jpg';
-import kevinLiuPic from '../../../images/team/executive-board-2024-2025/kevin-liu.jpg';
+// import qingquanLiPic from '../../../images/team/executive-board-2024-2025/qingquan-li.jpg';
+import tempPic from '../../../images/team/club-developers/avatar.jpg';
 
 const members = [
   {
-    name: 'Qingquan Li',
-    role: 'President',
-    photo: qingquanLiPic,
+    name: 'Full Name',
+    role: 'Full Stack Developer',
+    photo: tempPic,
     linkedinUrl: 'https://www.linkedin.com/in/qingquan-li/',
     githubUrl: 'https://github.com/Qingquan-Li',
     personalWebsiteUrl: 'https://qingquanli.com/',
-    instagramUrl: 'https://www.instagram.com/qingquan__li/',
+    instagramUrl: 'https://www.instagram.com/qingquan__li/'
   },
   {
-    name: 'Megi Murati',
-    role: 'Vice President',
-    photo: megiMuratiPic,
-    linkedinUrl: 'https://www.linkedin.com/in/megi-murati/',
-    githubUrl: 'https://github.com/megimurati/',
-  },
-  {
-    name: 'Faizan Khan',
-    role: 'Treasurer',
-    photo: faizanKhanPic,
-    linkedinUrl: 'https://www.linkedin.com/in/faizan-khan234/',
-    githubUrl: 'https://github.com/jellyfishing2346',
-    instagramUrl: 'https://www.instagram.com/faizizizan/',
-  },
-  {
-    name: 'Anna Belenko',
-    role: 'Secretary',
-    photo: annaBelenkoPic,
-    linkedinUrl: 'https://www.linkedin.com/in/annabelenko/',
-    githubUrl: 'https://github.com/annabelenko',
-    personalWebsiteUrl: 'https://annabelenko.com/',
-  },
-  {
-    name: 'Kevin Liu',
-    role: 'Club Connector',
-    photo: kevinLiuPic,
-    linkedinUrl: 'https://www.linkedin.com/in/kevin-liu10252003/',
-    githubUrl: 'https://github.com/Kevinrocks100',
+    name: 'Full Name',
+    role: 'Frontend Developer',
+    photo: tempPic,
+    linkedinUrl: 'https://www.linkedin.com/in/qingquan-li/',
+    githubUrl: 'https://github.com/Qingquan-Li',
   },
 ]
 
-export default function MembersSection() {
+export default function ClubDevelopersSection() {
   return (
-    <div>
+    <div className="mt-40">
       <div className="mx-auto max-w-7xl px-6 text-center lg:px-8">
         <div className="mx-auto max-w-2xl">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Executive Board
+            Club Developers
           </h2>
         </div>
         <ul
