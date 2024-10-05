@@ -5,6 +5,8 @@ import { useRouter } from 'next/navigation'; // For navigation
 import { useSearchParams } from 'next/navigation';
 import EventSection from "@/app/ui/portal/events/EventSection";
 
+export const runtime = 'edge';
+
 export default function Page() {
 
   const searchParams = useSearchParams();
