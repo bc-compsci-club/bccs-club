@@ -9,7 +9,17 @@ import tempPic from '../../../images/team/club-developers/avatar.jpg';
 import axelmejiaPic from '../../../images/team/club-developers/axel-mejia.jpg';
 import andrewLiPic from '../../../images/team/club-developers/andrew-li.jpg'
 
-const members = [
+interface Member {
+  name: string;
+  role: string;
+  photo: any;
+  linkedinUrl?: string; // Optional field
+  githubUrl?: string; // Optional field
+  personalWebsiteUrl?: string; // Optional field
+  instagramUrl?: string; // Optional field
+}
+
+const members: Member[] = [
   {
     name: 'Axel Mejia',
     role: 'Backend Developer',
