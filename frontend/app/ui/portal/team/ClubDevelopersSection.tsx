@@ -2,10 +2,13 @@ import { BsLinkedin } from "react-icons/bs";
 import { BsGithub } from "react-icons/bs";
 import { BsGlobe2 } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
+import ayeshaZakerPic from '../../../images/team/club-developers/ayesha-zaker.jpg';
 import Image from 'next/image';
 // import qingquanLiPic from '../../../images/team/executive-board-2024-2025/qingquan-li.jpg';
 import tempPic from '../../../images/team/club-developers/avatar.jpg';
 import axelmejiaPic from '../../../images/team/club-developers/axel-mejia.jpg';
+import andrewLiPic from '../../../images/team/club-developers/andrew-li.jpg'
+
 const members = [
   {
     name: 'Axel Mejia',
@@ -16,11 +19,19 @@ const members = [
     instagramUrl: 'https://www.instagram.com/4xl_m3/'
   },
   {
-    name: 'Full Name',
-    role: 'Frontend Developer',
-    photo: tempPic,
-    linkedinUrl: 'https://www.linkedin.com/in/qingquan-li/',
-    githubUrl: 'https://github.com/Qingquan-Li',
+    name: 'Andrew Li',
+    role: 'Back End Developer',
+    photo: andrewLiPic,
+    linkedinUrl: 'https://www.linkedin.com/in/andrew-li-611a34278/',
+    githubUrl: 'https://github.com/AndrewL05',
+    instagramUrl: 'https://www.instagram.com/andrew.liiiiiii'
+  },
+  {
+    name: 'Ayesha Zaker',
+    role: 'Full Stack Developer',
+    photo: ayeshaZakerPic,
+    linkedinUrl: 'https://www.linkedin.com/in/ayesha-z-4321a318b',
+    githubUrl: 'https://github.com/AZcodes',
   },
 ]
 
