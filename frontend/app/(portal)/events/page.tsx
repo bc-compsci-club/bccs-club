@@ -63,7 +63,7 @@ export default function Page() {
       },
       {
         title: 'Club Connection & Career Panel',
-        description: 'Get to know the executive board members and heard from 4 panelists about their experiences in the tech industry.',
+        description: 'Get to know the executive board members and hear from 4 panelists about their experiences in the tech industry.',
         location: 'Jefferson Williams 4th Fl, Student Center',
         start: '2024-10-08T01:00:00', 
         end: '2024-10-08T14:30:00',
