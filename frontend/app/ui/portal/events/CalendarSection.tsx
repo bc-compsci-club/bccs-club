@@ -20,6 +20,7 @@ const Calendar = (props: any) => {
               }}
               height="auto"
               contentHeight="auto"
+              aspectRatio={1.5}
               eventContent={(eventInfo) => (
                 <button>
                   <div className="text-sm leading-6">
