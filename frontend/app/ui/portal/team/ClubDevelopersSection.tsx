@@ -6,16 +6,17 @@ import ayeshaZakerPic from '../../../images/team/club-developers/ayesha-zaker.jp
 import Image from 'next/image';
 // import qingquanLiPic from '../../../images/team/executive-board-2024-2025/qingquan-li.jpg';
 import tempPic from '../../../images/team/club-developers/avatar.jpg';
+import axelmejiaPic from '../../../images/team/club-developers/axel-mejia.jpg';
 import andrewLiPic from '../../../images/team/club-developers/andrew-li.jpg'
+
 const members = [
   {
-    name: 'Full Name',
-    role: 'Full Stack Developer',
-    photo: tempPic,
-    linkedinUrl: 'https://www.linkedin.com/in/qingquan-li/',
-    githubUrl: 'https://github.com/Qingquan-Li',
-    personalWebsiteUrl: 'https://qingquanli.com/',
-    instagramUrl: 'https://www.instagram.com/qingquan__li/'
+    name: 'Axel Mejia',
+    role: 'Backend Developer',
+    photo: axelmejiaPic,
+    linkedinUrl: 'https://www.linkedin.com/in/axel-mejia-04a69725a/',
+    githubUrl: 'https://github.com/Ax3lMejia',
+    instagramUrl: 'https://www.instagram.com/4xl_m3/'
   },
   {
     name: 'Andrew Li',
