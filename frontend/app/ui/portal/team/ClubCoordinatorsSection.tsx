@@ -2,12 +2,12 @@ import { BsLinkedin } from "react-icons/bs";
 import { BsGithub } from "react-icons/bs";
 import { BsGlobe2 } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
-import ayeshaZakerPic from '../../../images/team/club-developers/ayesha-zaker.jpg';
 import Image from 'next/image';
-// import qingquanLiPic from '../../../images/team/executive-board-2024-2025/qingquan-li.jpg';
-import tempPic from '../../../images/team/club-developers/avatar.jpg';
-import axelmejiaPic from '../../../images/team/club-developers/axel-mejia.jpg';
-import andrewLiPic from '../../../images/team/club-developers/andrew-li.jpg'
+// import avatarPic from '../../../images/team/club-coordinators/avatar.jpg'
+import ayeshaZakerPic from '../../../images/team/club-coordinators/ayesha-zaker.jpg';
+import nicoleShmerkinPic from '../../../images/team/club-coordinators/nicole-shmerkin.jpg';
+import axelmejiaPic from '../../../images/team/club-coordinators/axel-mejia.jpg';
+import andrewLiPic from '../../../images/team/club-coordinators/andrew-li.jpg'
 
 interface Member {
   name: string;
@@ -21,6 +21,20 @@ interface Member {
 
 const members: Member[] = [
   {
+    name: 'Nicole Shmerkin',
+    role: 'Event Coordinator',
+    photo: nicoleShmerkinPic,
+    linkedinUrl: 'https://www.linkedin.com/in/nicole-shmerkin-36ba2a2a9/',
+    instagramUrl: 'https://www.instagram.com/nvcole5/'
+  },
+  {
+    name: 'Ayesha Zaker',
+    role: 'Full Stack Developer',
+    photo: ayeshaZakerPic,
+    linkedinUrl: 'https://www.linkedin.com/in/ayesha-z-4321a318b',
+    githubUrl: 'https://github.com/AZcodes',
+  },
+  {
     name: 'Axel Mejia',
     role: 'Backend Developer',
     photo: axelmejiaPic,
@@ -30,28 +44,21 @@ const members: Member[] = [
   },
   {
     name: 'Andrew Li',
-    role: 'Back End Developer',
+    role: 'Backend Developer',
     photo: andrewLiPic,
     linkedinUrl: 'https://www.linkedin.com/in/andrew-li-611a34278/',
     githubUrl: 'https://github.com/AndrewL05',
     instagramUrl: 'https://www.instagram.com/andrew.liiiiiii'
   },
-  {
-    name: 'Ayesha Zaker',
-    role: 'Full Stack Developer',
-    photo: ayeshaZakerPic,
-    linkedinUrl: 'https://www.linkedin.com/in/ayesha-z-4321a318b',
-    githubUrl: 'https://github.com/AZcodes',
-  },
 ]
 
-export default function ClubDevelopersSection() {
+export default function ClubCoordinatorsSection() {
   return (
     <div className="mt-40">
       <div className="mx-auto max-w-7xl px-6 text-center lg:px-8">
         <div className="mx-auto max-w-2xl">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Club Developers
+            Club Coordinators
           </h2>
         </div>
         <ul
