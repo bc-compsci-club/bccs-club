@@ -1,13 +1,13 @@
 import HeroSection from "@/app/ui/portal/team/HeroSection";
 import ExecutiveBoardSection from "@/app/ui/portal/team/ExecutiveBoardSection";
-import ClubDevelopersSection from "@/app/ui/portal/team/ClubDevelopersSection";
+import ClubCoordinatorsSection from "@/app/ui/portal/team/ClubCoordinatorsSection";
 
 export default function Page() {
   return (
     <main>
       <HeroSection />
       <ExecutiveBoardSection />
-      <ClubDevelopersSection />
+      <ClubCoordinatorsSection />
     </main>
   );
 }

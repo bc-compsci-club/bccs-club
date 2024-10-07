@@ -9,7 +9,17 @@ import faizanKhanPic from '../../../images/team/executive-board-2024-2025/faizan
 import annaBelenkoPic from '../../../images/team/executive-board-2024-2025/anna-belenko.jpg';
 import kevinLiuPic from '../../../images/team/executive-board-2024-2025/kevin-liu.jpg';
 
-const members = [
+interface Member {
+  name: string;
+  role: string;
+  photo: any;
+  linkedinUrl?: string; // Optional field
+  githubUrl?: string; // Optional field
+  personalWebsiteUrl?: string; // Optional field
+  instagramUrl?: string; // Optional field
+}
+
+const members: Member[] = [
   {
     name: 'Qingquan Li',
     role: 'President',

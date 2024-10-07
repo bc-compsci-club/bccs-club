@@ -12,12 +12,12 @@ const items = [
     link: "https://www.breakthroughtech.org/",
   },
   {
-    title: "CUNY apprenticeship program",
-    link: "https://www.cuny.edu/about/administration/offices/ocip/students/apprenticeships/",
-  },
-  {
     title: "Basta Fellowship",
     link: "https://www.projectbasta.com/fellowship",
+  },
+  {
+    title: "CodePath Tech Fellow Program",
+    link: "https://www.codepath.org/tech-fellow-program",
   },
 ]
 
