@@ -55,12 +55,6 @@ Note: We use two primary (protected) branches in the [upstream repository](https
     ```
 6. **Push your branch to your fork**:
     ```sh
-    # Pull the latest changes from the upstream dev branch
-    # This is optional but recommended.
-    # Just in case someone has pushed changes to the upstream dev branch since you last pulled
-    git pull upstream dev
-    ```
-    ```sh
     git push origin feature/your-feature-name # Push your branch to your fork
     ```
 
