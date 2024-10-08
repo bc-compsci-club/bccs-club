@@ -1,4 +1,5 @@
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
+import { title } from 'process';
 import { BsPlus } from "react-icons/bs";
 import { BsDash } from "react-icons/bs";
 
@@ -12,12 +13,24 @@ const items = [
     link: "https://www.breakthroughtech.org/",
   },
   {
-    title: "CUNY apprenticeship program",
-    link: "https://www.cuny.edu/about/administration/offices/ocip/students/apprenticeships/",
-  },
-  {
     title: "Basta Fellowship",
     link: "https://www.projectbasta.com/fellowship",
+  },
+  {
+    title: "CodePath Tech Fellow Program",
+    link: "https://www.codepath.org/tech-fellow-program",
+  },
+  {
+    title: "Rewriting the Code",
+    link: "https://rewritingthecode.org/",
+  },
+  {
+    title: "Girls Who Code",
+    link: "https://girlswhocode.com/",
+  },
+  {
+    title: "America Needs You",
+    link: "https://americaneedsyou.org/",
   },
 ]
 
@@ -26,7 +39,7 @@ export default function Page() {
     <div className="mx-auto max-w-7xl px-6 lg:px-8 py-8">
       <div className="mx-auto max-w-4xl divide-y divide-gray-900/10">
         <h2 className="text-2xl font-bold leading-10 tracking-tight text-gray-900">
-          Tech Fellowship/Apprenticeship Programs
+          Fellowship/Apprenticeship Programs
         </h2>
         <dl className="mt-10 space-y-6 divide-y divide-gray-900/10">
           {items.map((item) => (

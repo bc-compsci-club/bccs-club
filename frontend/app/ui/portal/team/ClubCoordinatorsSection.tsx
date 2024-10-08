@@ -3,61 +3,62 @@ import { BsGithub } from "react-icons/bs";
 import { BsGlobe2 } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
 import Image from 'next/image';
-import qingquanLiPic from '../../../images/team/executive-board-2024-2025/qingquan-li.jpg';
-import megiMuratiPic from '../../../images/team/executive-board-2024-2025/megi-murati.jpg';
-import faizanKhanPic from '../../../images/team/executive-board-2024-2025/faizan-khan.jpg';
-import annaBelenkoPic from '../../../images/team/executive-board-2024-2025/anna-belenko.jpg';
-import kevinLiuPic from '../../../images/team/executive-board-2024-2025/kevin-liu.jpg';
+// import avatarPic from '../../../images/team/club-coordinators/avatar.jpg'
+import ayeshaZakerPic from '../../../images/team/club-coordinators/ayesha-zaker.jpg';
+import nicoleShmerkinPic from '../../../images/team/club-coordinators/nicole-shmerkin.jpg';
+import axelmejiaPic from '../../../images/team/club-coordinators/axel-mejia.jpg';
+import andrewLiPic from '../../../images/team/club-coordinators/andrew-li.jpg'
 
-const members = [
+interface Member {
+  name: string;
+  role: string;
+  photo: any;
+  linkedinUrl?: string; // Optional field
+  githubUrl?: string; // Optional field
+  personalWebsiteUrl?: string; // Optional field
+  instagramUrl?: string; // Optional field
+}
+
+const members: Member[] = [
   {
-    name: 'Qingquan Li',
-    role: 'President',
-    photo: qingquanLiPic,
-    linkedinUrl: 'https://www.linkedin.com/in/qingquan-li/',
-    githubUrl: 'https://github.com/Qingquan-Li',
-    personalWebsiteUrl: 'https://qingquanli.com/',
-    instagramUrl: 'https://www.instagram.com/qingquan__li/',
+    name: 'Nicole Shmerkin',
+    role: 'Event Coordinator',
+    photo: nicoleShmerkinPic,
+    linkedinUrl: 'https://www.linkedin.com/in/nicole-shmerkin-36ba2a2a9/',
+    instagramUrl: 'https://www.instagram.com/nvcole5/'
   },
   {
-    name: 'Megi Murati',
-    role: 'Vice President',
-    photo: megiMuratiPic,
-    linkedinUrl: 'https://www.linkedin.com/in/megi-murati/',
-    githubUrl: 'https://github.com/megimurati/',
+    name: 'Ayesha Zaker',
+    role: 'Full Stack Developer',
+    photo: ayeshaZakerPic,
+    linkedinUrl: 'https://www.linkedin.com/in/ayesha-z-4321a318b',
+    githubUrl: 'https://github.com/AZcodes',
   },
   {
-    name: 'Faizan Khan',
-    role: 'Treasurer',
-    photo: faizanKhanPic,
-    linkedinUrl: 'https://www.linkedin.com/in/faizan-khan234/',
-    githubUrl: 'https://github.com/jellyfishing2346',
-    instagramUrl: 'https://www.instagram.com/faizizizan/',
+    name: 'Axel Mejia',
+    role: 'Backend Developer',
+    photo: axelmejiaPic,
+    linkedinUrl: 'https://www.linkedin.com/in/axel-mejia-04a69725a/',
+    githubUrl: 'https://github.com/Ax3lMejia',
+    instagramUrl: 'https://www.instagram.com/4xl_m3/'
   },
   {
-    name: 'Anna Belenko',
-    role: 'Secretary',
-    photo: annaBelenkoPic,
-    linkedinUrl: 'https://www.linkedin.com/in/annabelenko/',
-    githubUrl: 'https://github.com/annabelenko',
-    personalWebsiteUrl: 'https://annabelenko.com/',
-  },
-  {
-    name: 'Kevin Liu',
-    role: 'Club Connector',
-    photo: kevinLiuPic,
-    linkedinUrl: 'https://www.linkedin.com/in/kevin-liu10252003/',
-    githubUrl: 'https://github.com/Kevinrocks100',
+    name: 'Andrew Li',
+    role: 'Backend Developer',
+    photo: andrewLiPic,
+    linkedinUrl: 'https://www.linkedin.com/in/andrew-li-611a34278/',
+    githubUrl: 'https://github.com/AndrewL05',
+    instagramUrl: 'https://www.instagram.com/andrew.liiiiiii'
   },
 ]
 
-export default function MembersSection() {
+export default function ClubCoordinatorsSection() {
   return (
-    <div>
+    <div className="mt-40">
       <div className="mx-auto max-w-7xl px-6 text-center lg:px-8">
         <div className="mx-auto max-w-2xl">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Executive Board
+            Club Coordinators
           </h2>
         </div>
         <ul

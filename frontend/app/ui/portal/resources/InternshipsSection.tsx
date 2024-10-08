@@ -32,6 +32,14 @@ const items = [
     link: "https://www.nyc.gov/site/dcas/employment/internship-and-fellowships-summer-internship-program.page",
   },
   {
+    title: "NYC Government Jobs",
+    link: "https://cityjobs.nyc.gov/",
+  },
+  {
+    title: "MTA College Aide Program",
+    link: "https://careers.mta.org/pages/mta-college-aide-program",
+  },
+  {
     title: "Summer 2025 Tech Internships by Pitt CSC & Simplify",
     link: "https://github.com/SimplifyJobs/Summer2025-Internships",
   },
