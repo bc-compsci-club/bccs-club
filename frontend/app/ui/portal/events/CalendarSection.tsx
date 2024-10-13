@@ -23,7 +23,7 @@ const Calendar = ({ handleEventClick, events }: {
             initialView="dayGridMonth"
             events={events}
             headerToolbar={{
-              left: 'prev next today',
+              left: 'prev,next today',
               center: 'title',
               right: 'dayGridMonth timeGridWeek timeGridDay',
             }}
