@@ -52,6 +52,13 @@ export default function Page() {
         start: '2024-10-08T01:00:00', 
         end: '2024-10-08T14:30:00',
       },
+      {
+        title: 'Virtual Career Panel',
+        description: 'Get to know and hear from 5 BC alumni and previous e-board members about their experiences in the tech industry.',
+        location: 'Virtual, RVSP for Zoom link: https://qr-code.click/i/670f06f119cc7',
+        start: '2024-10-19T05:00:00', 
+        end: '2024-10-19T06:00:00',
+      },
     ]);
   }, []);
 
