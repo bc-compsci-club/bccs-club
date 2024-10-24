@@ -12,6 +12,7 @@ export default function NotFound() {
           <div className="mt-10 flex justify-center items-center gap-x-6">
             <Link
               href="/"
+              target="_self"
               rel="noopener noreferrer"
               className="rounded-md px-3.5 py-2.5 text-sm font-semibold bg-transparent text-bc-red border border-bc-red hover:bg-bc-yellow hover:border-transparent"
             >
