@@ -9,6 +9,7 @@ import nicoleShmerkinPic from "../../../images/team/club-coordinators/nicole-shm
 import axelmejiaPic from "../../../images/team/club-coordinators/axel-mejia.jpg";
 import andrewLiPic from "../../../images/team/club-coordinators/andrew-li.jpg";
 import wilsonLiuPic from "../../../images/team/club-coordinators/wilson-liu.jpg";
+import birongliuPic from "../../../images/team/club-coordinators/birong-liu.jpg"
 
 interface Member {
   name: string;
@@ -50,6 +51,14 @@ const members: Member[] = [
     linkedinUrl: "https://www.linkedin.com/in/andrew-li-611a34278/",
     githubUrl: "https://github.com/AndrewL05",
     instagramUrl: "https://www.instagram.com/andrew.liiiiiii",
+  },
+  {
+    name: "Bi Rong Liu",
+    role: "Frontend Developer",
+    photo: birongliuPic,
+    linkedinUrl: "https://www.linkedin.com/in/birongliu",
+    githubUrl: "https://github.com/birongliu",
+    personalWebsiteUrl: "https://birongliu.dev",
   },
   {
     name: "Wilson Liu",
