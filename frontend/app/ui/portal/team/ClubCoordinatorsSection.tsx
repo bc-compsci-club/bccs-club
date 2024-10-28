@@ -2,12 +2,13 @@ import { BsLinkedin } from "react-icons/bs";
 import { BsGithub } from "react-icons/bs";
 import { BsGlobe2 } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
-import Image from 'next/image';
+import Image from "next/image";
 // import avatarPic from '../../../images/team/club-coordinators/avatar.jpg'
-import ayeshaZakerPic from '../../../images/team/club-coordinators/ayesha-zaker.jpg';
-import nicoleShmerkinPic from '../../../images/team/club-coordinators/nicole-shmerkin.jpg';
-import axelmejiaPic from '../../../images/team/club-coordinators/axel-mejia.jpg';
-import andrewLiPic from '../../../images/team/club-coordinators/andrew-li.jpg'
+import ayeshaZakerPic from "../../../images/team/club-coordinators/ayesha-zaker.jpg";
+import nicoleShmerkinPic from "../../../images/team/club-coordinators/nicole-shmerkin.jpg";
+import axelmejiaPic from "../../../images/team/club-coordinators/axel-mejia.jpg";
+import andrewLiPic from "../../../images/team/club-coordinators/andrew-li.jpg";
+import wilsonLiuPic from "../../../images/team/club-coordinators/wilson-liu.jpg";
 
 interface Member {
   name: string;
@@ -21,36 +22,44 @@ interface Member {
 
 const members: Member[] = [
   {
-    name: 'Nicole Shmerkin',
-    role: 'Event Coordinator',
+    name: "Nicole Shmerkin",
+    role: "Event Coordinator",
     photo: nicoleShmerkinPic,
-    linkedinUrl: 'https://www.linkedin.com/in/nicole-shmerkin-36ba2a2a9/',
-    instagramUrl: 'https://www.instagram.com/nvcole5/'
+    linkedinUrl: "https://www.linkedin.com/in/nicole-shmerkin-36ba2a2a9/",
+    instagramUrl: "https://www.instagram.com/nvcole5/",
   },
   {
-    name: 'Ayesha Zaker',
-    role: 'Full Stack Developer',
+    name: "Ayesha Zaker",
+    role: "Full Stack Developer",
     photo: ayeshaZakerPic,
-    linkedinUrl: 'https://www.linkedin.com/in/ayesha-z-4321a318b',
-    githubUrl: 'https://github.com/AZcodes',
+    linkedinUrl: "https://www.linkedin.com/in/ayesha-z-4321a318b",
+    githubUrl: "https://github.com/AZcodes",
   },
   {
-    name: 'Axel Mejia',
-    role: 'Backend Developer',
+    name: "Axel Mejia",
+    role: "Backend Developer",
     photo: axelmejiaPic,
-    linkedinUrl: 'https://www.linkedin.com/in/axel-mejia-04a69725a/',
-    githubUrl: 'https://github.com/Ax3lMejia',
-    instagramUrl: 'https://www.instagram.com/4xl_m3/'
+    linkedinUrl: "https://www.linkedin.com/in/axel-mejia-04a69725a/",
+    githubUrl: "https://github.com/Ax3lMejia",
+    instagramUrl: "https://www.instagram.com/4xl_m3/",
   },
   {
-    name: 'Andrew Li',
-    role: 'Backend Developer',
+    name: "Andrew Li",
+    role: "Backend Developer",
     photo: andrewLiPic,
-    linkedinUrl: 'https://www.linkedin.com/in/andrew-li-611a34278/',
-    githubUrl: 'https://github.com/AndrewL05',
-    instagramUrl: 'https://www.instagram.com/andrew.liiiiiii'
+    linkedinUrl: "https://www.linkedin.com/in/andrew-li-611a34278/",
+    githubUrl: "https://github.com/AndrewL05",
+    instagramUrl: "https://www.instagram.com/andrew.liiiiiii",
   },
-]
+  {
+    name: "Wilson Liu",
+    role: "Full Stack Developer",
+    photo: wilsonLiuPic,
+    linkedinUrl: "https://www.linkedin.com/in/wilson-liu-780255237/",
+    githubUrl: "https://github.com/wilsonliu2",
+    personalWebsiteUrl: "https://wilsonliu.vercel.app/",
+  },
+];
 
 export default function ClubCoordinatorsSection() {
   return (
@@ -73,7 +82,9 @@ export default function ClubCoordinatorsSection() {
                 className="mx-auto h-56 w-56 rounded-full"
                 placeholder="blur"
               />
-              <h3 className="mt-6 text-base font-semibold leading-7 tracking-tight text-gray-900">{member.name}</h3>
+              <h3 className="mt-6 text-base font-semibold leading-7 tracking-tight text-gray-900">
+                {member.name}
+              </h3>
               <p className="text-sm leading-6 text-gray-600">{member.role}</p>
               <ul role="list" className="mt-6 flex justify-center gap-x-6">
                 {member.linkedinUrl && (
@@ -98,7 +109,7 @@ export default function ClubCoordinatorsSection() {
                       className="text-gray-400 hover:text-gray-500"
                     >
                       <span className="sr-only">Github</span>
-                      <BsGithub className="h-5 w-5"/>
+                      <BsGithub className="h-5 w-5" />
                     </a>
                   </li>
                 )}
@@ -111,7 +122,7 @@ export default function ClubCoordinatorsSection() {
                       className="text-gray-400 hover:text-gray-500"
                     >
                       <span className="sr-only">Personal Website</span>
-                      <BsGlobe2 className="h-5 w-5"/>
+                      <BsGlobe2 className="h-5 w-5" />
                     </a>
                   </li>
                 )}
@@ -124,7 +135,7 @@ export default function ClubCoordinatorsSection() {
                       className="text-gray-400 hover:text-gray-500"
                     >
                       <span className="sr-only">Instagram</span>
-                      <BsInstagram className="h-5 w-5"/>
+                      <BsInstagram className="h-5 w-5" />
                     </a>
                   </li>
                 )}
@@ -140,7 +151,7 @@ export default function ClubCoordinatorsSection() {
         <div
           style={{
             clipPath:
-              'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
+              "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
           }}
           className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
         />
