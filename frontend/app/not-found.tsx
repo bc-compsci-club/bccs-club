@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function NotFound() {
   return (
     <main>
@@ -8,14 +10,14 @@ export default function NotFound() {
             <h2>Sorry, the page you are looking for does not exist.</h2>
           </div>
           <div className="mt-10 flex justify-center items-center gap-x-6">
-            <a
+            <Link
               href="/"
-              target="_blank"
+              target="_self"
               rel="noopener noreferrer"
               className="rounded-md px-3.5 py-2.5 text-sm font-semibold bg-transparent text-bc-red border border-bc-red hover:bg-bc-yellow hover:border-transparent"
             >
               HomePage
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -4,10 +4,11 @@ import { BsGlobe2 } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
 import Image from 'next/image';
 // import avatarPic from '../../../images/team/club-coordinators/avatar.jpg'
-import ayeshaZakerPic from '../../../images/team/club-coordinators/ayesha-zaker.jpg';
-import nicoleShmerkinPic from '../../../images/team/club-coordinators/nicole-shmerkin.jpg';
-import axelmejiaPic from '../../../images/team/club-coordinators/axel-mejia.jpg';
-import andrewLiPic from '../../../images/team/club-coordinators/andrew-li.jpg'
+import ayeshaZakerPic from "../../../images/team/club-coordinators/ayesha-zaker.jpg";
+import nicoleShmerkinPic from "../../../images/team/club-coordinators/nicole-shmerkin.jpg";
+import axelmejiaPic from "../../../images/team/club-coordinators/axel-mejia.jpg";
+import andrewLiPic from "../../../images/team/club-coordinators/andrew-li.jpg";
+import birongliuPic from "../../../images/team/club-coordinators/birong-liu.jpg"
 
 interface Member {
   name: string;
@@ -50,7 +51,15 @@ const members: Member[] = [
     githubUrl: 'https://github.com/AndrewL05',
     instagramUrl: 'https://www.instagram.com/andrew.liiiiiii'
   },
-]
+  {
+    name: "Bi Rong Liu",
+    role: "Frontend Developer",
+    photo: birongliuPic,
+    linkedinUrl: "https://www.linkedin.com/in/birongliu",
+    githubUrl: "https://github.com/birongliu",
+    personalWebsiteUrl: "https://birongliu.dev",
+  },
+];
 
 export default function ClubCoordinatorsSection() {
   return (
