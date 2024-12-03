@@ -16,7 +16,7 @@ COPY src ./src
 
 # Build the application with Maven,
 # skip the tests because we have not configured the database yet
-RUN mvn clean package -DskipTests
+RUN mvn clean package
 
 ################################
 # Stage 2: Run the application #
