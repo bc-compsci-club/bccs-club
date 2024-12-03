@@ -12,7 +12,15 @@ The API project is built with Java and Spring Boot, and it provides the backend 
 
 ```bash
 cd path/to/bccs-club/api
-docker-compose up --build
+
+# Build the Docker image
+docker-compose build
+
+# Run the Docker container
+docker-compose up
+
+# Or run the Docker container in the background (detached mode)
+docker-compose up -d
 ````
 
 Open [http://localhost:8080/v1/calendar/events](http://localhost:8080/v1/calendar/events) with your browser to see one of the API endpoints.

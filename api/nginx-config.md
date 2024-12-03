@@ -2,14 +2,14 @@
 
 Use Nginx as a reverse proxy to serve the `api` project.
 
-## 1. Create a new file bccs-club-api in the /etc/nginx/sites-available directory:
+## 1. Create a new file api-bccs-club in the /etc/nginx/sites-available directory:
 ```bash
-$ sudo vim /etc/nginx/sites-available/bccs-club-api
+$ sudo vim /etc/nginx/sites-available/api-bccs-club
 ```
 
 ## 2. Add the following configuration:
 ```conf
-# /etc/nginx/sites-available/bccs-club-api
+# /etc/nginx/sites-available/api-bccs-club
 
 # Define a server block.
 server {
@@ -31,7 +31,7 @@ server {
 
 ## 3. Create a symbolic link to the file in the /etc/nginx/sites-enabled directory:
 ```bash
-$ sudo ln -s /etc/nginx/sites-available/bccs-club-api /etc/nginx/sites-enabled/
+$ sudo ln -s /etc/nginx/sites-available/api-bccs-club /etc/nginx/sites-enabled/
 ```
 
 ## 4. Optional: Configure HTTPS
