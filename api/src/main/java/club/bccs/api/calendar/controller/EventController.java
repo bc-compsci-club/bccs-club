@@ -17,7 +17,7 @@ import club.bccs.api.calendar.service.EventService;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/api/v1/calendar/events")
+@RequestMapping("/v1/calendar/events")
 public class EventController {
     
     @Autowired

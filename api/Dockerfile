@@ -14,8 +14,7 @@ COPY pom.xml .
 # Copy the source code into the container
 COPY src ./src
 
-# Build the application with Maven,
-# skip the tests because we have not configured the database yet
+# Build the application with Maven
 RUN mvn clean package
 
 ################################

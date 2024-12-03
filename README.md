@@ -13,7 +13,7 @@
   - PostgreSQL
 - Deployment:
   - Docker
-  - Kubernetes
+  - Linux
 - CI/CD:
   - GitHub Actions
 
