@@ -1,6 +1,6 @@
 # Brooklyn College Computer Science Club Website
 
-## Tech Stacks
+## Tech Stack
 
 - Frontend:
   - TypeScript (JavaScript)
@@ -9,6 +9,13 @@
 - Backend:
   - Java
   - Spring Boot
+- Database:
+  - PostgreSQL
+- Deployment:
+  - Docker
+  - Linux
+- CI/CD:
+  - GitHub Actions
 
 ## Contributions
 

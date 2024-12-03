@@ -1,0 +1,34 @@
+services:
+  api:
+    build: .
+    restart: always
+    ports:
+      - "8090:8080"
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: bccsclubdb
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+    networks:
+      - api-network
+
+  db:
+    image: postgres:16.6
+    restart: always
+    environment:
+      POSTGRES_DB: bccsclubdb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    networks:
+      - api-network
+
+volumes:
+  db-data:
+
+networks:
+  api-network:
