@@ -20,8 +20,7 @@ sudo docker pull ghcr.io/bc-compsci-club/bccsclub-api:latest
 
 ```bash
 cd path/to/bccs-club/api/deployment
-
-docker-compose -f docker-compose.prod.yml up -d
+sudo docker-compose -f docker-compose.prod.yml up -d
 ```
 
 ## 2. Configure Nginx as a reverse proxy
