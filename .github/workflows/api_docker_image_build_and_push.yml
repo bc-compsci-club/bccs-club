@@ -1,0 +1,44 @@
+name: Build and Push the bccsclub-api Docker Image to GitHub Container Registry
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    # Set permissions for the GITHUB_TOKEN
+    permissions:
+      contents: read   # Allows reading the repository contents
+      packages: write  # Allows pushing packages (Docker images) to GitHub Container Registry
+
+    steps:
+      # Step 1: Check out the repository code
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Step 2: Set up Docker Buildx
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      # Step 3: Log in to GitHub Container Registry
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}  # Automatically use the username of the user that triggered the workflow run
+          password: ${{ secrets.GITHUB_TOKEN }}  # Use the auto-generated GITHUB_TOKEN secret for the password
+
+      # Step 4: Build and push the Docker image
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v6
+        with:
+          context: ./api                   # Path to your 'api' directory
+          file: ./api/Dockerfile           # Path to your Dockerfile
+          push: true                       # Push the image after building
+          # tags: ghcr.io/${{ github.repository_owner }}/bccsclub-api:latest
+          # Tag Docker image as 'latest' when pushing to 'main' branch, and 'dev' when pushing to 'dev' branch, otherwise tag as 'other'
+          tags: ghcr.io/${{ github.repository_owner }}/bccsclub-api:${{ github.ref == 'refs/heads/main' && 'latest' || (github.ref == 'refs/heads/dev' && 'dev' || 'other') }}

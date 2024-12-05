@@ -1,6 +1,6 @@
 # Frontend
 
-## Run the Fontend Locally with Docker (Recommended, for faster setup)
+## Run the `fontend` project locally with Docker (for faster setup)
 
 ### Prerequisites:
 
@@ -23,7 +23,7 @@ docker-compose down
 ```
 
 
-## Run the Frontend Locally without Docker
+## Run the `frontend` project locally without Docker
 
 ### Prerequisites:
 
@@ -51,8 +51,3 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 cd path/to/bccs-club/frontend
 npm run build
 ```
-
-
-# Deployment
-
-The frontend is deployed to [Cloudflare Pages](https://pages.cloudflare.com/). The deployment is triggered automatically when a pull request is merged to the `main` or `dev` branch.
