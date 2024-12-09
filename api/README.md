@@ -24,7 +24,8 @@ docker-compose up
 docker-compose up -d
 ````
 
-Open [http://localhost:8090/v1/calendar/events](http://localhost:8090/v1/calendar/events) with your browser to see one of the API endpoints.
+- Open http://localhost:8090/v1/calendar/events with your browser to see one of the API endpoints.
+- API documentation is available at: http://localhost:8090/swagger-ui/index.html
 
 ### Stop the Docker container:
 
