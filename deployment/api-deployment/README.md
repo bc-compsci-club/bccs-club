@@ -10,16 +10,13 @@ The `api` project is deployed on a Linux server (Ubuntu) with Docker and Nginx.
 - [Docker Compose](https://docs.docker.com/compose/install/)
 - [Nginx](https://nginx.org/)
 
-### 1.2 Pull the Docker image from GitHub Container Registry
+### 1.2 Run the Docker containers (bccsclub-api and bccsclub-db) with Docker Compose
+
+- The `bccsclub-api` container is deployed using the `ghcr.io/bc-compsci-club/bccsclub-api:latest` image from GitHub Container Registry
+- The `bccsclub-db` container is deployed using the `postgres:16` image from Docker Hub
 
 ```bash
-sudo docker pull ghcr.io/bc-compsci-club/bccsclub-api:latest
-```
-
-### 1.3 Run the Docker containers (bccsclub-api and bccsclub-db) with Docker Compose
-
-```bash
-cd path/to/bccs-club/api/deployment
+cd path/to/bccs-club/deployment/api-deployment
 sudo docker-compose -f docker-compose.prod.yml up -d
 ```
 
