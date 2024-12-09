@@ -1,0 +1,36 @@
+services:
+  api:
+    image: ghcr.io/bc-compsci-club/bccsclub-api:dev
+    container_name: bccsclub-api
+    restart: always
+    ports:
+      - "8090:8080"
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: bccsclubdb
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+    networks:
+      - bccsclub-network
+
+  db:
+    image: postgres:16
+    container_name: bccsclub-db
+    restart: always
+    environment:
+      POSTGRES_DB: bccsclubdb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    networks:
+      - bccsclub-network
+
+volumes:
+  db-data:
+
+networks:
+  bccsclub-network:
