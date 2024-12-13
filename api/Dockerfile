@@ -22,7 +22,9 @@ RUN mvn clean package
 ################################
 
 # Official Images for OpenJDK binaries built by Eclipse Temurin
-FROM eclipse-temurin:21
+# FROM eclipse-temurin:21
+# Use a JRE image to run the application
+FROM eclipse-temurin:21-jre
 
 # Set the working directory inside the container
 WORKDIR /app
