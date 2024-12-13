@@ -3,12 +3,13 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "./ui/portal/navbar";
 import Footer from "./ui/portal/footer";
-
+import StoreProvider from "./providers/StoreProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Brooklyn College Computer Science Club",
-  description: "By the BC tech community, for the BC tech community. The Brooklyn College Computer Science Club is a community that enables students interested in tech to learn and grow.",
+  description:
+    "By the BC tech community, for the BC tech community. The Brooklyn College Computer Science Club is a community that enables students interested in tech to learn and grow.",
 };
 
 export default function RootLayout({
