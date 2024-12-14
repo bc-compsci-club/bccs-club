@@ -10,7 +10,7 @@ export default async function getEventsAction(): Promise<Event[]> {
     },
   });
   const data = await events.json();
-  console.log(data, events)
+  console.log(data)
   return data;
 }
 

@@ -26,6 +26,7 @@ const Calendar = ({
             initialView="dayGridMonth"
             events={events.map((event) => {
               const { endTime: end, startTime: start, ...rest } = event;
+              if(!event.isActive) return {};
               return {
                 ...rest,
                 title: event.title,
@@ -34,6 +35,7 @@ const Calendar = ({
                 rrule: event.rrule,
                 extendedProps: {
                   description: event.description,
+                  isActive: event.isActive,
                   location: event.location,
                   id: event.id,
                 },
@@ -61,12 +63,13 @@ const Calendar = ({
               const endTime = end && end.toString();
               handleEventClick({
                 id: a.event.extendedProps.id,
+                isActive: a.event.extendedProps.isActive,
                 ...a.event.extendedProps,
                 title,
                 description,
                 location,
-                startTime: startTime as string,
-                endTime: endTime === null ? startTime as string : endTime as string,
+                startTime: startTime ? startTime : "",
+                endTime: endTime ? endTime : startTime ?? "",
               });
             }} // Attach the event click handler
             dayHeaderClassNames="bg-gray-50 text-sm font-semibold leading-6 text-gray-900"

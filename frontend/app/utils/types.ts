@@ -3,6 +3,7 @@ export interface Event {
   title: string;
   description: string;
   location: string;
+  isActive: boolean;
   rrule?: {
     freq: string;
     interval: number;
