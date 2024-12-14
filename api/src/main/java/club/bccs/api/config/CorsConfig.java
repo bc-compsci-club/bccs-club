@@ -22,7 +22,8 @@ public class CorsConfig {
                             "https://*.qing-bccs-club.pages.dev",
                             "http://localhost:*"
                         )
-                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // Allow specific HTTP methods
+                        // .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // Allow specific HTTP methods
+                        .allowedMethods("*") // Allow all HTTP methods
                         .allowedHeaders("*") // Allow all headers
                         .allowCredentials(true); // Allow cookies and authentication
             }
