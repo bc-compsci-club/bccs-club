@@ -7,6 +7,9 @@ import CalendarSection from "@/app/ui/portal/events/CalendarSection";
 import { Event } from "@/app/utils/types";
 import getEventAction from "@/app/lib/actions/getEventsAction";
 
+
+export const runtime = 'edge';
+
 export default function Page() {
   const [events, setEvents] = useState<Event[]>([]);
 

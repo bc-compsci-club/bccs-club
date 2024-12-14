@@ -6,7 +6,6 @@ import EventSection from "@/app/ui/portal/events/EventSection";
 import Link from 'next/link';
 import { Event } from '@/app/utils/types';
 import getEventAction from '@/app/lib/actions/getEventAction';
-import { stat } from 'fs';
 
 export const runtime = 'edge';
 
