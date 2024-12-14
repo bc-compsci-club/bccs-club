@@ -1,8 +1,6 @@
 services:
   api:
-    build: .
-    # default image name: api-api, folder_name-service_name
-    image: api:latest
+    image: ghcr.io/bc-compsci-club/bccsclub-api:dev
     container_name: bccsclub-api
     restart: always
     ports:

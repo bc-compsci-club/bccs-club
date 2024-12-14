@@ -2,12 +2,14 @@
 
 Use Nginx as a reverse proxy to serve the `api` project.
 
-## 1. Create a new file api-bccs-club in the /etc/nginx/sites-available directory:
+## 1. Create a new file api-bccs-club in the /etc/nginx/sites-available directory
+
 ```bash
 $ sudo vim /etc/nginx/sites-available/api-bccs-club
 ```
 
-## 2. Add the following configuration:
+## 2. Add the following configuration
+
 ```conf
 # /etc/nginx/sites-available/api-bccs-club
 
@@ -29,12 +31,24 @@ server {
 }
 ```
 
-## 3. Create a symbolic link to the file in the /etc/nginx/sites-enabled directory:
+## 3. Create a symbolic link to the file in the /etc/nginx/sites-enabled directory
+
 ```bash
 $ sudo ln -s /etc/nginx/sites-available/api-bccs-club /etc/nginx/sites-enabled/
 ```
 
-## 4. Optional: Configure HTTPS
+## 4. Test the Nginx configuration
+```bash
+$ sudo nginx -t
+```
+
+## 5. Reload Nginx to apply the changes
+
+```bash
+$ sudo systemctl reload nginx
+```
+
+## 6. Configure HTTPS
 
 - Use Cloudflare DNS proxy to enable HTTPS (it can also enable to hide the IP address of the server)
 - Or: Configure Let's Encrypt (certbot) in Nginx to enable HTTPS
