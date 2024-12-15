@@ -11,6 +11,5 @@ export default async function getEventAction(slug: string): Promise<Event | null
   });
   if(res.status === 404 || res.status === 500) return null;
   const data = await res.json();
-  console.log("data", data);
   return data;
 }
