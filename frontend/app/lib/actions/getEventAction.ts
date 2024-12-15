@@ -2,8 +2,8 @@
 
 import { Event } from "@/app/utils/types";
 
-export default async function getEventAction(id: string, eventName: string): Promise<Event | null> {
-  const res = await fetch(`${process.env.BACKEND_URL}/v1/calendar/events/${id}`, {
+export default async function getEventAction(slug: string): Promise<Event | null> {
+  const res = await fetch(`${process.env.BACKEND_URL}/v1/calendar/events/slug/${slug}`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -11,8 +11,6 @@ export default async function getEventAction(id: string, eventName: string): Pro
   });
   if(res.status === 404 || res.status === 500) return null;
   const data = await res.json();
-  const date = new Date(data.startTime);
-  const compare = `${data.title.trim().replace(" ", "-")}-${date.getMonth()}-${date.getDate()}-${date.getFullYear()}`
-  if(compare !== eventName) return null;
+  console.log("data", data);
   return data;
 }

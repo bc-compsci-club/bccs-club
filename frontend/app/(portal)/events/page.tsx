@@ -32,8 +32,12 @@ export default function Page() {
 
   // Event click handler to navigate to the specific event page
   const handleEventClick = (a: Event) => {
-    const date = new Date(a.startTime);
-    router.push(`/events/${a.id}/${a.title.trim().replace(" ", "-")}-${date.getMonth()}-${date.getDate()}-${date.getFullYear()}`);
+    const date = new Date(a.startTime).toLocaleDateString("en-CA", {
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+    });
+    router.push(`/events/${a.title.trim().toLowerCase().replaceAll("[^a-z0-9]+", "-").replaceAll(" ", "-").replaceAll("(^-|-$)", "")}-${date}`);
   };
 
   return (

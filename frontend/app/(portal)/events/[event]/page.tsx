@@ -10,11 +10,12 @@ import getEventAction from '@/app/lib/actions/getEventAction';
 export const runtime = 'edge';
 
 export default function Page() {
-  const { id, event: eventName } = useParams();
+  const { event: eventName } = useParams();
   
   const [event, setEvent] = useState<Event>({
     id: "Unknown ID",
     title: "Unknown Title",
+    isActive: false,
     description: "Unknown Description",
     location: "Unknown Location",
     startTime: '',
@@ -25,12 +26,13 @@ export default function Page() {
 
   useEffect(() => {      
     const fetchEvent = async () => {
-      if(!id || typeof id !== "string" || typeof eventName !== "string") return;
-      const eventAction = await getEventAction(id, eventName);
+      if(typeof eventName !== "string") return;
+      const eventAction = await getEventAction(eventName);
       if(!eventAction) {
         setState("error");
         setEvent({
           id: "404",
+          isActive: false,
           title: "Event Not Found",
           description: "The event you are looking for does not exist.",
           location: "N/A",
@@ -43,7 +45,7 @@ export default function Page() {
       setState("complete");
     };
     fetchEvent();
-  }, [id, eventName]);
+  }, [eventName]);
 
   if(state === "loading") return 
   
