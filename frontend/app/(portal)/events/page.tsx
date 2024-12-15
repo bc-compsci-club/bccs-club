@@ -35,7 +35,11 @@ export default function Page() {
       month: "2-digit",
       day: "2-digit",
     });
-    router.push(`/events/${a.title.trim().toLowerCase().replaceAll("[^a-z0-9]+", "-").replaceAll(" ", "-").replaceAll("(^-|-$)", "")}-${date}`);
+    const title = a.title
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, "") // Remove all symbols
+    .replace(/\s+/g, "-"); // Replace all whitespace with hyphens
+    router.push(`/events/${title}-${date}`);
   };
 
   return (

@@ -12,15 +12,7 @@ export const runtime = 'edge';
 export default function Page() {
   const { event: eventName } = useParams();
   
-  const [event, setEvent] = useState<Event>({
-    id: "Unknown ID",
-    title: "Unknown Title",
-    isActive: false,
-    description: "Unknown Description",
-    location: "Unknown Location",
-    startTime: '',
-    endTime:''
-  });
+  const [event, setEvent] = useState<Event | null>();
 
   const [state, setState] = useState<"error" | "complete" | "loading">("loading")
 
