@@ -1,7 +1,6 @@
 import { Event } from "@/app/utils/types";
 
 export default function HeroSection({ event }: { event: Event }) {
-  console.log(event);
   return (
     <main>
       <div className="relative isolate px-6 pt-14 lg:px-8 bg-gradient-to-b from-bc-red/15">
