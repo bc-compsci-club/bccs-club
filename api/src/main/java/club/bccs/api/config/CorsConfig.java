@@ -17,7 +17,6 @@ public class CorsConfig {
                         // .allowedOrigins("https://bccs.club") // Allow requests from this origin
                         .allowedOriginPatterns(
                             "https://bccs.club",
-                            "https://*.bccs-club-7lz.pages.dev",
                             "https://bccs-club.pages.dev",
                             "https://*.bccs-club.pages.dev",
                             "https://*.qing-bccs-club.pages.dev",
