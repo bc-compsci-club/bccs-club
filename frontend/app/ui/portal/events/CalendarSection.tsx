@@ -26,7 +26,7 @@ const Calendar = ({
             initialView="dayGridMonth"
             events={events.map((event) => {
               const { endTime: end, startTime: start, ...rest } = event;
-              if(!event.isActive) return {};
+              if (!event.isActive) return {};
               return {
                 ...rest,
                 title: event.title,
@@ -36,6 +36,7 @@ const Calendar = ({
                 extendedProps: {
                   description: event.description,
                   isActive: event.isActive,
+                  rsvpLink: event.rsvpLink,
                   location: event.location,
                   id: event.id,
                 },
@@ -62,6 +63,7 @@ const Calendar = ({
               const startTime = start && start.toString();
               const endTime = end && end.toString();
               handleEventClick({
+                rsvpLink: a.event.extendedProps.rsvpLink,
                 id: a.event.extendedProps.id,
                 isActive: a.event.extendedProps.isActive,
                 ...a.event.extendedProps,

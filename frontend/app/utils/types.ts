@@ -1,9 +1,10 @@
 export interface Event {
-  id: string
+  id: string;
   title: string;
   description: string;
   location: string;
   isActive: boolean;
+  rsvpLink: string;
   rrule?: {
     freq: string;
     interval: number;
@@ -12,7 +13,7 @@ export interface Event {
     until: string;
   }; // Optional for non-recurring events
   startTime: string; // Used for non-recurring events
-  endTime: string;   // Used for non-recurring events
+  endTime: string; // Used for non-recurring events
   duration?: string;
   exdate?: string[]; // Optional for recurring events
 }
