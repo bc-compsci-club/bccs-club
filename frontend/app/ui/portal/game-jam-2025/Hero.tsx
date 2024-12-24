@@ -46,7 +46,7 @@ export default function Hero() {
             developers to create a game within a short amount of time. It is
             open to all CSI and Brooklyn College students and majors.
           </p>
-          <Image className="flex justify-center w-full mt-10 rounded" src={gameJam2025} alt="game-jam-2025" width={200} height={200} />
+          <Image className="flex justify-center mx-auto mt-10 rounded" src={gameJam2025} alt="game-jam-2025" width={400} height={300} />
         </div>
       </div>
     </div>
