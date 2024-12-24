@@ -1,6 +1,6 @@
-import { CheckCircleIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
 import React from "react";
-
+import gameJam2025 from "../../../images/club-event/gameJam-2025.png";
 const schedules = [
   "Comencement Meeting: 1/16/2025 11AM - 12PM, at BC, room TBD, attending in person highly encouraged",
   "Game Jam: 1/16/2025 2 PM - 1/23. presentations 1/23 and 1/24 2-5 pm. @ bc, hybrid, room tbd. present in person or submit video",
@@ -21,7 +21,7 @@ export default function Hero() {
             clipPath:
               "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
           }}
-          className="aspect-[1318/752] w-[82.375rem] flex-none bg-gradient-to-r from-[#ff80b5] to-[#9089fc] opacity-15"
+          className="aspect-[1318/752] w-[82.375rem] flex-none bg-gradient-to-r from-[#ff80b5] to-[#454091] opacity-15"
         />
       </div>
       <div className="mx-auto max-w-2xl py-20">
@@ -34,23 +34,7 @@ export default function Hero() {
             developers to create a game within a short amount of time. It is
             open to all CSI and Brooklyn College students and majors.
           </p>
-        </div>
-        <div className="flex flex-col items-center my-20">
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900">
-            Schedule
-          </h1>
-          {schedules.map((schedule) => (
-            <p
-              key={schedule}
-              className="mt-6 gap-2 text-lg leading-8 flex  text-gray-600"
-            >
-              <CheckCircleIcon
-                aria-hidden="true"
-                className="h-7 w-5 flex-none"
-              />
-              {schedule}
-            </p>
-          ))}
+          <Image className="flex justify-center w-full mt-10" src={gameJam2025} alt="game-jam-2025" width={200} height={200} />
         </div>
       </div>
     </div>
