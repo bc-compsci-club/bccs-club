@@ -1,6 +1,6 @@
-export default function HeroSection(props: any) {
-  var event = props.event;
-  console.log(event);
+import { Event } from "@/app/utils/types";
+
+export default function HeroSection({ event }: { event: Event }) {
   return (
     <main>
       <div className="relative isolate px-6 pt-14 lg:px-8 bg-gradient-to-b from-bc-red/15">
@@ -14,38 +14,47 @@ export default function HeroSection(props: any) {
       </div>
       <div className="max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="text-center bg-white shadow-lg rounded-lg p-6">
-          <p className="text-gray-700 text-lg mb-4">{event.extendedProps.description}</p>
+          <p className="text-gray-700 text-lg mb-4">{event.description}</p>
           <div className="mt-4">
             <h2 className="text-xl font-semibold text-gray-800">Details</h2>
             <div className="mt-2 text-gray-600">
               <p className="mb-2">
-                <span className="font-semibold">Location:</span> {event.extendedProps.location}
+                <span className="font-semibold">Location:</span>{" "}
+                {event.location}
               </p>
               <p className="mb-2">
                 <span className="font-semibold">Start Time: </span>
                 <span className="ml-2">
-                  {new Date(event.start).toLocaleString('en-US', {
-                    month: 'long',
-                    day: 'numeric',
-                    year: 'numeric',
-                    hour: 'numeric',
-                    minute: 'numeric',
-                    hour12: true,
-                  })}
+                  {event.startTime
+                    ? new Date(event.startTime).toLocaleString("en-US", {
+                        month: "long",
+                        day: "numeric",
+                        year: "numeric",
+                        hour: "2-digit",
+                        minute: "2-digit",
+                        hour12: true,
+                      })
+                    : "N/A"}
                 </span>
               </p>
               <p className="mb-2">
                 <span className="font-semibold">End Time: </span>
                 <span className="ml-2">
-                  {new Date(event.end).toLocaleString('en-US', {
-                    month: 'long',
-                    day: 'numeric',
-                    year: 'numeric',
-                    hour: 'numeric',
-                    minute: 'numeric',
-                    hour12: true,
-                  })}
+                  {event.startTime
+                    ? new Date(event.endTime).toLocaleString("en-US", {
+                        month: "long",
+                        day: "numeric",
+                        year: "numeric",
+                        hour: "numeric",
+                        minute: "numeric",
+                        hour12: true,
+                      })
+                    : "N/A"}
                 </span>
+              </p>
+              <p className={`mb-2 ${event.rsvpLink ? "block" : "hidden"}`}>
+                <span className="font-semibold">RSVP Link: </span>
+                <span className="ml-2">{event.rsvpLink}</span>
               </p>
             </div>
           </div>
