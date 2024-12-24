@@ -1,13 +1,6 @@
 import Image from "next/image";
 import React from "react";
 import gameJam2025 from "../../../images/club-event/gameJam-2025.png";
-const schedules = [
-  "Comencement Meeting: 1/16/2025 11AM - 12PM, at BC, room TBD, attending in person highly encouraged",
-  "Game Jam: 1/16/2025 2 PM - 1/23. presentations 1/23 and 1/24 2-5 pm. @ bc, hybrid, room tbd. present in person or submit video",
-  "Team Collaboration and Github Workshop: 1/16/2025, 12-1 pm, CSI location 1N-111 virtual, bc location tbd",
-  "Github Workshop: 1/16/2025 right after commencement meeting 12-1 pm, CSI location 1N-111 virtual, bc location tbd. ideal for beginners, will teach how to use github",
-  "resume workshop: takes place days/week after game jam, time tbd, will teach how to include your projects on your resume",
-];
 
 export default function Hero() {
   return (
