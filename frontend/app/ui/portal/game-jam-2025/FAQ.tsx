@@ -23,6 +23,14 @@ const items: FAQItem[] = [
       "The Game Jam 2025 is open to all CSI and Brooklyn College students and majors.",
   },
   {
+    title: "When is Game Jam 2025?",
+    message: "Game Jam 2025 is from January 16th @ 2:00pm to January 24th @ 5:00pm.",
+  },
+  {
+    title: "Where is Game Jam 2025?",
+    message: "Location is TBA (To Be Announced).",
+  },
+  {
     title: "Is there a discord for Game Jam 2025?",
     message: "Yes, there is a discord. You can join the discord here:",
     url: "https://discord.com/invite/q4Yyx3dhJC",
