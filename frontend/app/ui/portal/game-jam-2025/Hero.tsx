@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import gameJam2025 from "../../../images/club-event/gameJam-2025.png";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -39,6 +40,10 @@ export default function Hero() {
             developers to create a game within a short amount of time. It is
             open to all CSI and Brooklyn College students and majors.
           </p>
+          <Link
+            href="https://docs.google.com/forms/d/1gswgwDe2rWxjFrblA72jXFEErgbPQtB-yH8K6AgmcG4/viewform?ts=672644f0&edit_requested=true"
+            className="inline-block px-6 py-3 mt-8 text-lg font-semibold leading-6 text-white bg-bc-red rounded hover:bg-opacity-90"
+          >Registration</Link>
           <Image className="flex justify-center mx-auto mt-10 rounded" src={gameJam2025} alt="game-jam-2025" width={400} height={300} />
         </div>
       </div>
