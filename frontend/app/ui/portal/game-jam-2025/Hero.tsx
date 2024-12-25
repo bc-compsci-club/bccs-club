@@ -41,10 +41,18 @@ export default function Hero() {
             open to all CSI and Brooklyn College students and majors.
           </p>
           <Link
-            href="https://docs.google.com/forms/d/1gswgwDe2rWxjFrblA72jXFEErgbPQtB-yH8K6AgmcG4/viewform?ts=672644f0&edit_requested=true"
-            className="inline-block px-6 py-3 mt-8 text-lg font-semibold leading-6 text-white bg-bc-red rounded hover:bg-opacity-90"
-          >Registration</Link>
-          <Image className="flex justify-center mx-auto mt-10 rounded" src={gameJam2025} alt="game-jam-2025" width={400} height={300} />
+            className="inline-block px-6 py-3 mt-8 text-lg font-semibold leading-6 text-white bg-bc-red rounded-xl hover:bg-opacity-90"
+            href="https://docs.google.com/forms/d/1gswgwDe2rWxjFrblA72jXFEErgbPQtB-yH8K6AgmcG4/viewform"
+          >
+            Registration
+          </Link>
+          <Image
+            className="flex justify-center mx-auto mt-10 rounded"
+            src={gameJam2025}
+            alt="game-jam-2025"
+            width={400}
+            height={300}
+          />
         </div>
       </div>
     </div>
