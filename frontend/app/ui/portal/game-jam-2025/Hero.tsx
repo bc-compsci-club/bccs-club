@@ -36,9 +36,7 @@ export default function Hero() {
             Game Jam 2025
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            The Game Jam is a 1 week long, beginner-friendly competition between
-            developers to create a game within a short amount of time. It is
-            open to all CSI and Brooklyn College students and majors.
+          The Game Jam is a week long beginner-friendly competition between developers on creating a game. It is open to all CSI and Brooklyn College students and majors.
           </p>
           <Link
             className="inline-block px-6 py-3 mt-8 text-lg font-semibold leading-6 text-white bg-bc-red rounded-xl hover:bg-opacity-90"
