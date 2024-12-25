@@ -46,7 +46,7 @@ export default function Judges() {
         <h2 className="text-2xl space-y-6 font-bold leading-10 tracking-tight text-gray-900">
           Judges
         </h2>
-        <ul role="list" className="grid py-3  grid-cols-2 md:grid-cols-3 gap-3 text-center">
+        <ul role="list" className="grid py-5 grid-cols-2 md:grid-cols-3 gap-3 text-center">
           {judges.map((judge) => (
             <li key={judge.name}>
               <Image

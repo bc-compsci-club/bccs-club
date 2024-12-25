@@ -24,7 +24,8 @@ const items: FAQItem[] = [
   },
   {
     title: "When is Game Jam 2025?",
-    message: "Game Jam 2025 is from January 16th @ 2:00pm to January 24th @ 5:00pm.",
+    message:
+      "Game Jam 2025 is from January 16th @ 2:00pm to January 24th @ 5:00pm.",
   },
   {
     title: "Where is Game Jam 2025?",
@@ -34,6 +35,14 @@ const items: FAQItem[] = [
     title: "Is there a discord for Game Jam 2025?",
     message: "Yes, there is a discord. You can join the discord here:",
     url: "https://discord.com/invite/q4Yyx3dhJC",
+  },
+  {
+    title: "Will there be food at Game Jam 2025?",
+    message: "Yes, there will be food at Game Jam 2025.",
+  },
+  {
+    title: "Do I need to have experience to participate in Game Jam 2025?",
+    message: "No, you do not need to have experience to participate in Game Jam 2025. The competition is beginner-friendly.",
   },
   {
     title: "What is the team limit for Game Jam 2025? Can I participate alone?",
@@ -69,9 +78,16 @@ export default function FAQ() {
                   </span>
                 </DisclosureButton>
               </dt>
-              <DisclosurePanel as="dd" className="mt-2 pr-12 flex items-center gap-1">
+              <DisclosurePanel
+                as="dd"
+                className="mt-2 pr-12 flex items-center gap-1"
+              >
                 <p className="text-lg  text-gray-600">{item.message}</p>
-                {item.url && <Link className="hover:text-bc-red/70" href={item.url}>{item.url}</Link>}
+                {item.url && (
+                  <Link className="hover:text-bc-red/70" href={item.url}>
+                    {item.url}
+                  </Link>
+                )}
               </DisclosurePanel>
             </Disclosure>
           ))}
