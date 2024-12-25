@@ -42,7 +42,7 @@ export default function Hero() {
             className="inline-block px-6 py-3 mt-8 text-lg font-semibold leading-6 text-white bg-bc-red rounded-xl hover:bg-opacity-90"
             href="https://docs.google.com/forms/d/1gswgwDe2rWxjFrblA72jXFEErgbPQtB-yH8K6AgmcG4/viewform"
           >
-            Registration
+            Game Jam 2025 Registration
           </Link>
           <Image
             className="flex justify-center mx-auto mt-10 rounded"
