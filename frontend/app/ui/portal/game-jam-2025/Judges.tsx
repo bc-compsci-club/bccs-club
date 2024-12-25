@@ -1,35 +1,40 @@
 import Image from "next/image";
 import React from "react";
 import image from "../../../images/team/club-coordinators/avatar.jpg";
+import eliSultanov from "../../../images/game-jam-2025-judges/Eli-Sultanov.jpeg";
+import jonathanYashayev from "../../../images/game-jam-2025-judges/Jonathan-Yashayev.jpeg";
+import oltiGjoni from "../../../images/game-jam-2025-judges/Olti-Gjoni.jpeg";
+import richardWeir from "../../../images/game-jam-2025-judges/Richard-Weir.png";
+import tatianaAnderson from "../../../images/game-jam-2025-judges/Tatiana-Anderson.jpeg";
 const judges = [
   {
     name: "Olti Gjoni",
     title: "Incoming Software Engineer",
     company: "Roblox",
-    iconUrl: image,
+    iconUrl: oltiGjoni,
   },
   {
     name: "Jonathan Yashayev",
     title: "Full Software Engineer",
     company: "GoBeyond",
-    iconUrl: image,
+    iconUrl: jonathanYashayev,
   },
   {
     name: "Eli Sultanov",
     title: "Software Engineer",
     company: "Valley IT Solutions",
-    iconUrl: image,
+    iconUrl: eliSultanov,
   },
   {
     name: "Richard Weir",
     title: "Chairperson of Computer Science",
     company: "Monsignor Farrell High School",
-    iconUrl: image,
+    iconUrl: richardWeir,
   },
   {
     name: "Tatiana Anderson",
     title: "CUNY 2X Lecturer",
-    iconUrl: image,
+    iconUrl: tatianaAnderson,
     company: " City University of New York",
   }
 ];

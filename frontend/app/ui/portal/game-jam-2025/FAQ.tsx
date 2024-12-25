@@ -3,14 +3,19 @@ import {
   DisclosureButton,
   DisclosurePanel,
 } from "@headlessui/react";
+import Link from "next/link";
 import { BsPlus } from "react-icons/bs";
 import { BsDash } from "react-icons/bs";
-
-const items = [
+interface FAQItem {
+  title: string;
+  message: string;
+  url?: string;
+}
+const items: FAQItem[] = [
   {
     title: "What is Game Jam 2025?",
     message:
-      "The Game Jam 2025 is a 1 week long, beginner-friendly competition between developers to create a game within a short amount of time.",
+      "The Game Jam is a week long beginner-friendly competition between developers on creating a game.",
   },
   {
     title: "Who can participate in Game Jam 2025?",
@@ -19,11 +24,13 @@ const items = [
   },
   {
     title: "Is there a discord for Game Jam 2025?",
-    message: "Yes, there is a discord. You can join the discord here: https://discord.com/invite/q4Yyx3dhJC.",
+    message: "Yes, there is a discord. You can join the discord here:",
+    url: "https://discord.com/invite/q4Yyx3dhJC",
   },
   {
     title: "What is the team limit for Game Jam 2025? Can I participate alone?",
-    message: "The team limit for Game Jam 2025 is 4. You can participate alone or with a team.",
+    message:
+      "The team limit for Game Jam 2025 is 4. You can participate alone or with a team.",
   },
 ];
 
@@ -54,8 +61,9 @@ export default function FAQ() {
                   </span>
                 </DisclosureButton>
               </dt>
-              <DisclosurePanel as="dd" className="mt-2 pr-12">
+              <DisclosurePanel as="dd" className="mt-2 pr-12 flex items-center gap-1">
                 <p className="text-lg  text-gray-600">{item.message}</p>
+                {item.url && <Link className="hover:text-bc-red/70" href={item.url}>{item.url}</Link>}
               </DisclosurePanel>
             </Disclosure>
           ))}
