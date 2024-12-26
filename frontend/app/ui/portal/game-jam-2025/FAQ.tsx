@@ -80,7 +80,7 @@ export default function FAQ() {
               </dt>
               <DisclosurePanel
                 as="dd"
-                className="flex flex-col md:flex-row md:items-center gap-1 "
+                className="mt-2 sm:flex sm:items-center sm:gap-1"
               >
                 <p className="text-lg text-gray-600">{item.message}</p>
                 {item.url && (
