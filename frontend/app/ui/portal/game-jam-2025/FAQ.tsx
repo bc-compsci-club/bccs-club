@@ -32,8 +32,8 @@ const items: FAQItem[] = [
     message: "Location is TBA (To Be Announced).",
   },
   {
-    title: "Is there a discord for Game Jam 2025?",
-    message: "Yes, there is a discord. You can join the discord here:",
+    title: "What is the discord server for Game Jam 2025?",
+    message: "You can join the discord here:",
     url: "https://discord.com/invite/q4Yyx3dhJC",
   },
   {
@@ -80,11 +80,11 @@ export default function FAQ() {
               </dt>
               <DisclosurePanel
                 as="dd"
-                className="mt-2 pr-12 flex items-center gap-1"
+                className="flex flex-col md:flex-row md:items-center gap-1 "
               >
-                <p className="text-lg  text-gray-600">{item.message}</p>
+                <p className="text-lg text-gray-600">{item.message}</p>
                 {item.url && (
-                  <Link className="hover:text-bc-red/70" href={item.url}>
+                  <Link className="w-fit hover:text-bc-red/70" href={item.url}>
                     {item.url}
                   </Link>
                 )}
