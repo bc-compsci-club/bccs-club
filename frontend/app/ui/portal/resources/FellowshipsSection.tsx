@@ -32,6 +32,10 @@ const items = [
     title: "America Needs You",
     link: "https://americaneedsyou.org/",
   },
+  {
+    title: "Hack Diversity",
+    link: "https://www.hackdiversity.com/",
+  },
 ]
 
 export default function Page() {
