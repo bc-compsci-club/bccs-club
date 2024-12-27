@@ -1,3 +1,4 @@
+import Contact from '@/app/ui/portal/game-jam-2025/Contact'
 import FAQ from '@/app/ui/portal/game-jam-2025/FAQ'
 import Hero from '@/app/ui/portal/game-jam-2025/Hero'
 import Judges from '@/app/ui/portal/game-jam-2025/Judges'
@@ -8,9 +9,10 @@ export default function page() {
   return (
    <main>
     <Hero />
+    <Schedule />
     <Judges />
     <FAQ />
-    <Schedule />
+    <Contact />
    </main>
   )
 }
