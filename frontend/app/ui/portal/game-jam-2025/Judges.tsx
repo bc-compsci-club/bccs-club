@@ -5,6 +5,7 @@ import eliSultanov from "../../../images/game-jam-2025-judges/Eli-Sultanov.jpeg"
 import jonathanYashayev from "../../../images/game-jam-2025-judges/Jonathan-Yashayev.jpeg";
 import oltiGjoni from "../../../images/game-jam-2025-judges/Olti-Gjoni.jpeg";
 import richardWeir from "../../../images/game-jam-2025-judges/Richard-Weir.png";
+import AliMohamed from "../../../images/game-jam-2025-judges/Ali-Mohamed.jpeg"
 import tatianaAnderson from "../../../images/game-jam-2025-judges/Tatiana-Anderson.jpeg";
 const judges = [
   {
@@ -36,7 +37,13 @@ const judges = [
     title: "CUNY 2X Lecturer",
     iconUrl: tatianaAnderson,
     company: " City University of New York",
-  }
+  },
+  {
+    name: "Ali Mohamed",
+    title: "Professor",
+    iconUrl: AliMohamed,
+    company: "City University of New York"
+  },
 ];
 
 export default function Judges() {
@@ -48,7 +55,7 @@ export default function Judges() {
         </h2>
         <ul role="list" className="grid py-5 grid-cols-2 md:grid-cols-3 gap-3 text-center">
           {judges.map((judge) => (
-            <li key={judge.name}>
+            <li className="py-2" key={judge.name}>
               <Image
                 alt={judge.name}
                 src={judge.iconUrl}

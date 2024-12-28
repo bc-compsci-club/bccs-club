@@ -31,7 +31,7 @@ export default function JudgeCriteria() {
     <div className="mx-auto max-w-7xl px-6 lg:px-8 py-8">
       <div className="mx-auto max-w-4xl divide-y divide-gray-900/10">
         <h2 className="text-2xl space-y-6 font-bold leading-10 tracking-tight text-gray-900">
-          Judge Criteria
+          Judging Criteria
         </h2>
         <ul
           role="list"
