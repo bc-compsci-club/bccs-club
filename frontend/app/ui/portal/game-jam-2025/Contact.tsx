@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Contact() {
   return (
-    <div className="max-w-7xl py-8 mx-auto text-center">
+    <div className="max-w-7xl h-full mt-20 mx-auto text-center">
       <p className="text-sm leading-8 text-gray-600">
         If you have any questions or concerns, please reach out to us at
       </p>
