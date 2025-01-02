@@ -39,6 +39,7 @@ const Calendar = ({
                   rsvpLink: event.rsvpLink,
                   location: event.location,
                   id: event.id,
+                  slug: event.slug
                 },
               };
             })}
@@ -66,6 +67,7 @@ const Calendar = ({
                 rsvpLink: a.event.extendedProps.rsvpLink,
                 id: a.event.extendedProps.id,
                 isActive: a.event.extendedProps.isActive,
+                slug: a.event.extendedProps.slug,
                 ...a.event.extendedProps,
                 title,
                 description,

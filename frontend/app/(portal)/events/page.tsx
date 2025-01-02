@@ -30,16 +30,7 @@ export default function Page() {
 
   // Event click handler to navigate to the specific event page
   const handleEventClick = (a: Event) => {
-    const date = new Date(a.startTime).toLocaleDateString("en-CA", {
-      year: "numeric",
-      month: "2-digit",
-      day: "2-digit",
-    });
-    const title = a.title
-    .toLowerCase()
-    .replace(/[^a-z0-9\s]/g, "") // Remove all symbols
-    .replace(/\s+/g, "-"); // Replace all whitespace with hyphens
-    router.push(`/events/${title}-${date}`);
+    router.push(`/events/${a.slug}`);
   };
 
   return (
