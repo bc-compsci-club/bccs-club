@@ -12,16 +12,7 @@ export const runtime = "edge";
 export default function Page() {
   const { event: eventName } = useParams();
 
-  const [event, setEvent] = useState<Event | null>({
-    id: "event loading",
-    isActive: false,
-    title: "Loading Event...",
-    description: "Please wait while we load the event.",
-    location: "",
-    startTime: "",
-    endTime: "",
-    rsvpLink: "",
-  });
+  const [event, setEvent] = useState<Event | null>(null);
 
   const [state, setState] = useState<"error" | "success" | "loading">(
     "loading"
@@ -35,6 +26,7 @@ export default function Page() {
         setState("error");
         setEvent({
           id: "404",
+          slug: "404",
           isActive: false,
           rsvpLink: "N/A",
           title: "Event Not Found",

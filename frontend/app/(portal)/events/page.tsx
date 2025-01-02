@@ -17,7 +17,7 @@ export default function Page() {
 
   useEffect(() => {
     // Fetch events from the backend
-    const event = async () => {
+    const eventFn = async () => {
       const event = await getEventAction();
       if(!event) {
         setEvents([])
@@ -25,7 +25,7 @@ export default function Page() {
       }
       setEvents(event.filter(k => k.isActive));
     };
-    event();
+    eventFn();
   }, []);
 
   // Event click handler to navigate to the specific event page
