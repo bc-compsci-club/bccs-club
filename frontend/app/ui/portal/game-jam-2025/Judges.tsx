@@ -7,6 +7,7 @@ import oltiGjoni from "../../../images/game-jam-2025-judges/Olti-Gjoni.jpeg";
 import richardWeir from "../../../images/game-jam-2025-judges/Richard-Weir.png";
 import AliMohamed from "../../../images/game-jam-2025-judges/Ali-Mohamed.jpeg"
 import tatianaAnderson from "../../../images/game-jam-2025-judges/Tatiana-Anderson.jpeg";
+import katherineChuang from "../../../images/game-jam-2025-judges/Katherine-Chuang.jpg";
 const judges = [
   {
     name: "Olti Gjoni",
@@ -42,7 +43,13 @@ const judges = [
     name: "Ali Mohamed",
     title: "Professor",
     iconUrl: AliMohamed,
-    company: "City University of New York"
+    company: "City University of New York",
+  },
+  {
+    name: "Katherine Chuang",
+    title: "Professor",
+    iconUrl: katherineChuang,
+    company: "City University of New York",
   },
 ];
 
