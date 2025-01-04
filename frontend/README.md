@@ -36,6 +36,20 @@ cd path/to/bccs-club/frontend
 npm install
 ```
 
+### Set up the environment variables:
+
+Create a `.env.local` file in the root directory of the `frontend` project and add the following environment variable(s):
+
+```bash
+BACKEND_URL=http://localhost:8090  # use your API base URL here
+```
+
+Or you can run
+```
+$ cp .env.local.example .env.local
+```
+to create a `.env.local` file with the example environment variable(s).
+
 ### Run the development server:
 
 ```bash

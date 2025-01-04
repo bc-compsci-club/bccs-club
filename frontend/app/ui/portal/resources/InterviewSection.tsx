@@ -8,6 +8,10 @@ const items = [
     link: "https://www.codepath.org/courses/tech-interview-prep",
   },
   {
+    title: "Neetcode - Algorithm Interview Prep Roadmap",
+    link: "https://neetcode.io/roadmap",
+  },
+  {
     title: "Tech Interview Handbook",
     link: "https://www.techinterviewhandbook.org/",
   },
