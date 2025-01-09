@@ -23,6 +23,10 @@ const items = [
     title: "AWS Cloud Clubs",
     link: "https://aws.amazon.com/developer/community/students/cloudclubs",
   },
+  {
+    title: "NCWIT Campus Reps",
+    link: "https://www.aspirations.org/aic-campus-reps",
+  },
 ]
 
 export default function Page() {
