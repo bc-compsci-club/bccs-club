@@ -45,7 +45,7 @@ export default function Hero() {
             Game Jam 2025 Registration
           </Link>
           <Image
-            className="flex justify-center mx-auto mt-10 rounded"
+            className="flex justify-center -z-10 mx-auto mt-10 rounded"
             src={gameJam2025}
             alt="game-jam-2025"
             width={400}
