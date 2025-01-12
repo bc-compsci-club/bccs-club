@@ -23,7 +23,6 @@ export default function RootLayout({
         <div className="bg-white">
           <NavBar />
           {children}
-          <AIActionButton />
           <Footer />
         </div>
       </body>

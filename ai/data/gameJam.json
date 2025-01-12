@@ -1,0 +1,151 @@
+{
+    "Event_Information": {
+        "name": "Game Jam 2025",
+        "description": "The Game Jam is a week long beginner-friendly competition between developers on creating a game. It is open to all CSI and Brooklyn College students and majors.",
+        "registration": "https://docs.google.com/forms/d/1gswgwDe2rWxjFrblA72jXFEErgbPQtB-yH8K6AgmcG4/viewform",
+        "flyer": "https://bccs.club/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FgameJam-2025.7f9044cd.png&w=828&q=75"
+    },
+    "Event_Schedule": [
+        {
+            "date": "January 16th",
+            "event": "Commencement Meeting",
+            "time": "11AM-12PM",
+            "room": "TBD",
+            "description": "*Attending in-person highly encouraged"
+        },
+        {
+            "date": "January 16th",
+            "event": "Team Collaboration + Github Workshop",
+            "time": "12PM-1PM",
+            "room": "CSI Location 1N-111 Virtual, BC TBD",
+            "description": "*Ideal for beginners!"
+        },
+        {
+            "date": "January 16th",
+            "event": "Game Jam Begins",
+            "time": "2PM",
+            "room": "Hybrid",
+            "description": "N/A"
+        },
+        {
+            "date": "January 23th",
+            "event": "Game Jam Ends, Judging Begins",
+            "time": "2PM-5PM",
+            "room": "Hybrid",
+            "description": "*Present in-person or submit a video"
+        },
+        {
+            "date": "January 24th",
+            "event": "Last Day of Judging",
+            "time": "2PM-5PM",
+            "room": "Hybrid",
+            "description": "N/A"
+        }
+    ],
+    "Judges": [
+        {
+            "name": "Olti Gjoni",
+            "title": "Incoming Software Engineer",
+            "employer": "Roblox"
+        },
+        {
+            "name": "Jonathan Yashayev",
+            "title": "Full Software Engineer",
+            "employer": "GoBeyond"
+        },
+        {
+            "name": "Eli Sultanov",
+            "title": "Software Engineer",
+            "employer": "Valley IT Solutions"
+        },
+        {
+            "name": "Richard Weir",
+            "title": "Chairperson of Computer Science",
+            "employer": "Monsignor Farrell High School"
+        },
+        {
+            "name": "Tatiana Anderson",
+            "title": "CUNY 2X Lecturer",
+            "employer": "City University of New York"
+        },
+        {
+            "name": "Ali Mohamed",
+            "title": "Professor",
+            "employer": "City University of New York"
+        },
+        {
+            "name": "Katherine Chuang",
+            "title": "Professor",
+            "employer": "City University of New York"
+        }
+    ],
+    "Judging_Criteria": [
+        {
+            "rule_number": 1,
+            "rule": "Interactivity, Game Play, and Rules",
+            "description": "The game prompts players to interact with it and provides rules and features that allow them to understand the game goals."
+        },
+        {
+            "rule_number": 2,
+            "rule": "Creativity",
+            "description": "The game should include novel or unique aspects, either through a truly new concept or a novel application of an existing concept or concepts."
+        },
+        {
+            "rule_number": 3,
+            "rule": "Theme",
+            "description": "The game should clearly demonstrate through concept, gameplay, story, or characters, the prompt/concept."
+        },
+        {
+            "rule_number": 4,
+            "rule": "Depth of Play",
+            "description": "While not all future development must be shown during the jam, plans for future expansion of the game or multiple varied gameplay features should be presented."
+        },
+        {
+            "rule_number": 5,
+            "rule": "Video Presentation",
+            "description": "The team presents their proposed game clearly to the audience through a 5-minute video presentation."
+        }
+    ],
+    "Frequently_Asked_Questions": [
+        {
+            "question_number": 1,
+            "question": "What is Game Jam 2025?",
+            "answer": "The Game Jam is a week long beginner-friendly competition between developers on creating a game."
+        },
+        {
+            "question_number": 2,
+            "question": "Who can participate in Game Jam 2025?",
+            "answer": "The Game Jam 2025 is open to all CSI and Brooklyn College students and majors."
+        },
+        {
+            "question_number": 3,
+            "question": "When is Game Jam 2025?",
+            "answer": "Game Jam 2025 is from January 16th @ 2:00pm to January 24th @ 5:00pm."
+        },
+        {
+            "question_number": 4,
+            "question": "Where is Game Jam 2025?",
+            "answer": "Location is TBA (To Be Announced)."
+        },
+        {
+            "question_number": 5,
+            "question": "What is the discord server for Game Jam 2025?",
+            "answer": "You can join the discord here: https://discord.com/invite/q4Yyx3dhJC"
+        },
+        {
+            "question_number": 6,
+            "question": "Will be there food at Game Jam 2025?",
+            "answer": "Yes, there will be food at Game Jam 2025."
+        },
+        {
+            "question_number": 7,
+            "question": "Do I need to have experience to participate in Game Jam 2025?",
+            "answer": "No, you do not need to have experience to participate in Game Jam 2025. The competition is beginner-friendly."
+        },
+        {
+            "question_number": 8,
+            "question": "What is the team limit for Game Jam 2025? Can I participate alone?",
+            "answer": "The team limit for Game Jam 2025 is 4. You can participate alone or with a team."
+        }
+    ]
+}

@@ -15,6 +15,7 @@ export default function page() {
     <Judges />
     <JudgeCriteria />
     <FAQ />
+    <AIActionButton />
     <Contact />
    </main>
   )
