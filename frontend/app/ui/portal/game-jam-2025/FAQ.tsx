@@ -6,30 +6,21 @@ import {
 import Link from "next/link";
 import { BsPlus } from "react-icons/bs";
 import { BsDash } from "react-icons/bs";
+
 interface FAQItem {
   title: string;
   message: string;
   url?: string;
 }
+
 const items: FAQItem[] = [
   {
-    title: "What is Game Jam 2025?",
-    message:
-      "The Game Jam is a week long beginner-friendly competition between developers on creating a game.",
+    title: "What is a Game Jam?",
+    message: "A Game Jam is an event, similar to a hackathon, where participants come together to create a video game within a set time frame, typically focusing on creativity, collaboration, and rapid prototyping.",
   },
   {
     title: "Who can participate in Game Jam 2025?",
-    message:
-      "The Game Jam 2025 is open to all CSI and Brooklyn College students and majors.",
-  },
-  {
-    title: "When is Game Jam 2025?",
-    message:
-      "Game Jam 2025 is from January 16th @ 2:00pm to January 24th @ 5:00pm.",
-  },
-  {
-    title: "Where is Game Jam 2025?",
-    message: "Location is TBA (To Be Announced).",
+    message: "The Game Jam 2025 is open to all College of Staten Island and Brooklyn College students.",
   },
   {
     title: "What is the discord server for Game Jam 2025?",
@@ -46,8 +37,12 @@ const items: FAQItem[] = [
   },
   {
     title: "What is the team limit for Game Jam 2025? Can I participate alone?",
-    message:
-      "The team limit for Game Jam 2025 is 4. You can participate alone or with a team.",
+    message: "The team limit for Game Jam 2025 is 4. You can participate alone or with a team.",
+  },
+  {
+    title: "Is there an Event Guide for Game Jam 2025?",
+    message: "Yes, you can view the Event Guide here:",
+    url: "https://docs.google.com/presentation/d/1dvRbPM6ct-FMClkXM7n_0luWCY5hPmJIljWR_eEL3T8/"
   },
 ];
 
