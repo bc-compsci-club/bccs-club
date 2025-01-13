@@ -40,7 +40,7 @@ const items: FAQItem[] = [
     message: "The team limit for Game Jam 2025 is 4. You can participate alone or with a team.",
   },
   {
-    title: "Is there a Event Guide for Game Jam 2025?",
+    title: "Is there an Event Guide for Game Jam 2025?",
     message: "Yes, you can view the Event Guide here:",
     url: "https://docs.google.com/presentation/d/1dvRbPM6ct-FMClkXM7n_0luWCY5hPmJIljWR_eEL3T8/"
   },
