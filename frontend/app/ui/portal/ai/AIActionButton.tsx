@@ -25,6 +25,7 @@ export default function AIActionButton() {
 
 export type MessageData = {
   role: "user" | "assistant";
+  typing: boolean,
   content: string;
 };
 
@@ -50,8 +51,8 @@ export function AIChat({
     setMessage("");
     setMessages((messages) => [
       ...messages,
-      { role: "user", content: message },
-      { role: "assistant", content: "" },
+      { role: "user", content: message, typing: false },
+      { role: "assistant", content: "", typing: true },
     ]);
     try {
       const response = await fetch(
@@ -84,11 +85,15 @@ export function AIChat({
             {
               ...lastMessage,
               content:
-                lastMessage.content === "" ? text : lastMessage.content + text,
+                lastMessage.typing && lastMessage.content === ""
+                  ? text
+                  : lastMessage.content + text,
+              typing: false,
             },
           ];
         });
         if (done) break;
+        
       }
     } catch (error) {
       setMessages((messages) => {
@@ -196,17 +201,20 @@ export function AIChat({
                     message.role === "user" ? "justify-end" : ""
                   }`}
                 >
-                  <div
-                    className={`${
-                      message.role === "user" && "order-2"
-                    } `}
-                  />
+                  <div className={`${message.role === "user" && "order-2"}`} />
                   {message.role !== "user" && (
                     <Image
                       className="w-8 h-8 flex items-start rounded-full"
                       src={clubIcon}
-                      alt="user"
+                      alt="assistant profile"
                     />
+                  )}
+                  {message.typing && (
+                    <div className="animate-typing">
+                      <div className="typing-dot"></div>
+                      <div className="typing-dot"></div>
+                      <div className="typing-dot"></div>
+                    </div>
                   )}
                   <p
                     className={`${
@@ -214,7 +222,6 @@ export function AIChat({
                     } rounded-lg p-2`}
                   >
                     {message.content}
-                    
                   </p>
                 </div>
               ))}
@@ -230,7 +237,7 @@ export function AIChat({
             <div
               className={`${
                 messages.length === 0
-                  ? "w-full animate-typing overflow-hidden whitespace-nowrap flex items-center justify-center font-bold text-2xl"
+                  ? "w-full  overflow-hidden whitespace-nowrap flex items-center justify-center font-bold text-2xl"
                   : "hidden"
               }`}
             >
