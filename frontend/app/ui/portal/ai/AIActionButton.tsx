@@ -108,6 +108,7 @@ export function AIChat({
               lastMessage.content === ""
                 ? errorMessage
                 : lastMessage.content + errorMessage,
+            typing: false,
           },
         ];
       });
