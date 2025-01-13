@@ -1,20 +1,22 @@
-'use client'
-import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from '@headlessui/react';
-import React, { Fragment, useState } from 'react'
+"use client";
+import { Dialog, Transition } from "@headlessui/react";
+import React, { Fragment, useState } from "react";
 
 export default function AIActionButton() {
   const [isOpen, setIsOpen] = useState(false);
-  const handleOpen = () => {
-    setIsOpen(!isOpen);
-  }
+  const handleOpen = () => setIsOpen(!isOpen);
+
   return (
-    <div
-      className="relative sm:overflow-auto max-w-7xl z-50 scroll inset-0 mx-auto"
-    >
-      <button onClick={() => handleOpen()} className={`bottom-5 right-5 fixed bg-bc-red hover:bg-bc-red/85 text-white font-bold py-2 px-4 rounded-xl ${isOpen ? "hidden" : "block"}`}>
+    <div className="relative sm:overflow-auto max-w-7xl z-50 scroll inset-0 mx-auto">
+      <button
+        onClick={() => handleOpen()}
+        className={`bottom-5 right-5 fixed bg-bc-red hover:bg-bc-red/85 text-white font-bold py-2 px-4 rounded-xl ${
+          isOpen ? "hidden" : "block"
+        }`}
+      >
         🤖
       </button>
-      {isOpen && <AIChat open={isOpen} handleOpen={handleOpen}  />}
+      {isOpen && <AIChat open={isOpen} handleOpen={handleOpen} />}
     </div>
   );
 }
@@ -24,26 +26,31 @@ export type MessageData = {
   content: string;
 };
 
-export function AIChat({ open, handleOpen }: { open: boolean, handleOpen: () => void }) {
-    const [message, setMessage] = React.useState("");
-    const [messages, setMessages] = React.useState<MessageData[]>([]);
+export function AIChat({
+  open,
+  handleOpen,
+}: {
+  open: boolean;
+  handleOpen: () => void;
+}) {
+  const [message, setMessage] = React.useState("");
+  const [messages, setMessages] = React.useState<MessageData[]>([]);
 
-    function isScrolledToBottom(element: HTMLDivElement | null) {
-      if (element) {
-        element.scroll({ top: element.scrollHeight, behavior: "smooth" });
-      }
+  function isScrolledToBottom(element: HTMLDivElement | null) {
+    if (element) {
+      element.scroll({ top: element.scrollHeight, behavior: "smooth" });
     }
+  }
 
-    async function handleForm(e: React.FormEvent) {
-      e.preventDefault();
-      setMessage("");
-      setMessages((messages) => [
-        ...messages,
-        { role: "user", content: message },
-        { role: "assistant", content: "" },
-      ]);
-      console.time("fetch");
-      try {
+  async function handleForm(e: React.FormEvent) {
+    e.preventDefault();
+    setMessage("");
+    setMessages((messages) => [
+      ...messages,
+      { role: "user", content: message },
+      { role: "assistant", content: "" },
+    ]);
+    try {
       const response = await fetch(
         `${process.env.NEXT_PUBLIC_AI_BACKEND_URL}/api/v1/llm`,
         {
@@ -57,25 +64,6 @@ export function AIChat({ open, handleOpen }: { open: boolean, handleOpen: () => 
           ]),
         }
       );
-      console.log(response)
-      if(response.status !== 200) { 
-        console.log("Error in response")
-        setMessages((messages) => {
-        let lastMessage = messages[messages.length - 1];
-        let otherMessages = messages.slice(0, messages.length - 1);
-        return [
-          ...otherMessages,
-          {
-            ...lastMessage,
-            content:
-              lastMessage.content === ""
-                ? "Sorry, I am not able to process your request at the moment."
-                : lastMessage.content + "Sorry, I am not able to process your request at the moment.",
-          },
-        ];
-      });
-      return;
-    }
       if (!response.body) return;
       const reader = response.body?.getReader();
       const decoder = new TextDecoder();
@@ -84,7 +72,6 @@ export function AIChat({ open, handleOpen }: { open: boolean, handleOpen: () => 
       while (true) {
         const { value, done } = await reader.read();
         const text = decoder.decode(value, { stream: true });
-        console.log(text)
 
         setMessages((messages) => {
           let lastMessage = messages[messages.length - 1];
@@ -94,33 +81,30 @@ export function AIChat({ open, handleOpen }: { open: boolean, handleOpen: () => 
             {
               ...lastMessage,
               content:
-                lastMessage.content === ""
-                  ? text
-                  : lastMessage.content + text,
+                lastMessage.content === "" ? text : lastMessage.content + text,
             },
           ];
         });
         if (done) break;
       }
     } catch (error) {
-      console.error(error);
       setMessages((messages) => {
         let lastMessage = messages[messages.length - 1];
         let otherMessages = messages.slice(0, messages.length - 1);
+        const errorMessage = "Sorry, I am not able to process your request at the moment.";
         return [
           ...otherMessages,
           {
             ...lastMessage,
             content:
               lastMessage.content === ""
-                ? "Sorry, I am not able to process your request at the moment."
-                : lastMessage.content + "Sorry, I am not able to process your request at the moment.",
+                ? errorMessage
+                : lastMessage.content + errorMessage,
           },
         ];
       });
     }
-      console.timeEnd("fetch");
-    }
+  }
   return (
     <Transition appear show={open} as={Fragment}>
       <div className="fixed inset-0 bg-black/70" aria-hidden="true" />
@@ -175,7 +159,7 @@ export function AIChat({ open, handleOpen }: { open: boolean, handleOpen: () => 
           <div className="flex items-center justify-between p-4 border-b border-gray-200">
             <h2 className="text-lg font-semibold">Club Assistant</h2>
             <button
-              onClick={() => handleOpen()}
+              onClick={handleOpen}
               className="text-gray-500 hover:text-gray-800"
             >
               <svg

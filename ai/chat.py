@@ -26,10 +26,10 @@ class Chat:
             doc = self._prepareDocument(file)
             self.documents.extend(doc)
             print("Documents loaded")
-            self.vectorstore.add_documents(self.documents)
+        self.vectorstore.add_documents(self.documents)
 
     def response(self, content: str):
-        vector_context = self.vectorstore.similarity_search(content, k=3)
+        vector_context = self.vectorstore.as_retriever(search_kwargs={"k": 3}).invoke(content)
         templete = ChatPromptTemplate([
             ("system", str("""
             > **System Instruction** You are an AI assistant strictly designed to retrieve information from a vector database. You are not allowed to generate or infer any information that is not explicitly stored in the vector database. Follow these guidelines to assist students effectively:
@@ -46,7 +46,7 @@ class Chat:
             
             **Additional Considerations:**
             By strictly adhering to the above guidelines, you will provide students with valuable information to help them make informed decisions.
-            """)), ("system", "context:\n {user_context}"), ("user", "{user_input}")
+            """)), ("system", "context:\n\n {user_context}"), ("user", "{user_input}")
             ])
         
         response = templete.invoke({
