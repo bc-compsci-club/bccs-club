@@ -1,5 +1,7 @@
 "use client";
 import { Dialog, Transition } from "@headlessui/react";
+import Image from "next/image";
+import clubIcon from "../../../images/logo/club-logo-hd.png"
 import React, { Fragment, useState } from "react";
 
 export default function AIActionButton() {
@@ -44,6 +46,7 @@ export function AIChat({
 
   async function handleForm(e: React.FormEvent) {
     e.preventDefault();
+    if(message.trim() === "") return;
     setMessage("");
     setMessages((messages) => [
       ...messages,
@@ -194,12 +197,24 @@ export function AIChat({
                   }`}
                 >
                   <div
-                    className={`rounded-full px-4 bg-red-200 w-8 h-8 ${
+                    className={`${
                       message.role === "user" && "order-2"
                     } `}
                   />
-                  <p className="bg-bc-red/15 rounded-lg p-2">
+                  {message.role !== "user" && (
+                    <Image
+                      className="w-8 h-8 flex items-start rounded-full"
+                      src={clubIcon}
+                      alt="user"
+                    />
+                  )}
+                  <p
+                    className={`${
+                      message.role !== "user" ? "bg-none" : " bg-bc-red/15"
+                    } rounded-lg p-2`}
+                  >
                     {message.content}
+                    
                   </p>
                 </div>
               ))}
