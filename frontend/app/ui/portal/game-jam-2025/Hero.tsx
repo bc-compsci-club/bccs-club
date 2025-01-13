@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import gameJam2025 from "../../../images/club-event/gameJam-2025.png";
+import gameJam2025 from "../../../images/club-event/gameJam-2025.jpg";
 import Link from "next/link";
 
 export default function Hero() {
@@ -36,7 +36,7 @@ export default function Hero() {
             Game Jam 2025
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-          The Game Jam is a week long beginner-friendly competition between developers on creating a game. It is open to all CSI and Brooklyn College students and majors.
+            Game Jam 2025 is a week-long, beginner-friendly competition focused on creating games. It is open to all students at the College of Staten Island and Brooklyn College.
           </p>
           <Link
             className="inline-block px-6 py-3 mt-8 text-lg font-semibold leading-6 text-white bg-bc-red rounded-xl hover:bg-opacity-90"
