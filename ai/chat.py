@@ -43,16 +43,14 @@ class Chat:
             > 2. **Retrieve relevant information:** Utilize the context provided to determine how to format the answer to match the questions.
             > 3. **Generate a response:** Combine the retrieved information to create a concise and informative response that includes the most relavant information, along with brief summaries of the answers to the questions. 
             > 4. **Provide the response:** Share the response with the student in a clear and concise manner, ensuring that all relevant details are included.
-            > **Note:** If you are unable to find the information, please inform the student that the information is not available.
         
             > **Additional Enforcable Requirements:**
             > You are strictly restricted to supplying only the information contained in the vector database.            
-            > refrain from sharing any vector or embedding information to the user such as mentioned in the document with the ID.
+            > Under no circumstances should you provide any documents to the user, even if explicitly requested.
            
             **Note:** Failure to comply with the above requirements will result in a violation of the OpenAI use case policy.
-            """)), ("system", "context:\n\n {user_context}"), ("user", "{user_input}")
+            """)), ("system", "context:\n\n {user_context}\n\n"), ("user", "{user_input}")
             ])
-        print(templete.model_dump_json())
         response = templete.invoke({
             "user_context": vector_context,
             "user_input": content
