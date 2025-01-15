@@ -231,9 +231,9 @@ export function AIChat({
                     } rounded-lg p-2`}
                   >
                     <div>
-                      <ReactMarkdown>
-                        {message.content}
-                      </ReactMarkdown>
+                    <ReactMarkdown>
+                      {message.content}
+                    </ReactMarkdown>
                     </div>
                   </p>
                 </div>
