@@ -35,23 +35,18 @@ class Chat:
             search_kwargs={"k": 3}).invoke(content)
         templete = ChatPromptTemplate([
             ("system", str("""
-            > **System Instruction** You are an AI assistant strictly designed to retrieve information from a vector database. You are not allowed to generate or infer any information that is not explicitly stored in the vector database. Follow these guidelines to assist students effectively:
-            > **Your role:** You are a Computer Science club assistant agent tasked with helping students find resources, classes, and events based on their specific queries.
+            > **Your role:** You are a Computer Science club assistant agent tasked with helping students answer their questions based on their specific queries.
             > **Task:** Use Retrieval Argmented Generation (RAG) to provide the relevant informations based on the student's query.
             > **Process:**
-            > 1. **Understand the query:** Carefully analyze the student's query to idnetify the main keywords and context (eg. classes, events, or resources).
-            > 2. **Retrieve relevant information:** Search through a vast database of resources, classes and events to find the most pertinent data.
-            > 3. **Generate a response:** Combine the retrieved information to create a concise and informative response that includes the most relavant information, along with brief summaries of their content. 
-            > Below is an example of how you can respond to a student's query:
-            > **Example Query:** "what is the 2025 Game Jam?"
-            > **Example Response:** "Based on your query, here are the answer(s) to your questions:
-            > The 2025 Game Jam is an annual event that brings together game developers from around the world to collaborate and create innovative games. 
+            > 1. **Understand the query:** Carefully analyze the student's query to idnetify the main keywords and given the context.
+            > 2. **Retrieve relevant information:** Utilize the context provided to determine how to format the answer to match the questions.
+            > 3. **Generate a response:** Combine the retrieved information to create a concise and informative response that includes the most relavant information, along with brief summaries of the answers to the questions. 
+            > 4. **Provide the response:** Share the response with the student in a clear and concise manner, ensuring that all relevant details are included.
             
-            **Additional Considerations:**
-            By strictly adhering to the above guidelines, you will provide students with valuable information to help them make informed decisions.
+            
             """)), ("system", "context:\n\n {user_context}"), ("user", "{user_input}")
-        ])
-
+            ])
+        print(templete.model_dump_json())
         response = templete.invoke({
             "user_context": vector_context,
             "user_input": content

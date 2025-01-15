@@ -3,7 +3,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import Image from "next/image";
 import clubIcon from "../../../images/logo/club-logo-hd.png"
 import React, { Fragment, useState } from "react";
-
+import ReactMarkdown, {} from "react-markdown";
 export default function AIActionButton() {
   const [isOpen, setIsOpen] = useState(false);
   const handleOpen = () => setIsOpen(!isOpen);
@@ -38,6 +38,7 @@ export function AIChat({
 }) {
   const [message, setMessage] = React.useState("");
   const [messages, setMessages] = React.useState<MessageData[]>([]);
+  const [disabledInput, setDisabledInput] = React.useState(false);
 
   function isScrolledToBottom(element: HTMLDivElement | null) {
     if (element) {
@@ -47,6 +48,7 @@ export function AIChat({
 
   async function handleForm(e: React.FormEvent) {
     e.preventDefault();
+    setDisabledInput(true)
     if(message.trim() === "") return;
     setMessage("");
     setMessages((messages) => [
@@ -54,10 +56,12 @@ export function AIChat({
       { role: "user", content: message, typing: false },
       { role: "assistant", content: "", typing: true },
     ]);
+    const abortController = new AbortController();
     try {
       const response = await fetch(
         `${process.env.NEXT_PUBLIC_AI_BACKEND_URL}/api/v1/llm`,
         {
+          signal: abortController.signal,
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -68,7 +72,6 @@ export function AIChat({
           ]),
         }
       );
-      if (!response.body) return;
       const reader = response.body?.getReader();
       const decoder = new TextDecoder();
 
@@ -76,7 +79,6 @@ export function AIChat({
       while (true) {
         const { value, done } = await reader.read();
         const text = decoder.decode(value, { stream: true });
-
         setMessages((messages) => {
           let lastMessage = messages[messages.length - 1];
           let otherMessages = messages.slice(0, messages.length - 1);
@@ -92,10 +94,15 @@ export function AIChat({
             },
           ];
         });
-        if (done) break;
+        if (done) {
+          setDisabledInput(false)
+          break;
+        }
         
       }
     } catch (error) {
+      abortController.abort();
+      console.log(error)
       setMessages((messages) => {
         let lastMessage = messages[messages.length - 1];
         let otherMessages = messages.slice(0, messages.length - 1);
@@ -112,6 +119,7 @@ export function AIChat({
           },
         ];
       });
+      setDisabledInput(false)
     }
   }
   return (
@@ -194,7 +202,7 @@ export function AIChat({
               messages.length > 0 ? "block" : "hidden"
             }`}
           >
-            <div className="px-5 py-4 flex-col mt-4 flex gap-3">
+            <div className="px-5 py-4 relative flex-col mt-4 flex gap-3">
               {messages.map((message, i) => (
                 <div
                   key={i}
@@ -205,13 +213,13 @@ export function AIChat({
                   <div className={`${message.role === "user" && "order-2"}`} />
                   {message.role !== "user" && (
                     <Image
-                      className="w-8 h-8 flex items-start rounded-full"
+                      className="w-8 h-8 flex  items-center justify-center rounded-full"
                       src={clubIcon}
                       alt="assistant profile"
                     />
                   )}
                   {message.typing && (
-                    <div className="animate-typing">
+                    <div className="animate-typing flex items-center justify-center  gap-1">
                       <div className="typing-dot"></div>
                       <div className="typing-dot"></div>
                       <div className="typing-dot"></div>
@@ -222,7 +230,11 @@ export function AIChat({
                       message.role !== "user" ? "bg-none" : " bg-bc-red/15"
                     } rounded-lg p-2`}
                   >
-                    {message.content}
+                    <div>
+                    <ReactMarkdown>
+                      {message.content}
+                    </ReactMarkdown>
+                    </div>
                   </p>
                 </div>
               ))}
@@ -248,6 +260,7 @@ export function AIChat({
               <input
                 onChange={(e) => setMessage(e.target.value)}
                 required
+                disabled={disabledInput}
                 onInvalid={(e) => e.preventDefault()}
                 autoFocus={true}
                 className=" bg-bc-red/10 focus h-12 my-5 rounded-xl px-10 w-full focus:outline-none"
