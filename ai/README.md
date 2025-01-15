@@ -1,54 +1,65 @@
-# Chat backend
+# AI Chatbot Backend
 
-## Getting Started
+Our custom AI chatbot integrates internal data with an LLM to help users find information more easily and quickly.
+
+## Tech Stack
+
+- Python 3.9+
+- Flask
+- LangChain
+- LLM
+
+## Run the `ai` backend API endpoints locally with Docker (for faster setup)
 
 ### Prerequisites
-Make sure you have the following installed:
-- Python 3.x
-- pip
 
-### Installation
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/bc-compsci-club/chat.git
-    ```
-2. Navigate to the project directory:
-    ```bash
-    cd chat/backend
-    ```
-3. Create a virtual environment:
-    ```bash
-    python -m venv venv
-    ```
-4. Activate the virtual environment:
-    - On Windows:
-        ```bash
-        venv\Scripts\activate
-        ```
-    - On macOS/Linux:
-        ```bash
-        source venv/bin/activate
-        ```
-5. Install dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
+- [Docker](https://www.docker.com/get-started/)
+- [Docker Compose](https://docs.docker.com/compose/install/)
 
-### Running the Project
-1. Start the development server:
-    ```bash
-    python app.py
-    ```
-
-### Environment Variables
-Create a `.env` file in the root directory and add the following environment variables:
+### Set up the environment variables:
+Create a `.env` file in the root directory of the `ai` project and add the following environment variables:
 ```
 OPENROUTER_API_KEY=key
-PINECONE_API_KEY=key
-PINECONE_INDEX_NAME=key
-TOKENIZERS_PARALLELISM=True # for huggingface embedding model
-FRONTEND_URL= # URL that you use for frontend development or production
+FRONTEND_URL= # URL that you use for frontend development or production. for CORS policy
 ```
 
-### License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+### Build and run the Docker container:
+
+```bash
+cd path/to/bccs-club/ai
+docker-compose build  # Build the Docker container
+docker-compose up  # Run the Docker container (may take tens of seconds to start)
+```
+
+## Run the `ai` backend API endpoints locally without Docker
+
+### Prerequisites
+
+- Python 3.12
+- pip
+
+### Install the dependencies
+
+```bash
+cd path/to/bccs-club/ai
+python -m venv .venv  # Create a virtual environment
+source .venv/bin/activate  # Activate the virtual environment
+pip install -r requirements.txt
+```
+
+### Set up the environment variables:
+Create a `.env` file in the root directory of the `ai` project and add the following environment variables:
+```
+OPENROUTER_API_KEY=key
+FRONTEND_URL= # URL that you use for frontend development or production. for CORS policy
+```
+
+### Run the development server:
+
+```bash
+cd path/to/bccs-club/ai
+python app.py
+
+# Or run the Flask app in development mode
+flask run
+```

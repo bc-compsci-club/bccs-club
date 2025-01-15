@@ -1,4 +1,3 @@
-import json
 from langchain_openai import ChatOpenAI
 from langchain_community.document_loaders import JSONLoader
 from langchain_core.documents import Document
@@ -8,9 +7,11 @@ from langchain_core.vectorstores import InMemoryVectorStore
 from langchain_core.prompts import ChatPromptTemplate
 import os
 
+
 class Chat:
-    files = ["ai/data/gameJam.json"]
+    files = ["data/gameJam.json"]
     documents: list[Document] = []
+
     def __init__(self):
         load_dotenv()
         self.llm = ChatOpenAI(
@@ -18,7 +19,8 @@ class Chat:
             api_key=os.environ["OPENROUTER_API_KEY"],
             temperature=0,
             model="meta-llama/llama-3.2-3b-instruct:free")
-        self.vectorstore = InMemoryVectorStore(embedding=HuggingFaceEmbeddings(model_name="intfloat/multilingual-e5-large"))
+        self.vectorstore = InMemoryVectorStore(
+            embedding=HuggingFaceEmbeddings(model_name="intfloat/multilingual-e5-large"))
 
     def initalize(self):
         print("Loading documents")
@@ -29,7 +31,8 @@ class Chat:
         self.vectorstore.add_documents(self.documents)
 
     def response(self, content: str):
-        vector_context = self.vectorstore.as_retriever(search_kwargs={"k": 3}).invoke(content)
+        vector_context = self.vectorstore.as_retriever(
+            search_kwargs={"k": 3}).invoke(content)
         templete = ChatPromptTemplate([
             ("system", str("""
             > **System Instruction** You are an AI assistant strictly designed to retrieve information from a vector database. You are not allowed to generate or infer any information that is not explicitly stored in the vector database. Follow these guidelines to assist students effectively:
@@ -47,29 +50,28 @@ class Chat:
             **Additional Considerations:**
             By strictly adhering to the above guidelines, you will provide students with valuable information to help them make informed decisions.
             """)), ("system", "context:\n\n {user_context}"), ("user", "{user_input}")
-            ])
-        
+        ])
+
         response = templete.invoke({
             "user_context": vector_context,
             "user_input": content
         })
-        
+
         for chunk in self.llm.stream(response):
             yield chunk.content.replace("\u0000", "")
         return chunk.content
-    
+
     def _prepareDocument(self, file_path: str):
         if not os.path.exists(file_path):
-            raise "File does not exist"
-        
+            raise FileNotFoundError(f"File does not exist: {file_path}")
+
         loader = JSONLoader(
             file_path=file_path,
-            jq_schema=".content[]",  
+            jq_schema=".content[]",
             text_content=False,
-        ) 
+        )
         docs = loader.load()
-        return docs;
-              
+        return docs
 
     def parse_document(self, document: str):
         lines = document.split("\n")
@@ -79,11 +81,12 @@ class Chat:
                 key, value = line.split(":", 1)
                 data[key.strip()] = value.strip()
                 if value.strip().startswith("["):
-                    data[key.strip()] = [item.strip().strip("'") for item in value.strip()[1:-1].split("', '")]
+                    data[key.strip()] = [item.strip().strip("'")
+                                         for item in value.strip()[1:-1].split("', '")]
         return data
 
-
     def generateEmbedding(self, context: list[str]):
-        embedding = HuggingFaceEmbeddings(model_name="intfloat/multilingual-e5-large")
+        embedding = HuggingFaceEmbeddings(
+            model_name="intfloat/multilingual-e5-large")
         vector = embedding.embed_documents(context)
         return vector

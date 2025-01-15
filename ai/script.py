@@ -1,12 +1,14 @@
 import json
 import csv
 import os
-try: 
+
+
+try:
     input_file = input("Enter the path of the file you want to read from: ")
     if not os.path.exists(input_file):
         print("File does not exist")
         exit()
-    
+
     output_file = input("Enter the path of the file you want to write to: ")
 except:
     exit()
