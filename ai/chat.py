@@ -13,10 +13,10 @@ class Chat:
     def __init__(self):
         load_dotenv()
         self.llm = ChatOpenAI(
-            base_url="http://localhost:11434/v1",
+            base_url="https://openrouter.ai/api/v1",
             api_key=os.environ["OPENROUTER_API_KEY"],
             temperature=0,
-            model="llama3.2")
+            model="meta-llama/llama-3.2-3b-instruct:free")
         self.vectorstore = InMemoryVectorStore(embedding=HuggingFaceEmbeddings(model_name="intfloat/multilingual-e5-large"))
 
     def initalize(self):
