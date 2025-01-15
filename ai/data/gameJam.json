@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "title": "Game Jam 2025",
+    "description": "A game jam is a hackathon for video games. It is a gathering of people for the purpose of planning, designing, and creating one or more games within a short span of time, usually ranging between 24 and 72 hours. Game developers are generally made up of programmers, game designers, artists, and others in game development-related fields.",
+    "flyer": "https://bccs.club/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FgameJam-2025.7f9044cd.png&w=828&q=75",
+    "registration": "https://docs.google.com/forms/d/1gswgwDe2rWxjFrblA72jXFEErgbPQtB-yH8K6AgmcG4/viewform"
+  },
+  "content": [
+    {
+      "title": "Frequantly Asked Questions",
+      "content": [
+        {
+          "question": "What is Game Jam 2025?",
+          "answer": "The Game Jam is a week long beginner-friendly competition between developers on creating a game."
+        },
+        {
+          "question": "Who can participate in Game Jam 2025?",
+          "answer": "The Game Jam 2025 is open to all CSI and Brooklyn College students and majors."
+        },
+        {
+          "question": "When is Game Jam 2025?",
+          "answer": "Game Jam 2025 is from January 16th @ 2:00pm to January 24th @ 5:00pm."
+        },
+        {
+          "question": "Where is Game Jam 2025?",
+          "answer": "Location is TBA (To Be Announced)."
+        },
+        {
+          "question": "What is the discord server for Game Jam 2025?",
+          "answer": "You can join the discord here: https://discord.com/invite/q4Yyx3dhJC"
+        },
+        {
+          "question": "Will be there food at Game Jam 2025?",
+          "answer": "Yes, there will be food at Game Jam 2025."
+        },
+        {
+          "question": "Do I need to have experience to participate in Game Jam 2025?",
+          "answer": "No, you do not need to have experience to participate in Game Jam 2025. The competition is beginner-friendly."
+        },
+        {
+          "question": "What is the team limit for Game Jam 2025? Can I participate alone?",
+          "answer": "The team limit for Game Jam 2025 is 4. You can participate alone or with a team."
+        }
+      ]
+    },
+    {
+      "title": "Judges",
+      "content": [
+        {
+          "name": "Olti Gjoni",
+          "title": "Incoming Software Engineer",
+          "employer": "Roblox"
+        },
+        {
+          "name": "Jonathan Yashayev",
+          "title": "Full Software Engineer",
+          "employer": "GoBeyond"
+        },
+        {
+          "name": "Eli Sultanov",
+          "title": "Software Engineer",
+          "employer": "Valley IT Solutions"
+        },
+        {
+          "name": "Richard Weir",
+          "title": "Chairperson of Computer Science",
+          "employer": "Monsignor Farrell High School"
+        },
+        {
+          "name": "Tatiana Anderson",
+          "title": "CUNY 2X Lecturer",
+          "employer": "City University of New York"
+        },
+        {
+          "name": "Ali Mohamed",
+          "title": "Professor",
+          "employer": "City University of New York"
+        },
+        {
+          "name": "Katherine Chuang",
+          "title": "Professor",
+          "employer": "City University of New York"
+        }
+      ]
+    },
+    {
+      "title": "Judging Criteria",
+      "content": [
+        {
+          "category": "Interactivity, Game Play, and Rules",
+          "description": "The game prompts players to interact with it and provides rules and features that allow them to understand the game goals."
+        },
+        {
+          "category": "Creativity",
+          "description": "The game should include novel or unique aspects, either through a truly new concept or a novel application of an existing concept or concepts."
+        },
+        {
+          "category": "Theme",
+          "description": "The game should clearly demonstrate through concept, gameplay, story, or characters, the prompt/concept."
+        },
+        {
+          "category": "Depth of Play",
+          "description": "While not all future development must be shown during the jam, plans for future expansion of the game or multiple varied gameplay features should be presented."
+        },
+        {
+          "category": "Video Presentation",
+          "description": "The team presents their proposed game clearly to the audience through a 5-minute video presentation."
+        }
+      ]
+    },
+    {
+      "title": "Event Details",
+      "content": [
+        {
+          "date": "January 16th",
+          "event": "Commencement Meeting",
+          "time": "11AM-12PM",
+          "room": "TBD",
+          "description": "This in-person meeting is highly encouraged for all participants, as it will provide essential information about the event, including the theme announcement, rules, and guidelines. It's also an excellent opportunity to meet fellow developers, form teams, and ask any questions you might have before the competition begins."
+        },
+        {
+          "date": "January 16th",
+          "event": "Team Collaboration + Github Workshop",
+          "time": "12PM-1PM",
+          "room": "CSI Location 1N-111 Virtual, BC TBD",
+          "description": "This workshop, scheduled from 12:00 PM to 1:00 PM, is designed to help participants enhance their collaborative development skills using GitHub. Attendees will learn how to effectively manage version control, collaborate with teammates, resolve merge conflicts, and follow best practices for team projects. It's ideal for both beginners and those looking to refine their skills before diving into the Game Jam."
+        },
+        {
+          "date": "January 16th",
+          "event": "Game Jam Begins",
+          "time": "2PM",
+          "room": "Hybrid",
+          "description": "The Game Jam officially kicks off at 2:00 PM, marking the start of an exciting event! Participants will work in teams or solo to create innovative games based on the announced theme. This is your opportunity to showcase creativity, technical skills, and teamwork. Make sure to manage your time effectively and have fun while bringing your game ideas to life"
+        },
+        {
+          "date": "January 23th",
+          "event": "Game Jam Ends, Judging Begins",
+          "time": "2PM-5PM",
+          "room": "Hybrid",
+          "description": "The Game Jam will conclude at 2:00 PM on January 23rd. Once the clock hits zero, judging will begin! All games will be reviewed by a panel of experts based on creativity, gameplay, design, and adherence to the theme. It's time to showcase your hard work and see how your game measures up. Get ready for an exciting reveal of the winners!"
+        },
+        {
+          "date": "January 24th",
+          "event": "Last Day of Judging",
+          "time": "2PM-5PM",
+          "room": "Hybrid",
+          "description": "The final day of judging will take place on January 24th. The panel will finish evaluating all the games based on creativity, technical execution, and overall gameplay experience. Participants can expect to hear the results and see the winning games announced shortly afterward. It's the last chance to see how your hard work is assessed, and the excitement is building up for the grand reveal!"
+        }
+      ]
+    }
+  ]
+}
