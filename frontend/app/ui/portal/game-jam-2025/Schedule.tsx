@@ -29,14 +29,14 @@ const schedule = [
   {
     name: "Game Jam Presentations",
     time: "2 PM - 5 PM",
-    location: "CSI: 1N-111. BC: Jefferson-Williams Room, Student Center (4FL)",
+    location: "CSI: 1N-111. BC: Bedford Lounge, Student Center (2FL)",
     note: "*You can present in person (encouraged), virtually, or submit a recorded video.",
     iconUrl: jan23Icon,
   },
   {
     name: "Game Jam Presentations",
     time: "2 PM - 5 PM",
-    location: "CSI: 1N-111. BC: Jefferson-Williams Room, Student Center (4FL)",
+    location: "CSI: 1N-111. BC: Bedford Lounge, Student Center (2FL)",
     note: "*You can present in person (encouraged), virtually, or submit a recorded video.",
     iconUrl: jan24Icon,
   }
