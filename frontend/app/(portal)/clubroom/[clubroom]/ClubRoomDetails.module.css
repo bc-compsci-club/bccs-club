@@ -1,0 +1,56 @@
+.clubRoomContainer {
+  margin: 60px auto; /* Increased margin to create more space above and below */
+  padding: 20px;
+  max-width: 800px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative; /* Ensures it doesn't overlap */
+  z-index: 1; /* Keeps it above other content if needed */
+}
+
+.clubRoomTitle {
+  font-size: 2rem;
+  margin-bottom: 30px; /* More space below the title */
+  text-align: center;
+  color: #333;
+}
+
+.imageContainer {
+  display: flex; /* Use flexbox for alignment */
+  flex-direction: column; /* Ensure image and description are stacked vertically */
+  align-items: center; /* Center content horizontally */
+  margin-bottom: 40px; /* Maintain spacing below the image section */
+  text-align: center; /* Center the text description */
+}
+
+.clubRoomImage {
+  max-width: 85%; /* Limit the width of the image */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px; /* Add spacing below the image */
+}
+
+
+.imageDescription {
+  font-size: 1rem;
+  margin-top: 10px;
+  margin-bottom: 20px; /* Added margin below description */
+  color: #555;
+}
+
+.stepsList {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #444;
+}
+
+.roomNotFound {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 60px; /* Increased margin above the error message */
+  color: #d9534f;
+}
