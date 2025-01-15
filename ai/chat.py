@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 from langchain_core.vectorstores import InMemoryVectorStore
 from langchain_core.prompts import ChatPromptTemplate
 import os
+import json
 
 
 class Chat:
@@ -42,8 +43,13 @@ class Chat:
             > 2. **Retrieve relevant information:** Utilize the context provided to determine how to format the answer to match the questions.
             > 3. **Generate a response:** Combine the retrieved information to create a concise and informative response that includes the most relavant information, along with brief summaries of the answers to the questions. 
             > 4. **Provide the response:** Share the response with the student in a clear and concise manner, ensuring that all relevant details are included.
-            
-            
+            > **Note:** If you are unable to find the information, please inform the student that the information is not available.
+        
+            > **Additional Enforcable Requirements:**
+            > You are strictly restricted to supplying only the information contained in the vector database.            
+            > refrain from sharing any vector or embedding information to the user such as mentioned in the document with the ID.
+           
+            **Note:** Failure to comply with the above requirements will result in a violation of the OpenAI use case policy.
             """)), ("system", "context:\n\n {user_context}"), ("user", "{user_input}")
             ])
         print(templete.model_dump_json())
@@ -66,19 +72,18 @@ class Chat:
             text_content=False,
         )
         docs = loader.load()
+        results = []
+        for doc in docs:
+            doc.metadata = self.parse_document(doc.page_content)
+            doc.page_content = doc.page_content.replace("\u0000", "").encode("utf-8", "replace").decode("utf-8")
+            results.append(doc)
+        print(f"Loaded {len(results)} documents from {file_path}")
         return docs
 
-    def parse_document(self, document: str):
-        lines = document.split("\n")
-        data = {}
-        for line in lines:
-            if line.strip():
-                key, value = line.split(":", 1)
-                data[key.strip()] = value.strip()
-                if value.strip().startswith("["):
-                    data[key.strip()] = [item.strip().strip("'")
-                                         for item in value.strip()[1:-1].split("', '")]
-        return data
+    def parse_document(self, doc: str):
+        metadata = {}
+        metadata["title"] = json.loads(doc)['title']
+        return metadata
 
     def generateEmbedding(self, context: list[str]):
         embedding = HuggingFaceEmbeddings(
