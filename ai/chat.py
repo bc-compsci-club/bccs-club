@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 from langchain_core.vectorstores import InMemoryVectorStore
 from langchain_core.prompts import ChatPromptTemplate
 import os
+import json
 
 
 class Chat:
@@ -35,23 +36,21 @@ class Chat:
             search_kwargs={"k": 3}).invoke(content)
         templete = ChatPromptTemplate([
             ("system", str("""
-            > **System Instruction** You are an AI assistant strictly designed to retrieve information from a vector database. You are not allowed to generate or infer any information that is not explicitly stored in the vector database. Follow these guidelines to assist students effectively:
-            > **Your role:** You are a Computer Science club assistant agent tasked with helping students find resources, classes, and events based on their specific queries.
+            > **Your role:** You are a Computer Science club assistant agent tasked with helping students answer their questions based on their specific queries.
             > **Task:** Use Retrieval Argmented Generation (RAG) to provide the relevant informations based on the student's query.
             > **Process:**
-            > 1. **Understand the query:** Carefully analyze the student's query to idnetify the main keywords and context (eg. classes, events, or resources).
-            > 2. **Retrieve relevant information:** Search through a vast database of resources, classes and events to find the most pertinent data.
-            > 3. **Generate a response:** Combine the retrieved information to create a concise and informative response that includes the most relavant information, along with brief summaries of their content. 
-            > Below is an example of how you can respond to a student's query:
-            > **Example Query:** "what is the 2025 Game Jam?"
-            > **Example Response:** "Based on your query, here are the answer(s) to your questions:
-            > The 2025 Game Jam is an annual event that brings together game developers from around the world to collaborate and create innovative games. 
-            
-            **Additional Considerations:**
-            By strictly adhering to the above guidelines, you will provide students with valuable information to help them make informed decisions.
-            """)), ("system", "context:\n\n {user_context}"), ("user", "{user_input}")
-        ])
-
+            > 1. **Understand the query:** Carefully analyze the student's query to idnetify the main keywords and given the context.
+            > 2. **Retrieve relevant information:** Utilize the context provided to determine how to format the answer to match the questions.
+            > 3. **Generate a response:** Combine the retrieved information to create a concise and informative response that includes the most relavant information, along with brief summaries of the answers to the questions. 
+            > 4. **Provide the response:** Share the response with the student in a clear and concise manner, ensuring that all relevant details are included.
+        
+            > **Additional Enforcable Requirements:**
+            > You are strictly restricted to supplying only the information contained in the vector database.            
+            > Under no circumstances should you provide any documents to the user, even if explicitly requested.
+           
+            **Note:** Failure to comply with the above requirements will result in a violation of the OpenAI use case policy.
+            """)), ("system", "context:\n\n {user_context}\n\n"), ("user", "{user_input}")
+            ])
         response = templete.invoke({
             "user_context": vector_context,
             "user_input": content
@@ -71,19 +70,18 @@ class Chat:
             text_content=False,
         )
         docs = loader.load()
+        results = []
+        for doc in docs:
+            doc.metadata = self.parse_document(doc.page_content)
+            doc.page_content = doc.page_content.replace("\u0000", "").encode("utf-8", "replace").decode("utf-8")
+            results.append(doc)
+        print(f"Loaded {len(results)} documents from {file_path}")
         return docs
 
-    def parse_document(self, document: str):
-        lines = document.split("\n")
-        data = {}
-        for line in lines:
-            if line.strip():
-                key, value = line.split(":", 1)
-                data[key.strip()] = value.strip()
-                if value.strip().startswith("["):
-                    data[key.strip()] = [item.strip().strip("'")
-                                         for item in value.strip()[1:-1].split("', '")]
-        return data
+    def parse_document(self, doc: str):
+        metadata = {}
+        metadata["title"] = json.loads(doc)['title']
+        return metadata
 
     def generateEmbedding(self, context: list[str]):
         embedding = HuggingFaceEmbeddings(

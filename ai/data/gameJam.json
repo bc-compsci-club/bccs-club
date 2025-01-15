@@ -115,14 +115,14 @@
           "date": "January 16th",
           "event": "Commencement Meeting",
           "time": "11AM-12PM",
-          "room": "TBD",
+          "room": "CSI Location at 1N-111 or BC Location at Amersfort Room, Student Center (2FL) or Virtual",
           "description": "This in-person meeting is highly encouraged for all participants, as it will provide essential information about the event, including the theme announcement, rules, and guidelines. It's also an excellent opportunity to meet fellow developers, form teams, and ask any questions you might have before the competition begins."
         },
         {
           "date": "January 16th",
           "event": "Team Collaboration + Github Workshop",
           "time": "12PM-1PM",
-          "room": "CSI Location 1N-111 Virtual, BC TBD",
+          "room": "CSI Location 1N-111 Virtual, BC Location Amersfort Room, Student Center (2FL) or Virtual",
           "description": "This workshop, scheduled from 12:00 PM to 1:00 PM, is designed to help participants enhance their collaborative development skills using GitHub. Attendees will learn how to effectively manage version control, collaborate with teammates, resolve merge conflicts, and follow best practices for team projects. It's ideal for both beginners and those looking to refine their skills before diving into the Game Jam."
         },
         {
