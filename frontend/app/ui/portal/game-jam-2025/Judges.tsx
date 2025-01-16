@@ -17,7 +17,7 @@ const judges = [
   },
   {
     name: "Jonathan Yashayev",
-    title: "Full Software Engineer",
+    title: "Full Stack Software Engineer",
     company: "GoBeyond",
     iconUrl: jonathanYashayev,
   },
