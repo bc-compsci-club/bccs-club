@@ -1,0 +1,26 @@
+# Use Python 3.12 as the base image
+FROM python:3.12-slim
+
+# Set a working directory in the container
+WORKDIR /app
+
+# Copy requirements before copying the rest of the files (for better caching)
+# COPY requirements.txt /app
+COPY requirements-lock.txt /app
+
+# Install the dependencies
+# RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements-lock.txt
+
+# Install Gunicorn (a WSGI HTTP server for Python web applications)
+RUN pip install --no-cache-dir gunicorn
+
+# Copy the rest of the project files
+COPY . /app
+
+# Expose the port on which your Flask/FastAPI/etc. app runs (adjust if needed)
+EXPOSE 5000
+
+# Use Gunicorn as the production WSGI server
+# First app is the file name, second app is the instance name
+CMD ["gunicorn", "--bind", "0.0.0.0:5000", "app:app"]

@@ -1,0 +1,8 @@
+services:
+  ai:
+    build:
+      context: ../../ai
+      dockerfile: Dockerfile.prod
+    container_name: bccsclub-ai
+    ports:
+      - "8091:5000"

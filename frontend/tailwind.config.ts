@@ -8,6 +8,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        typing: {
+          "0% 80% 100%": { transform: "scale(0)" },
+          "40%": { transform: "scale(1)" },
+        },
+      },
+      animation: {
+        typing: "typing 1.4s infinite ease-in-out",
+      },
       colors: {
         "bc-red": "#882346",
         "bc-yellow": "#f3bd48",
