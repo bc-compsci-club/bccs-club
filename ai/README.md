@@ -18,10 +18,11 @@ Our custom AI chatbot integrates internal data with an LLM to help users find in
 - [OpenRouter API Key](https://openrouter.ai)
 
 ### Set up the environment variables:
+
 Create a `.env` file in the root directory of the `ai` project and add the following environment variables:
 ```
-OPENROUTER_API_KEY=key 
-FRONTEND_URL= # URL that you use for frontend development or production. for CORS policy
+OPENROUTER_API_KEY=key # Your OpenRouter API key
+FRONTEND_URL=URL # URL that you use for frontend development or production. for CORS policy
 ```
 
 ### Build and run the Docker container:
