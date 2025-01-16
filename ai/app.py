@@ -6,8 +6,10 @@ from chat import Chat
 
 load_dotenv()
 app = Flask(__name__)
-chat = Chat()
 cors = CORS(app, origins=getenv("FRONTEND_URL"))
+
+chat = Chat()
+chat.initalize()
 
 
 @app.route("/api/v1/llm", methods=["POST"])
@@ -22,7 +24,6 @@ def hello_world():
 
 
 if __name__ == "__main__":
-    chat.initalize()
     # By default, app.run(debug=True) will bind to 127.0.0.1,
     # which only accepts connections from inside the container itself.
     # To access the Flask server on the host (your actual machine),
