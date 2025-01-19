@@ -1,0 +1,11 @@
+services:
+  ai:
+    build: .
+    container_name: ai_container
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app  # host:container. Optional: bind-mount the project directory for local dev
+    # environment:
+    #   - MY_ENV_VAR=some_value
+    command: python app.py

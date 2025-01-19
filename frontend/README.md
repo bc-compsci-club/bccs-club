@@ -38,17 +38,11 @@ npm install
 
 ### Set up the environment variables:
 
-Create a `.env.local` file in the root directory of the `frontend` project and add the following environment variable(s):
-
-```bash
-BACKEND_URL=http://localhost:8090  # use your API base URL here
+Create a `.env.local` file in the root directory of the `frontend` project and add the environment variables from the `.env.local.example` file.
+You can copy the `.env.local.example` file to `.env.local` using the following command if you are using a Unix-based system:
 ```
-
-Or you can run
+cp .env.local.example .env.local
 ```
-$ cp .env.local.example .env.local
-```
-to create a `.env.local` file with the example environment variable(s).
 
 ### Run the development server:
 
