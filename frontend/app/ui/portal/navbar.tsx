@@ -10,6 +10,7 @@ const navigation = [
   { name: 'Contact', href: '/contact' },
   { name: 'Events', href: '/events' },
   { name: 'Resources', href: '/resources' },
+  { name: 'Courses', href: '/courses'},
 ]
 
 export default function NavBar() {
