@@ -6,26 +6,32 @@ const items = [
   {
     title: "Forge Software Engineering Simulations",
     link: "https://www.theforage.com/career-path/software-engineering",
+    description: "This is description",
   },
   {
     title: "Developer Roadmaps",
     link: "https://roadmap.sh/",
+    description: "This is description",
   },
   {
     title: "Open Source Computer Science Degree",
     link: "https://github.com/ForrestKnight/open-source-cs",
+    description: "This is description",
   },
   {
     title: "100 Days CSS Challenge",
     link: "https://100dayscss.com/",
+    description: "This is description",
   },
   {
     title: "Code Wars - Achieve Mastery Through Practice",
     link: "https://www.codewars.com/",
+    description: "This is description",
   },
   {
     title: "The Odin Project ",
     link: "https://www.theodinproject.com/",
+    description: "This is description",
   },
 ]
 
@@ -49,6 +55,10 @@ export default function Page() {
                 </DisclosureButton>
               </dt>
               <DisclosurePanel as="dd" className="mt-2 pr-12">
+                <span
+                      className="text-base leading-7 break-words">
+                      {item.description}
+                </span>
                 <a
                   href={item.link}
                   target="_blank"
