@@ -1,4 +1,4 @@
-import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
+import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react';
 import { BsPlus } from "react-icons/bs";
 import { BsDash } from "react-icons/bs";
 
@@ -6,33 +6,40 @@ const items = [
   {
     title: "Forge Software Engineering Simulations",
     link: "https://www.theforage.com/career-path/software-engineering",
-    description: "This is description",
+    description: `The Forage’s Software Engineering career path page offers free virtual job simulations, guides,
+                  and resources to help you explore software engineering roles, build real-world technical skills, and prepare 
+                  for a successful entry into the field.`,
   },
   {
     title: "Developer Roadmaps",
     link: "https://roadmap.sh/",
-    description: "This is description",
+    description: `roadmap.sh is a community-driven platform offering comprehensive, actively maintained developer
+                  roadmaps, guides, and resources to help learners choose and advance their software development careers.`,
   },
   {
     title: "Open Source Computer Science Degree",
     link: "https://github.com/ForrestKnight/open-source-cs",
-    description: "This is description",
+    description: `ForrestKnight’s open-source-cs on GitHub is a curated curriculum of free, university-level computer 
+                  science courses that cover core CS topics equivalent to a degree, excluding general education.`,
   },
   {
     title: "100 Days CSS Challenge",
     link: "https://100dayscss.com/",
-    description: "This is description",
-  },
+    description: `100dayscss.com hosts a CSS challenge that encourages daily practice through templates and 
+                  submissions to help users improve their CSS skills progressively.`,
+    },
   {
     title: "Code Wars - Achieve Mastery Through Practice",
     link: "https://www.codewars.com/",
-    description: "This is description",
+    description: `Codewars is an interactive coding platform where users solve community-created coding challenges ("kata") 
+                  to sharpen skills, earn ranks, and engage with a global developer community across 55+ languages.`,
   },
   {
     title: "The Odin Project ",
     link: "https://www.theodinproject.com/",
-    description: "This is description",
-  },
+    description: `The Odin Project provides a free, self-paced web development curriculum with curated tutorials and projects,
+                   supported by a community to help beginners build real-world skills and portfolios.`,
+  }
 ]
 
 export default function Page() {
@@ -59,6 +66,8 @@ export default function Page() {
                       className="text-base leading-7 break-words">
                       {item.description}
                 </span>
+                <br />
+                <span className= "text-base leading-7 text-bold "> Link: <span/>
                 <a
                   href={item.link}
                   target="_blank"
