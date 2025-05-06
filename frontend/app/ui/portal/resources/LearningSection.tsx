@@ -62,12 +62,13 @@ export default function Page() {
                 </DisclosureButton>
               </dt>
               <DisclosurePanel as="dd" className="mt-2 pr-12">
+                <span className= "text-base leading-7 font-semibold "> Description: </span>
                 <span
                       className="text-base leading-7 break-words">
                       {item.description}
                 </span>
                 <br />
-                <span className= "text-base leading-7 text-bold "> Link: <span/>
+                <span className= "text-base leading-7 font-semibold "> Link: </span>
                 <a
                   href={item.link}
                   target="_blank"
