@@ -23,6 +23,10 @@ const items = [
     title: "Code Wars - Achieve Mastery Through Practice",
     link: "https://www.codewars.com/",
   },
+  {
+    title: "The Odin Project ",
+    link: "https://www.theodinproject.com/",
+  },
 ]
 
 export default function Page() {
