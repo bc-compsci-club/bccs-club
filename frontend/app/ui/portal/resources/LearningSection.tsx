@@ -39,6 +39,13 @@ const items = [
     link: "https://www.theodinproject.com/",
     description: `The Odin Project provides a free, self-paced web development curriculum with curated tutorials and projects,
                    supported by a community to help beginners build real-world skills and portfolios.`,
+  },
+  {
+    title: "FreeCodeCamp",
+    link: "freecodecamp.org/learn",
+    description: `FreeCodeCamp offers a free, self-paced curriculum with interactive coding lessons, projects, and certifications covering 
+                web development, JavaScript, Python, data analysis, and full stack development to help beginners and aspiring
+                 developers build real-world programming skills`,
   }
 ]
 
