@@ -6,42 +6,52 @@ const items = [
   {
     title: "CUNY Spring Forward internship",
     link: "https://www.cuny.edu/about/administration/offices/ocip/students/spring-forward/",
+    description: `roadmap.sh is a community-driven platform offering comprehensive, actively maintained developer`
   },
   {
     title: "CUNY Career Launch (summer internships)",
     link: "https://www.cuny.edu/about/administration/offices/ocip/students/careerlaunch/",
+    description: `roadmap.sh is a community-driven platform offering comprehensive, actively maintained developer`
   },
   {
     title: "CUNY Internship to Employment (I2E) internship",
     link: "https://www.cuny.edu/about/administration/offices/ocip/students/i2e/",
+    description: `roadmap.sh is a community-driven platform offering comprehensive, actively maintained developer`
   },
   {
     title: "CUNY Internship Programs portal",
     link: "https://cunyinternship-oaa-csm.symplicity.com/",
+    description: `roadmap.sh is a community-driven platform offering comprehensive, actively maintained developer`
   },
   {
     title: "Brooklyn Navy Yard Internship Programs",
     link: "https://www.brooklynnavyyard.org/internship-opportunities/",
+    description: `roadmap.sh is a community-driven platform offering comprehensive, actively maintained developer`
   },
   {
     title: "New York Jobs CEO Council",
     link: "https://www.nyjobsceocouncil.org/",
+    description: `roadmap.sh is a community-driven platform offering comprehensive, actively maintained developer`
   },
   {
     title: "The City of New York Summer Internship Program",
     link: "https://www.nyc.gov/site/dcas/employment/internship-and-fellowships-summer-internship-program.page",
+    description: `roadmap.sh is a community-driven platform offering comprehensive, actively maintained developer`
   },
   {
     title: "NYC Government Jobs",
     link: "https://cityjobs.nyc.gov/",
+    description: `roadmap.sh is a community-driven platform offering comprehensive, actively maintained developer`
   },
   {
     title: "MTA College Aide Program",
     link: "https://careers.mta.org/pages/mta-college-aide-program",
+    description: `roadmap.sh is a community-driven platform offering comprehensive, actively maintained developer`
   },
   {
     title: "Summer 2025 Tech Internships by Pitt CSC & Simplify",
     link: "https://github.com/SimplifyJobs/Summer2025-Internships",
+    description: `roadmap.sh is a community-driven platform offering comprehensive, actively maintained developer`
   },
 ]
 
@@ -65,6 +75,13 @@ export default function Page() {
                 </DisclosureButton>
               </dt>
               <DisclosurePanel as="dd" className="mt-2 pr-12">
+                <span className= "text-base leading-7 font-semibold "> Description: </span>
+                <span
+                      className="text-base leading-7 break-words">
+                      {item.description}
+                </span>
+                <br />
+                <span className= "text-base leading-7 font-semibold "> Link: </span>
                 <a
                   href={item.link}
                   target="_blank"
@@ -73,9 +90,9 @@ export default function Page() {
                 >
                   {item.link}
                 </a>
-              </DisclosurePanel>
+                </DisclosurePanel>
             </Disclosure>
-          ))}
+            ))}
         </dl>
       </div>
     </div>

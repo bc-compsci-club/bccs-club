@@ -53,11 +53,15 @@ export default function Page() {
   return (
     <div className="mx-auto max-w-7xl px-6 lg:px-8 py-8">
       <div className="mx-auto max-w-4xl divide-y divide-gray-900/10">
+      {/* TITLE OF THE SECTION */}
         <h2 className="text-2xl font-bold leading-10 tracking-tight text-gray-900">
           Self-Learning Materials
         </h2>
+
+      {/* FETCHING DATA FROM const items */}
         <dl className="mt-10 space-y-6 divide-y divide-gray-900/10">
           {items.map((item) => (
+    // SETTING UP TITLE
             <Disclosure key={item.title} as="div" className="pt-6">
               <dt>
                 <DisclosureButton className="group flex w-full items-start justify-between text-left text-gray-900">
@@ -68,7 +72,8 @@ export default function Page() {
                   </span>
                 </DisclosureButton>
               </dt>
-              <DisclosurePanel as="dd" className="mt-2 pr-12">
+      {/* SETTING UP DESCRIPTION   */}
+                <DisclosurePanel as="dd" className="mt-2 pr-12">
                 <span className= "text-base leading-7 font-semibold "> Description: </span>
                 <span
                       className="text-base leading-7 break-words">
