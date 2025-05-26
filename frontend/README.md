@@ -41,7 +41,7 @@ npm install
 Create a `.env.local` file in the root directory of the `frontend` project and add the environment variables from the `.env.example` file.
 You can copy the `.env.example` file to `.env.local` using the following command if you are using a Unix-based system:
 ```
-cp .env.local.example .env.local
+cp .env.example .env.local
 ```
 
 ### Run the development server:
