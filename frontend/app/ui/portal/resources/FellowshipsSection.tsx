@@ -32,6 +32,10 @@ const items = [
     title: "America Needs You",
     link: "https://americaneedsyou.org/",
   },
+  {
+    title: "CapitalOne Full-Time Programs",
+    link: "https://www.capitalonecareers.com/full-time-programs",
+  },
 ]
 
 export default function Page() {
