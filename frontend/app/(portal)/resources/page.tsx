@@ -9,10 +9,10 @@ export default function Page() {
   return (
     <main>
       <HeroSection />
-      <LearningSection />
       <InternshipsSection />
       <FellowshipsSection />
       <InterviewSection />
+      <LearningSection />
       <StudentProgramsSection />
     </main>
   );
