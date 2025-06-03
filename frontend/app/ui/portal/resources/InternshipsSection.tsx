@@ -44,6 +44,10 @@ const items = [
     link: "https://careers.mta.org/pages/mta-college-aide-program",
   },
   {
+    title: "CUNY x MTA Internship Program",
+    link: "https://www.cuny.edu/about/administration/offices/ocip/students/mta-internship-program/",
+  },
+  {
     title: "Summer 2025 Tech Internships by Pitt CSC & Simplify",
     link: "https://github.com/SimplifyJobs/Summer2025-Internships",
   },

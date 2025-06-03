@@ -1,5 +1,9 @@
-import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
-import { title } from 'process';
+import {
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+} from "@headlessui/react";
+import { title } from "process";
 import { BsPlus } from "react-icons/bs";
 import { BsDash } from "react-icons/bs";
 
@@ -32,7 +36,11 @@ const items = [
     title: "America Needs You",
     link: "https://americaneedsyou.org/",
   },
-]
+  {
+    title: "Code2040 Fellows Program",
+    link: "https://www.code2040.org/programs",
+  },
+];
 
 export default function Page() {
   return (
@@ -46,10 +54,18 @@ export default function Page() {
             <Disclosure key={item.title} as="div" className="pt-6">
               <dt>
                 <DisclosureButton className="group flex w-full items-start justify-between text-left text-gray-900">
-                  <span className="text-base font-semibold leading-7">{item.title}</span>
+                  <span className="text-base font-semibold leading-7">
+                    {item.title}
+                  </span>
                   <span className="ml-6 flex h-7 items-center">
-                    <BsPlus aria-hidden="true" className="h-6 w-6 group-data-[open]:hidden" />
-                    <BsDash aria-hidden="true" className="h-6 w-6 [.group:not([data-open])_&]:hidden" />
+                    <BsPlus
+                      aria-hidden="true"
+                      className="h-6 w-6 group-data-[open]:hidden"
+                    />
+                    <BsDash
+                      aria-hidden="true"
+                      className="h-6 w-6 [.group:not([data-open])_&]:hidden"
+                    />
                   </span>
                 </DisclosureButton>
               </dt>
@@ -68,5 +84,5 @@ export default function Page() {
         </dl>
       </div>
     </div>
-  )
+  );
 }
