@@ -28,7 +28,7 @@ The `frontend` project is deployed to [Cloudflare Pages](https://pages.cloudflar
 
 - Type: Plaintext
 - Name: BACKEND_URL
-- Value: https://example.com (use your API base URL here)
+- Value: https://api.bccs.club (use your API base URL here)
 
 - Type: Plaintext
 - Name: NEXT_PUBLIC_AI_BACKEND_URL
