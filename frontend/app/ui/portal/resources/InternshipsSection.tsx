@@ -1,4 +1,8 @@
-import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
+import {
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+} from "@headlessui/react";
 import { BsPlus } from "react-icons/bs";
 import { BsDash } from "react-icons/bs";
 
@@ -40,14 +44,30 @@ const items = [
     link: "https://careers.mta.org/pages/mta-college-aide-program",
   },
   {
-    title: "Summer 2025 Tech Internships by Pitt CSC & Simplify",
-    link: "https://github.com/SimplifyJobs/Summer2025-Internships",
+    title: "CUNY x MTA Internship Program",
+    link: "https://www.cuny.edu/about/administration/offices/ocip/students/mta-internship-program/",
   },
   {
     title: "Forge Software Engineering Simulations",
     link: "https://www.theforage.com/career-path/software-engineering",
   },
-]
+  {
+    title: "Summer 2025 Tech Internships by Pitt CSC & Simplify",
+    link: "https://github.com/SimplifyJobs/Summer2025-Internships",
+  },
+  {
+    title: "Simplify Jobs",
+    link: "https://simplify.jobs/",
+  },
+  {
+    title: "Brooklyn College Handshake Internships",
+    link: "https://app.joinhandshake.com/stu/schools/1364",
+  },
+  {
+    title: "Ladders for Leaders Summer Internship Program",
+    link: "https://www.nyc.gov/site/dycd/services/jobs-internships/nyc-ladders-for-leaders.page",
+  },
+];
 
 export default function Page() {
   return (
@@ -61,10 +81,18 @@ export default function Page() {
             <Disclosure key={item.title} as="div" className="pt-6">
               <dt>
                 <DisclosureButton className="group flex w-full items-start justify-between text-left text-gray-900">
-                  <span className="text-base font-semibold leading-7">{item.title}</span>
+                  <span className="text-base font-semibold leading-7">
+                    {item.title}
+                  </span>
                   <span className="ml-6 flex h-7 items-center">
-                    <BsPlus aria-hidden="true" className="h-6 w-6 group-data-[open]:hidden" />
-                    <BsDash aria-hidden="true" className="h-6 w-6 [.group:not([data-open])_&]:hidden" />
+                    <BsPlus
+                      aria-hidden="true"
+                      className="h-6 w-6 group-data-[open]:hidden"
+                    />
+                    <BsDash
+                      aria-hidden="true"
+                      className="h-6 w-6 [.group:not([data-open])_&]:hidden"
+                    />
                   </span>
                 </DisclosureButton>
               </dt>
@@ -83,5 +111,5 @@ export default function Page() {
         </dl>
       </div>
     </div>
-  )
+  );
 }
