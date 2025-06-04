@@ -57,7 +57,7 @@ The domain name (bccs.club) is managed by Cloudflare. The DNS configuration is s
 
 ## How to build your branch?
 In order to build your branch follow the steps: 
-    1. Open the settings of your build. 
-    2. Change "Choose Environment" to "Preview" option. 
-    3. Make sure that "Branch Control" is set to "All non-production branches" 
+   1. Open the settings of your build. 
+   2. Change "Choose Environment" to "Preview" option. 
+   3. Make sure that "Branch Control" is set to "All non-production branches" 
 That way every push you make to your repository will be processsed by Cloudfare for review (automatically). That provides a direct link tothe version of the bccs.club website based on your branch.  
