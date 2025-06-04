@@ -1,9 +1,0 @@
-[02:10:57 2025-06-04] FETCHING Version 2.40.10
-[02:10:57 2025-06-04] CREATING /Users/davemiya/.spicetify
-[02:10:57 2025-06-04] DOWNLOADING https://github.com/spicetify/cli/releases/download/v2.40.10/spicetify-2.40.10-darwin-arm64.tar.gz
-[02:10:57 2025-06-04] EXTRACTING /Users/davemiya/.spicetify/spicetify.tar.gz
-[02:10:57 2025-06-04] SETTING EXECUTABLE PERMISSIONS TO /Users/davemiya/.spicetify/spicetify
-[02:10:57 2025-06-04] REMOVING /Users/davemiya/.spicetify/spicetify.tar.gz
-[02:10:57 2025-06-04] APPENDING /Users/davemiya/.spicetify to PATH in /Users/davemiya/.zshrc
-[02:10:57 2025-06-04] spicetify v2.40.10 was installed successfully to /Users/davemiya/.spicetify
-[02:10:57 2025-06-04] Run 'spicetify --help' to get started
