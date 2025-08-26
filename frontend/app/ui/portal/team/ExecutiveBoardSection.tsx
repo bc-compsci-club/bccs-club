@@ -3,11 +3,11 @@ import { BsGithub } from "react-icons/bs";
 import { BsGlobe2 } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
 import Image from 'next/image';
-import qingquanLiPic from '../../../images/team/executive-board-2024-2025/qingquan-li.jpg';
-import megiMuratiPic from '../../../images/team/executive-board-2024-2025/megi-murati.jpg';
-import faizanKhanPic from '../../../images/team/executive-board-2024-2025/faizan-khan.jpg';
-import annaBelenkoPic from '../../../images/team/executive-board-2024-2025/anna-belenko.jpg';
-import kevinLiuPic from '../../../images/team/executive-board-2024-2025/kevin-liu.jpg';
+import annaBelenkoPic from '../../../images/team/executive-board-2025-2026/anna-belenko.jpg';
+import pawelCieslakPic from '../../../images/team/executive-board-2025-2026/pawel-cieslak.jpg';
+import faizanKhanPic from '../../../images/team/executive-board-2025-2026/faizan-khan.jpg';
+import jessicaLivchitsPic from '../../../images/team/executive-board-2025-2026/jessica-livchits.jpg';
+import luGonzalezPic from '../../../images/team/executive-board-2025-2026/lu-gonzalez.jpg';
 
 interface Member {
   name: string;
@@ -21,20 +21,19 @@ interface Member {
 
 const members: Member[] = [
   {
-    name: 'Qingquan Li',
+    name: 'Anna Belenko',
     role: 'President',
-    photo: qingquanLiPic,
-    linkedinUrl: 'https://www.linkedin.com/in/qingquan-li/',
-    githubUrl: 'https://github.com/Qingquan-Li',
-    personalWebsiteUrl: 'https://qingquanli.com/',
-    instagramUrl: 'https://www.instagram.com/qingquan__li/',
+    photo: annaBelenkoPic,
+    linkedinUrl: 'https://www.linkedin.com/in/annabelenko/',
+    githubUrl: 'https://github.com/annabelenko',
+    personalWebsiteUrl: 'https://annabelenko.com/',
   },
   {
-    name: 'Megi Murati',
+    name: 'Pawel Cieslak',
     role: 'Vice President',
-    photo: megiMuratiPic,
-    linkedinUrl: 'https://www.linkedin.com/in/megi-murati/',
-    githubUrl: 'https://github.com/megimurati/',
+    photo: pawelCieslakPic,
+    linkedinUrl: 'https://www.linkedin.com/in/pawelcieslak4/',
+    githubUrl: 'https://github.com/PawelC4',
   },
   {
     name: 'Faizan Khan',
@@ -45,19 +44,18 @@ const members: Member[] = [
     instagramUrl: 'https://www.instagram.com/faizizizan/',
   },
   {
-    name: 'Anna Belenko',
+    name: 'Jessica Livchits',
     role: 'Secretary',
-    photo: annaBelenkoPic,
-    linkedinUrl: 'https://www.linkedin.com/in/annabelenko/',
-    githubUrl: 'https://github.com/annabelenko',
-    personalWebsiteUrl: 'https://annabelenko.com/',
+    photo: jessicaLivchitsPic,
+    linkedinUrl: 'https://www.linkedin.com/in/jessica-livchits-75b479262/',
+    githubUrl: 'https://github.com/jessicalist',
   },
   {
-    name: 'Kevin Liu',
+    name: 'Lu Gonzalez',
     role: 'Club Connector',
-    photo: kevinLiuPic,
-    linkedinUrl: 'https://www.linkedin.com/in/kevin-liu10252003/',
-    githubUrl: 'https://github.com/Kevinrocks100',
+    photo: luGonzalezPic,
+    linkedinUrl: 'https://www.linkedin.com/in/luis-gonzalez-148354272/',
+    githubUrl: 'https://github.com/lu-syn',
   },
 ]
 
