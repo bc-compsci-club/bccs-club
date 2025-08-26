@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import teamPic from '../../../images/team/executive-board-2024-2025/executive-board-2024-2025-02.jpg';
+import teamPic from '../../../images/team/eboard-alumni/executive-board-2024-2025-02.jpg';
 
 export default function TeamSection() {
   return (
