@@ -22,7 +22,7 @@ function HoverImage({ photo, hoverPhoto, alt }: { photo: any; hoverPhoto?: any; 
   const [hovered, setHovered] = useState(false);
   return (
     <div
-      className="relative w-[500px] h-[700px] overflow-hidden shadow-lg"
+      className="relative w-[90vw] max-w-[300px] h-[60vw] max-h-[400px] sm:w-[250px] sm:h-[350px] md:w-[300px] md:h-[400px] overflow-hidden shadow-lg"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
@@ -105,13 +105,13 @@ export default function ExecutiveBoardSection() {
         </div>
         <ul
           role="list"
-          className="mx-auto mt-20 grid max-w-4xl grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none"
+          className="mx-auto mt-10 grid max-w-4xl grid-cols-1 gap-x-4 gap-y-10 sm:grid-cols-2 md:gap-x-8 md:gap-y-14 lg:grid-cols-3 lg:mx-0 lg:max-w-none"
         >
           {members.map((member) => (
             <li key={member.name} className="flex flex-col items-center">
               <HoverImage photo={member.photo} hoverPhoto={member.hoverPhoto} alt={member.name} />
-              <h3 className="mt-6 text-lg font-semibold leading-7 tracking-tight text-gray-900">{member.name}</h3>
-              <p className="text-base leading-6 text-gray-600">{member.role}</p>
+              <h3 className="mt-4 text-base sm:text-lg font-semibold leading-7 tracking-tight text-gray-900">{member.name}</h3>
+              <p className="text-sm sm:text-base leading-6 text-gray-600">{member.role}</p>
               <ul role="list" className="mt-6 flex justify-center gap-x-6">
                 {member.linkedinUrl && (
                   <li>
