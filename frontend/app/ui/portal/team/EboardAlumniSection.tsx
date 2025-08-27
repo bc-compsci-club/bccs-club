@@ -17,6 +17,9 @@ import junninhoThomasPic from '../../../images/team/eboard-alumni/junninho-thoma
 import evelynVelezPic from '../../../images/team/eboard-alumni/evelyn-velez.jpg';
 import dianaHungPic from '../../../images/team/eboard-alumni/diana-hung.jpg';
 import mariiaOnokhinaPic from '../../../images/team/eboard-alumni/mariia-onokhina.jpg';
+import qingquanLiPic from '../../../images/team/eboard-alumni/qingquan-li.jpg';
+import megiMuratiPic from '../../../images/team/eboard-alumni/megi-murati.jpg';
+import kevinLiuPic from '../../../images/team/eboard-alumni/kevin-liu.jpg';
 
 interface Member {
   photo: any;
@@ -27,8 +30,28 @@ interface Member {
   personalWebsiteUrl?: string; // Optional field
 }
 
-
 const members: Member[] = [
+  {
+    photo: kevinLiuPic,
+    name: 'Kevin Liu',
+    role: 'Club Connector ~ 2024',
+    title: 'SWE Intern @ 10Clear',
+    linkedinUrl: 'https://www.linkedin.com/in/kevin-liu10252003/',
+  },
+  {
+    photo: qingquanLiPic,
+    name: 'Qingquan Li',
+    role: 'Club President ~ 2024',
+    title: 'SWE Intern @ MTA',
+    linkedinUrl: 'https://www.linkedin.com/in/qingquan-li/',
+  },
+  {
+    photo: megiMuratiPic,
+    name: 'Megi Murati',
+    role: 'Club Vice President ~ 2024',
+    title: 'SWE Intern @ Con Edison',
+    linkedinUrl: 'https://www.linkedin.com/in/megi-murati/',
+  },
   {
     photo: antaraKhanPic,
     name: 'Antara Khan',
@@ -133,7 +156,7 @@ const members: Member[] = [
     photo: mariiaOnokhinaPic,
     name: 'Mariia Onokhina',
     role: 'Club Secretary ~ 2023',
-    title: 'Tutor @ CUNY Tutor Corps',
+    title: 'Graduate Student @ NYU',
     linkedinUrl: 'https://www.linkedin.com/in/mariia-onokhina/',
   },
 ]

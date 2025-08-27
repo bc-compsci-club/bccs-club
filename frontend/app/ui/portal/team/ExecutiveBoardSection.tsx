@@ -1,22 +1,52 @@
+"use client";
+
 import { BsLinkedin } from "react-icons/bs";
 import { BsGithub } from "react-icons/bs";
 import { BsGlobe2 } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
 import Image from 'next/image';
+import { useState } from 'react';
 import annaBelenkoPic from '../../../images/team/executive-board-2025-2026/anna-belenko.jpg';
+import annaBelenkoPicHover from '../../../images/team/executive-board-2025-2026/anna-belenko1.jpg';
 import pawelCieslakPic from '../../../images/team/executive-board-2025-2026/pawel-cieslak.jpg';
+import pawelCieslakPicHover from '../../../images/team/executive-board-2025-2026/pawel-cieslak1.jpg';
 import faizanKhanPic from '../../../images/team/executive-board-2025-2026/faizan-khan.jpg';
+import faizanKhanPicHover from '../../../images/team/executive-board-2025-2026/faizan-khan1.jpg';
 import jessicaLivchitsPic from '../../../images/team/executive-board-2025-2026/jessica-livchits.jpg';
+import jessicaLivchitsPicHover from '../../../images/team/executive-board-2025-2026/jessica-livchits1.jpg';
 import luGonzalezPic from '../../../images/team/executive-board-2025-2026/lu-gonzalez.jpg';
+import luGonzalezPicHover from '../../../images/team/executive-board-2025-2026/lu-gonzalez1.jpg';
+
+
+function HoverImage({ photo, hoverPhoto, alt }: { photo: any; hoverPhoto?: any; alt: string }) {
+  const [hovered, setHovered] = useState(false);
+  return (
+    <div
+      className="relative w-[500px] h-[700px] overflow-hidden shadow-lg"
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
+      <Image
+        alt={alt}
+        src={hovered && hoverPhoto ? hoverPhoto : photo}
+        fill
+        style={{ objectFit: 'cover' }}
+        className=""
+        placeholder="blur"
+      />
+    </div>
+  );
+}
 
 interface Member {
   name: string;
   role: string;
   photo: any;
-  linkedinUrl?: string; // Optional field
-  githubUrl?: string; // Optional field
-  personalWebsiteUrl?: string; // Optional field
-  instagramUrl?: string; // Optional field
+  hoverPhoto?: any;
+  linkedinUrl?: string;
+  githubUrl?: string;
+  personalWebsiteUrl?: string;
+  instagramUrl?: string;
 }
 
 const members: Member[] = [
@@ -24,6 +54,7 @@ const members: Member[] = [
     name: 'Anna Belenko',
     role: 'President',
     photo: annaBelenkoPic,
+    hoverPhoto: annaBelenkoPicHover,
     linkedinUrl: 'https://www.linkedin.com/in/annabelenko/',
     githubUrl: 'https://github.com/annabelenko',
     personalWebsiteUrl: 'https://annabelenko.com/',
@@ -32,6 +63,7 @@ const members: Member[] = [
     name: 'Pawel Cieslak',
     role: 'Vice President',
     photo: pawelCieslakPic,
+    hoverPhoto: pawelCieslakPicHover,
     linkedinUrl: 'https://www.linkedin.com/in/pawelcieslak4/',
     githubUrl: 'https://github.com/PawelC4',
   },
@@ -39,6 +71,7 @@ const members: Member[] = [
     name: 'Faizan Khan',
     role: 'Treasurer',
     photo: faizanKhanPic,
+    hoverPhoto: faizanKhanPicHover,
     linkedinUrl: 'https://www.linkedin.com/in/faizan-khan234/',
     githubUrl: 'https://github.com/jellyfishing2346',
     instagramUrl: 'https://www.instagram.com/faizizizan/',
@@ -47,6 +80,7 @@ const members: Member[] = [
     name: 'Jessica Livchits',
     role: 'Secretary',
     photo: jessicaLivchitsPic,
+    hoverPhoto: jessicaLivchitsPicHover,
     linkedinUrl: 'https://www.linkedin.com/in/jessica-livchits-75b479262/',
     githubUrl: 'https://github.com/jessicalist',
   },
@@ -54,10 +88,11 @@ const members: Member[] = [
     name: 'Lu Gonzalez',
     role: 'Club Connector',
     photo: luGonzalezPic,
+    hoverPhoto: luGonzalezPicHover,
     linkedinUrl: 'https://www.linkedin.com/in/luis-gonzalez-148354272/',
     githubUrl: 'https://github.com/lu-syn',
   },
-]
+];
 
 export default function ExecutiveBoardSection() {
   return (
@@ -70,18 +105,13 @@ export default function ExecutiveBoardSection() {
         </div>
         <ul
           role="list"
-          className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3"
+          className="mx-auto mt-20 grid max-w-4xl grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none"
         >
           {members.map((member) => (
-            <li key={member.name}>
-              <Image
-                alt={member.name}
-                src={member.photo}
-                className="mx-auto h-56 w-56 rounded-full"
-                placeholder="blur"
-              />
-              <h3 className="mt-6 text-base font-semibold leading-7 tracking-tight text-gray-900">{member.name}</h3>
-              <p className="text-sm leading-6 text-gray-600">{member.role}</p>
+            <li key={member.name} className="flex flex-col items-center">
+              <HoverImage photo={member.photo} hoverPhoto={member.hoverPhoto} alt={member.name} />
+              <h3 className="mt-6 text-lg font-semibold leading-7 tracking-tight text-gray-900">{member.name}</h3>
+              <p className="text-base leading-6 text-gray-600">{member.role}</p>
               <ul role="list" className="mt-6 flex justify-center gap-x-6">
                 {member.linkedinUrl && (
                   <li>

@@ -3,12 +3,7 @@ import { BsGithub } from "react-icons/bs";
 import { BsGlobe2 } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
 import Image from 'next/image';
-// import avatarPic from '../../../images/team/club-coordinators/avatar.jpg'
-import ayeshaZakerPic from "../../../images/team/club-coordinators/ayesha-zaker.jpg";
-import nicoleShmerkinPic from "../../../images/team/club-coordinators/nicole-shmerkin.jpg";
-import axelmejiaPic from "../../../images/team/club-coordinators/axel-mejia.jpg";
-import andrewLiPic from "../../../images/team/club-coordinators/andrew-li.jpg";
-import birongliuPic from "../../../images/team/club-coordinators/birong-liu.jpg"
+import avatarPic from '../../../images/team/club-coordinators/avatar.jpg'
 
 interface Member {
   name: string;
@@ -22,42 +17,9 @@ interface Member {
 
 const members: Member[] = [
   {
-    name: 'Nicole Shmerkin',
-    role: 'Event Coordinator',
-    photo: nicoleShmerkinPic,
-    linkedinUrl: 'https://www.linkedin.com/in/nicole-shmerkin-36ba2a2a9/',
-    instagramUrl: 'https://www.instagram.com/nvcole5/'
-  },
-  {
-    name: 'Ayesha Zaker',
-    role: 'Full Stack Developer',
-    photo: ayeshaZakerPic,
-    linkedinUrl: 'https://www.linkedin.com/in/ayesha-z-4321a318b',
-    githubUrl: 'https://github.com/AZcodes',
-  },
-  {
-    name: 'Axel Mejia',
-    role: 'Backend Developer',
-    photo: axelmejiaPic,
-    linkedinUrl: 'https://www.linkedin.com/in/axel-mejia-04a69725a/',
-    githubUrl: 'https://github.com/Ax3lMejia',
-    instagramUrl: 'https://www.instagram.com/4xl_m3/'
-  },
-  {
-    name: 'Andrew Li',
-    role: 'Backend Developer',
-    photo: andrewLiPic,
-    linkedinUrl: 'https://www.linkedin.com/in/andrew-li-611a34278/',
-    githubUrl: 'https://github.com/AndrewL05',
-    instagramUrl: 'https://www.instagram.com/andrew.liiiiiii'
-  },
-  {
-    name: "Bi Rong Liu",
-    role: "Frontend Developer",
-    photo: birongliuPic,
-    linkedinUrl: "https://www.linkedin.com/in/birongliu",
-    githubUrl: "https://github.com/birongliu",
-    personalWebsiteUrl: "https://birongliu.dev",
+    name: 'Name',
+    role: 'Club Coordinator',
+    photo: avatarPic,
   },
 ];
 
