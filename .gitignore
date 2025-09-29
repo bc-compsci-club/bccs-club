@@ -1,2 +1,26 @@
 .DS_Store
 .vscode/*
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Python virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Node/Next.js (repo-level safeguard; project .gitignores already cover these)
+node_modules/
+.next/
+dist/
+build/
+
+# OS/Editor
+.idea/
+Thumbs.db

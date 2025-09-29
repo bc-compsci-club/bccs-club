@@ -44,6 +44,9 @@ def main():
     parser.add_argument('--start-time', help='Event start time in HH:MM')
     parser.add_argument('--end-time', help='Event end time in HH:MM')
     parser.add_argument('--weekdays', nargs='+', default=['TU', 'WE', 'TH'], help='Weekdays for events (e.g. TU WE TH)')
+    # Optional extras for automated mode
+    parser.add_argument('--rsvp-link', dest='rsvp_link', default='', help='RSVP link (optional)')
+    parser.add_argument('--flier-link', dest='flier_link', default='', help='Flier link (optional)')
     args = parser.parse_args()
 
     success = 0
@@ -146,8 +149,8 @@ def main():
             "startTime": start_dt.isoformat(),
             "endTime": end_dt.isoformat(),
             "isActive": True,
-            "rsvpLink": "",
-            "flierLink": ""
+            "rsvpLink": args.rsvp_link or "",
+            "flierLink": args.flier_link or ""
         }
         valid, msg = validate_event(event)
         if valid:
