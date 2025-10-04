@@ -36,6 +36,10 @@ const items = [
     title: "CapitalOne Full-Time Programs",
     link: "https://www.capitalonecareers.com/full-time-programs",
   },
+  {
+    title: "Project Alpaca",
+    link: "https://projectalpaca.org/"
+  }
 ]
 
 export default function Page() {
