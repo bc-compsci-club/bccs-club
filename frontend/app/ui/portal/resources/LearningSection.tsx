@@ -4,44 +4,28 @@ import { BsDash } from "react-icons/bs";
 
 const items = [
   {
-    title: "CUNY Spring Forward internship",
-    link: "https://www.cuny.edu/about/administration/offices/ocip/students/spring-forward/",
+    title: "Forge Software Engineering Simulations",
+    link: "https://www.theforage.com/career-path/software-engineering",
   },
   {
-    title: "CUNY Career Launch (summer internships)",
-    link: "https://www.cuny.edu/about/administration/offices/ocip/students/careerlaunch/",
+    title: "Developer Roadmaps",
+    link: "https://roadmap.sh/",
   },
   {
-    title: "CUNY Internship to Employment (I2E) internship",
-    link: "https://www.cuny.edu/about/administration/offices/ocip/students/i2e/",
+    title: "Open Source Computer Science Degree",
+    link: "https://github.com/ForrestKnight/open-source-cs",
   },
   {
-    title: "CUNY Internship Programs portal",
-    link: "https://cunyinternship-oaa-csm.symplicity.com/",
+    title: "100 Days CSS Challenge",
+    link: "https://100dayscss.com/",
   },
   {
-    title: "Brooklyn Navy Yard Internship Programs",
-    link: "https://www.brooklynnavyyard.org/internship-opportunities/",
+    title: "Code Wars - Achieve Mastery Through Practice",
+    link: "https://www.codewars.com/",
   },
   {
-    title: "New York Jobs CEO Council",
-    link: "https://www.nyjobsceocouncil.org/",
-  },
-  {
-    title: "The City of New York Summer Internship Program",
-    link: "https://www.nyc.gov/site/dcas/employment/internship-and-fellowships-summer-internship-program.page",
-  },
-  {
-    title: "NYC Government Jobs",
-    link: "https://cityjobs.nyc.gov/",
-  },
-  {
-    title: "MTA College Aide Program",
-    link: "https://careers.mta.org/pages/mta-college-aide-program",
-  },
-  {
-    title: "Summer 2025 Tech Internships by Pitt CSC & Simplify",
-    link: "https://github.com/SimplifyJobs/Summer2025-Internships",
+    title: "The Odin Project ",
+    link: "https://www.theodinproject.com/",
   },
 ]
 
@@ -50,7 +34,7 @@ export default function Page() {
     <div className="mx-auto max-w-7xl px-6 lg:px-8 py-8">
       <div className="mx-auto max-w-4xl divide-y divide-gray-900/10">
         <h2 className="text-2xl font-bold leading-10 tracking-tight text-gray-900">
-          Tech Internship Opportunities
+          Self-Learning Materials
         </h2>
         <dl className="mt-10 space-y-6 divide-y divide-gray-900/10">
           {items.map((item) => (
