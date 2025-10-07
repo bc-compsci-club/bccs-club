@@ -43,10 +43,6 @@ const items = [
     title: "Summer 2025 Tech Internships by Pitt CSC & Simplify",
     link: "https://github.com/SimplifyJobs/Summer2025-Internships",
   },
-  {
-    title: "Forge Software Engineering Simulations",
-    link: "https://www.theforage.com/career-path/software-engineering",
-  },
 ]
 
 export default function Page() {
