@@ -106,7 +106,7 @@ const members: Member[] = [
   {
     photo: neissaDorsinvillePic,
     name: 'Neissa Dorsinville',
-    role: 'Clun Secretary ~ 2020',
+    role: 'Club Secretary ~ 2020',
     title: 'SWE @ JPMorgan Chase',
     linkedinUrl: 'https://www.linkedin.com/in/neissado/',
   },
