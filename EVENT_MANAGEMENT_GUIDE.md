@@ -875,18 +875,3 @@ cd frontend; npm run dev
 # View all events
 Invoke-RestMethod http://localhost:8090/v1/calendar/events | ConvertTo-Json
 ```
-
----
-
-## 🆘 Support
-
-For issues:
-- GitHub Issues: [bccs-club/issues](https://github.com/bc-compsci-club/bccs-club/issues)
-- BCCS Club Discord
-- Email: bccs@brooklyn.cuny.edu
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License. See [LICENSE.md](docs/LICENSE.md) for details.
