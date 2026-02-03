@@ -24,6 +24,7 @@ export default function RootLayout({
           <NavBar />
           {children}
           <Footer />
+          <AIActionButton />
         </div>
       </body>
     </html>

@@ -1,55 +1,126 @@
 "use client";
-import { Dialog, Transition } from "@headlessui/react";
 import Image from "next/image";
-import clubIcon from "../../../images/logo/club-logo-hd.png"
-import React, { Fragment, useState } from "react";
-import ReactMarkdown, {} from "react-markdown";
+import clubIcon from "../../../images/logo/club-logo-hd.png";
+import React, { useState, useRef, useEffect } from "react";
+import ReactMarkdown from "react-markdown";
+
 export default function AIActionButton() {
   const [isOpen, setIsOpen] = useState(false);
-  const handleOpen = () => setIsOpen(!isOpen);
+  const [isClosing, setIsClosing] = useState(false);
+
+  const handleOpen = () => {
+    if (isOpen) {
+      setIsClosing(true);
+      setTimeout(() => {
+        setIsOpen(false);
+        setIsClosing(false);
+      }, 150);
+    } else {
+      setIsOpen(true);
+    }
+  };
 
   return (
-    <div className="relative sm:overflow-auto max-w-7xl z-50 scroll inset-0 mx-auto">
+    <>
       <button
-        onClick={() => handleOpen()}
-        className={`bottom-5 right-5 fixed bg-bc-red hover:bg-bc-red/85 text-white font-bold py-2 px-4 rounded-xl ${
-          isOpen ? "hidden" : "block"
-        }`}
+        onClick={handleOpen}
+        className={`fixed bottom-5 right-5 z-50 bg-bc-red hover:bg-bc-red/90 text-white p-4 rounded-full shadow-lg transition-all duration-200 hover:scale-105 ${
+          isOpen ? "scale-0 opacity-0" : "scale-100 opacity-100"
+        } flex items-center justify-center`}
+        aria-label="Open chat"
       >
-        🤖
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+          />
+        </svg>
       </button>
-      {isOpen && <AIChat open={isOpen} handleOpen={handleOpen} />}
-    </div>
+
+      {isOpen && <AIChat handleOpen={handleOpen} isClosing={isClosing} />}
+    </>
   );
 }
 
 export type MessageData = {
   role: "user" | "assistant";
-  typing: boolean,
+  typing: boolean;
   content: string;
 };
 
-export function AIChat({
-  open,
-  handleOpen,
-}: {
-  open: boolean;
-  handleOpen: () => void;
-}) {
-  const [message, setMessage] = React.useState("");
-  const [messages, setMessages] = React.useState<MessageData[]>([]);
-  const [disabledInput, setDisabledInput] = React.useState(false);
+const LinkRenderer = ({ href, children }: { href?: string; children?: React.ReactNode }) => (
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-blue-600 hover:text-blue-800 underline"
+  >
+    {children}
+  </a>
+);
 
-  function isScrolledToBottom(element: HTMLDivElement | null) {
-    if (element) {
-      element.scroll({ top: element.scrollHeight, behavior: "smooth" });
-    }
-  }
+const convertUrlsToLinks = (text: string): string => {
+  let result = text;
+
+  // Pattern: "Discord (discord.gg/...)" or "Discord (https://discord.gg/...)"
+  result = result.replace(/Discord\s*\((?:https?:\/\/)?discord\.gg\/[^\s\)]+\)/gi, '[Discord](https://discord.gg/C77eXN8bHT)');
+
+  // Pattern: "WhatsApp (chat.whatsapp.com/...)" or "WhatsApp (https://chat.whatsapp.com/...)"
+  result = result.replace(/WhatsApp\s*\((?:https?:\/\/)?chat\.whatsapp\.com\/[^\s\)]+\)/gi, '[WhatsApp](https://chat.whatsapp.com/ISU51DWQHSL0wQ7SoEAKa0)');
+
+  // Pattern: standalone discord.gg URLs
+  result = result.replace(/(?<!\[)(?:https?:\/\/)?discord\.gg\/[^\s\)\]]+/gi, '[Discord](https://discord.gg/C77eXN8bHT)');
+
+  // Pattern: standalone chat.whatsapp.com URLs
+  result = result.replace(/(?<!\[)(?:https?:\/\/)?chat\.whatsapp\.com\/[^\s\)\]]+/gi, '[WhatsApp](https://chat.whatsapp.com/ISU51DWQHSL0wQ7SoEAKa0)');
+
+  // Pattern: clubs.brooklyn.cuny.edu signup
+  result = result.replace(/(?:https?:\/\/)?clubs\.brooklyn\.cuny\.edu\/ComputerScienceClub\/club_signup/gi, '[club signup portal](https://clubs.brooklyn.cuny.edu/ComputerScienceClub/club_signup)');
+
+  // Pattern: bccs.club
+  result = result.replace(/(?<!\[)(?:https?:\/\/)?bccs\.club(?![\w\/])/gi, '[bccs.club](https://bccs.club)');
+
+  return result;
+};
+
+export function AIChat({
+  handleOpen,
+  isClosing,
+}: {
+  handleOpen: () => void;
+  isClosing: boolean;
+}) {
+  const [message, setMessage] = useState("");
+  const [messages, setMessages] = useState<MessageData[]>([]);
+  const [disabledInput, setDisabledInput] = useState(false);
+  const [isOpening, setIsOpening] = useState(true);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsOpening(false), 10);
+    return () => clearTimeout(timer);
+  }, []);
 
   async function handleForm(e: React.FormEvent) {
     e.preventDefault();
-    setDisabledInput(true)
-    if(message.trim() === "") return;
+    setDisabledInput(true);
+    if (message.trim() === "") return;
     setMessage("");
     setMessages((messages) => [
       ...messages,
@@ -72,6 +143,29 @@ export function AIChat({
           ]),
         }
       );
+
+      // Handle error responses
+      if (!response.ok) {
+        let errorMessage = "Sorry, I can only help with BCCS club questions!";
+        try {
+          const errorData = await response.json();
+          if (errorData.error) {
+            errorMessage = errorData.error;
+          }
+        } catch {
+          // If JSON parsing fails, use default message
+        }
+        setMessages((messages) => {
+          const otherMessages = messages.slice(0, messages.length - 1);
+          return [
+            ...otherMessages,
+            { role: "assistant", content: errorMessage, typing: false },
+          ];
+        });
+        setDisabledInput(false);
+        return;
+      }
+
       const reader = response.body?.getReader();
       const decoder = new TextDecoder();
 
@@ -95,18 +189,18 @@ export function AIChat({
           ];
         });
         if (done) {
-          setDisabledInput(false)
+          setDisabledInput(false);
           break;
         }
-        
       }
     } catch (error) {
       abortController.abort();
-      console.log(error)
+      console.log(error);
       setMessages((messages) => {
         let lastMessage = messages[messages.length - 1];
         let otherMessages = messages.slice(0, messages.length - 1);
-        const errorMessage = "Sorry, I am not able to process your request at the moment.";
+        const errorMessage =
+          "Sorry, I am not able to process your request at the moment.";
         return [
           ...otherMessages,
           {
@@ -119,163 +213,144 @@ export function AIChat({
           },
         ];
       });
-      setDisabledInput(false)
+      setDisabledInput(false);
     }
   }
+
   return (
-    <Transition appear show={open} as={Fragment}>
-      <div className="fixed inset-0 bg-black/70" aria-hidden="true" />
-      <Dialog
-        open={open}
-        onClose={handleOpen}
-        as="div"
-        role="dialog"
-        aria-modal="true"
-        className={`w-full overflow-hidden h-full lg:w-3/4 lg:h-3/4 z-50  fixed mx-auto my-auto inset-0 lg:rounded-2xl bg-white shadow-lg`}
-      >
-        <div
-          aria-hidden="true"
-          className="fixed blur-2xl  inset-x-0 rotate-45 -top-60 -right-60 -z-10 flex transform-gpu justify-center overflow-hidden pointer-events-none"
-        >
-          <div
-            style={{
-              width: 1000,
-              clipPath:
-                "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-            }}
-            className="aspect-[1318/752] w-[82.375rem] flex-none bg-gradient-to-r from-[#ff80b5] to-[#454091] opacity-15"
+    <div
+      className={`fixed bottom-5 right-5 z-50 w-[380px] h-[500px] max-w-[calc(100vw-40px)] max-h-[calc(100vh-100px)] bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-gray-200 transition-all duration-150 origin-bottom-right ${
+        isClosing || isOpening ? "scale-0 opacity-0" : "scale-100 opacity-100"
+      }`}
+      style={{ transformOrigin: "bottom right" }}
+    >
+      <div className="flex items-center justify-between p-4 bg-bc-red text-white">
+        <div className="flex items-center gap-3">
+          <Image
+            className="w-8 h-8 rounded-full bg-white p-0.5"
+            src={clubIcon}
+            alt="BCCS Logo"
           />
-        </div>
-        <div
-          aria-hidden="true"
-          className="fixed blur-2xl inset-x-0 rotate-45 -top-12 -right-20 -z-10 flex transform-gpu justify-center overflow-hidden pointer-events-none"
-        >
-          <div
-            style={{
-              width: 1000,
-              clipPath:
-                "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-            }}
-            className="aspect-[1318/752] w-[82.375rem] flex-none bg-gradient-to-r from-[#ff80b5] to-[#454091] opacity-15"
-          />
-        </div>
-        <div
-          aria-hidden="true"
-          className="fixed blur-2xl inset-x-0 rotate-45 -bottom-12 -left-20 -z-10 flex transform-gpu justify-center overflow-hidden pointer-events-none"
-        >
-          <div
-            style={{
-              width: 1000,
-              clipPath:
-                "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-            }}
-            className="aspect-[1318/752] w-[82.375rem] flex-none bg-gradient-to-r from-[#ff80b5] to-[#454091] opacity-15"
-          />
-        </div>
-        <div className="flex flex-col h-full">
-          <div className="flex items-center justify-between p-4 border-b border-gray-200">
-            <h2 className="text-lg font-semibold">Club Assistant</h2>
-            <button
-              onClick={handleOpen}
-              className="text-gray-500 hover:text-gray-800"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
+          <div>
+            <h2 className="font-semibold text-sm">BCCS Assistant</h2>
+            <p className="text-xs text-white/80">Ask me about the club!</p>
           </div>
-          <div
-            ref={isScrolledToBottom}
-            className={`h-4/5 rounded overflow-x-hidden  ${
-              messages.length > 0 ? "block" : "hidden"
-            }`}
+        </div>
+        <button
+          onClick={handleOpen}
+          className="text-white/80 hover:text-white transition-colors"
+          aria-label="Close chat"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
           >
-            <div className="px-5 py-4 relative flex-col mt-4 flex gap-3">
-              {messages.map((message, i) => (
-                <div
-                  key={i}
-                  className={`flex items-center gap-4 ${
-                    message.role === "user" ? "justify-end" : ""
-                  }`}
-                >
-                  <div className={`${message.role === "user" && "order-2"}`} />
-                  {message.role !== "user" && (
-                    <Image
-                      className="w-8 h-8 flex  items-center justify-center rounded-full"
-                      src={clubIcon}
-                      alt="assistant profile"
-                    />
-                  )}
-                  {message.typing && (
-                    <div className="animate-typing flex items-center justify-center  gap-1">
-                      <div className="typing-dot"></div>
-                      <div className="typing-dot"></div>
-                      <div className="typing-dot"></div>
-                    </div>
-                  )}
-                  <p
-                    className={`${
-                      message.role !== "user" ? "bg-none" : " bg-bc-red/15"
-                    } rounded-lg p-2`}
-                  >
-                    <div>
-                    <ReactMarkdown>
-                      {message.content}
-                    </ReactMarkdown>
-                    </div>
-                  </p>
-                </div>
-              ))}
-            </div>
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div className="flex-1 overflow-y-auto p-4 space-y-4 bg-gray-50">
+        {messages.length === 0 && (
+          <div className="h-full flex flex-col items-center justify-center text-center text-gray-500">
+            <Image
+              className="w-16 h-16 mb-4 opacity-50"
+              src={clubIcon}
+              alt="BCCS Logo"
+            />
+            <p className="font-medium text-gray-700">Hi! How can I help you?</p>
+            <p className="text-sm mt-1">Ask me about events, joining, or resources</p>
           </div>
+        )}
+        {messages.map((msg, i) => (
           <div
-            className={
-              messages.length === 0
-                ? "h-5/6 w-full flex items-center gap-2 flex-col justify-center"
-                : "block"
-            }
+            key={i}
+            className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
           >
-            <div
-              className={`${
-                messages.length === 0
-                  ? "w-full  overflow-hidden whitespace-nowrap flex items-center justify-center font-bold text-2xl"
-                  : "hidden"
-              }`}
-            >
-              What can I help you with?
-            </div>
-            <form className="w-full px-5" onSubmit={handleForm}>
-              <input
-                onChange={(e) => setMessage(e.target.value)}
-                required
-                disabled={disabledInput}
-                onInvalid={(e) => e.preventDefault()}
-                autoFocus={true}
-                className=" bg-bc-red/10 focus h-12 my-5 rounded-xl px-10 w-full focus:outline-none"
-                placeholder="Enter your message..."
-                value={message}
-                type="text"
+            {msg.role === "assistant" && (
+              <Image
+                className="w-7 h-7 rounded-full mr-2 flex-shrink-0 mt-1"
+                src={clubIcon}
+                alt="Assistant"
               />
-            </form>
-            <p className="text-center bottom-0 md:text-sm text-xs items-center pb-5 text-gray-500">
-              Please note: The AI bot may occasionally provide incorrect or
-              outdated information.
-            </p>
+            )}
+            {msg.typing ? (
+              <div className="bg-white rounded-2xl rounded-tl-sm px-4 py-3 shadow-sm">
+                <div className="flex items-center gap-1">
+                  <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: "0ms" }}></div>
+                  <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: "150ms" }}></div>
+                  <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: "300ms" }}></div>
+                </div>
+              </div>
+            ) : (
+              <div
+                className={`max-w-[80%] px-4 py-2 rounded-2xl text-sm break-words overflow-hidden ${
+                  msg.role === "user"
+                    ? "bg-bc-red text-white rounded-tr-sm"
+                    : "bg-white text-gray-800 rounded-tl-sm shadow-sm"
+                }`}
+                style={{ wordBreak: "break-word", overflowWrap: "anywhere" }}
+              >
+                <ReactMarkdown
+                  components={{
+                    a: LinkRenderer,
+                  }}
+                >
+                  {convertUrlsToLinks(msg.content)}
+                </ReactMarkdown>
+              </div>
+            )}
           </div>
-        </div>
-      </Dialog>
-    </Transition>
+        ))}
+        <div ref={messagesEndRef} />
+      </div>
+
+      <div className="p-3 bg-white border-t border-gray-200">
+        <form onSubmit={handleForm} className="flex gap-2">
+          <input
+            onChange={(e) => setMessage(e.target.value)}
+            required
+            disabled={disabledInput}
+            onInvalid={(e) => e.preventDefault()}
+            autoFocus={true}
+            className="flex-1 bg-gray-100 h-10 rounded-full px-4 text-sm focus:outline-none focus:ring-2 focus:ring-bc-red/50"
+            placeholder="Type a message..."
+            value={message}
+            type="text"
+          />
+          <button
+            type="submit"
+            disabled={disabledInput}
+            className="bg-bc-red hover:bg-bc-red/90 text-white h-10 w-10 rounded-full flex items-center justify-center disabled:opacity-50 transition-colors"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
+              />
+            </svg>
+          </button>
+        </form>
+        <p className="text-center text-[10px] text-gray-400 mt-2">
+          AI may provide inaccurate info
+        </p>
+      </div>
+    </div>
   );
 }

@@ -4,10 +4,10 @@ Our custom AI chatbot integrates internal data with an LLM to help users find in
 
 ## Tech Stack
 
-- Python 3.9+
+- Python 3.12
 - Flask
 - LangChain
-- LLM
+- Groq (Llama 3.1 8B)
 
 ## Run the `ai` backend API endpoints locally with Docker (for faster setup)
 
@@ -15,13 +15,13 @@ Our custom AI chatbot integrates internal data with an LLM to help users find in
 
 - [Docker](https://www.docker.com/get-started/)
 - [Docker Compose](https://docs.docker.com/compose/install/)
-- [OpenRouter API Key](https://openrouter.ai)
+- [Groq API Key](https://console.groq.com)
 
 ### Set up the environment variables:
 
 Create a `.env` file in the root directory of the `ai` project and add the following environment variables:
 ```
-OPENROUTER_API_KEY=key # Your OpenRouter API key
+GROQ_API_KEY=key # Your Groq API key
 FRONTEND_URL=URL # URL that you use for frontend development or production. for CORS policy
 ```
 
@@ -52,7 +52,7 @@ pip install -r requirements.txt
 ### Set up the environment variables:
 Create a `.env` file in the root directory of the `ai` project and add the following environment variables:
 ```
-OPENROUTER_API_KEY=key
+GROQ_API_KEY=key
 FRONTEND_URL= # URL that you use for frontend development or production. for CORS policy
 ```
 

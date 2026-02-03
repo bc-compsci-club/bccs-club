@@ -1,0 +1,287 @@
+{
+  "metadata": {
+    "title": "Brooklyn College Computer Science Club",
+    "description": "By the BC tech community, for the BC tech community. A community for students interested in technology to learn and grow together.",
+    "website": "https://bccs.club/",
+    "join_link": "https://www.clubs.brooklyn.cuny.edu/ComputerScienceClub/club_signup"
+  },
+  "content": [
+    {
+      "title": "About the Club",
+      "content": [
+        {
+          "section": "Mission",
+          "description": "The Brooklyn College Computer Science Club is committed to fostering a dynamic and engaging community through a series of events and workshops designed to enhance your learning experience and professional growth."
+        },
+        {
+          "section": "What We Do",
+          "description": "We host tech events, workshops, hackathons, company visits, and tech talks. We also share resources and connect you with internship opportunities, fellowship programs, tech interview prep materials, and student developer programs. We create a community where students interested in technology can connect, learn, and grow together."
+        },
+        {
+          "section": "Who Can Join",
+          "description": "The club is open to all Brooklyn College students interested in computer science and technology, regardless of major or experience level. Whether you're a CS major or just curious about tech, you're welcome!"
+        }
+      ]
+    },
+    {
+      "title": "Executive Board",
+      "content": [
+        {
+          "name": "Anna Belenko",
+          "position": "President",
+          "linkedin": "https://www.linkedin.com/in/annabelenko/",
+          "github": "https://github.com/annabelenko",
+          "website": "https://annabelenko.com/"
+        },
+        {
+          "name": "Pawel Cieslak",
+          "position": "Vice President",
+          "linkedin": "https://www.linkedin.com/in/pawelcieslak4/",
+          "github": "https://github.com/PawelC4"
+        },
+        {
+          "name": "Faizan Khan",
+          "position": "Treasurer",
+          "linkedin": "https://www.linkedin.com/in/faizan-khan234/",
+          "github": "https://github.com/jellyfishing2346",
+          "instagram": "https://www.instagram.com/faizizizan/"
+        },
+        {
+          "name": "Jessica Livchits",
+          "position": "Secretary",
+          "linkedin": "https://www.linkedin.com/in/jessica-livchits-75b479262/",
+          "github": "https://github.com/jessicalist"
+        },
+        {
+          "name": "Lu Gonzalez",
+          "position": "Club Connector",
+          "linkedin": "https://www.linkedin.com/in/luis-gonzalez-148354272/",
+          "github": "https://github.com/lu-syn"
+        }
+      ]
+    },
+    {
+      "title": "Events and Programs",
+      "content": [
+        {
+          "event": "Alumni Talk Series",
+          "description": "Hear from Brooklyn College alumni who have successfully transitioned into tech careers. Learn about their journey, get advice, and network with professionals in the field."
+        },
+        {
+          "event": "Tech Talk Series",
+          "description": "Regular technical presentations covering various topics in computer science and technology. Learn about cutting-edge technologies, best practices, and industry trends."
+        },
+        {
+          "event": "Hackathons",
+          "description": "Participate in competitive coding events where you can build projects, collaborate with teammates, and showcase your skills. Open to all skill levels."
+        },
+        {
+          "event": "Company Visits",
+          "description": "Visit tech companies to see where professionals work, learn about company culture, and network with employees. Great opportunity to explore potential career paths."
+        },
+        {
+          "event": "Club Hours",
+          "description": "Regular meeting times on Wednesdays and Thursdays from 5-6pm in Room 0317, Ingersoll Hall basement, where club members can gather, work on projects together, get help with coursework, and socialize with fellow tech enthusiasts."
+        },
+        {
+          "event": "Game Jam",
+          "description": "A week-long beginner-friendly competition where developers create games. Open to CSI and Brooklyn College students of all majors and experience levels."
+        },
+        {
+          "event": "LeetCode Sessions",
+          "description": "Weekly coding practice sessions held on Tuesdays where members work through algorithm problems together and prepare for technical interviews."
+        },
+        {
+          "event": "Workshops",
+          "description": "Hands-on technical workshops covering various programming languages, frameworks, tools, and technologies to help you build practical skills."
+        },
+        {
+          "event": "Girls Who Code Events",
+          "description": "Events in collaboration with Girls Who Code to support and empower women in technology through workshops, talks, and community building."
+        },
+        {
+          "event": "Google Developer Group Events",
+          "description": "Events in collaboration with Google Developer Group featuring talks, workshops, and networking opportunities focused on Google technologies and developer tools."
+        },
+        {
+          "event": "Info Sessions",
+          "description": "Information sessions about club activities, upcoming events, opportunities, and how to get involved in the BC tech community."
+        }
+      ]
+    },
+    {
+      "title": "Resources and Information",
+      "content": [
+        {
+          "resource": "Internship Opportunities",
+          "description": "The club shares curated links to internship opportunities including CUNY Spring Forward, CUNY Career Launch, Brooklyn Navy Yard programs, NYC Summer Internship Program, MTA College Aide Program, and GitHub lists of tech internships. Visit bccs.club/resources to explore these opportunities."
+        },
+        {
+          "resource": "Fellowship and Apprenticeship Programs",
+          "description": "Information and links to competitive fellowship programs including CUNY Tech Prep, Break Through Tech, Basta Fellowship, CodePath Tech Fellow Program, Rewriting the Code, Girls Who Code, and America Needs You."
+        },
+        {
+          "resource": "Tech Interview Preparation",
+          "description": "Curated list of resources for preparing for technical interviews, including CodePath interview prep course, NeetCode roadmap, Tech Interview Handbook, ByteByteGo system design, LeetCode practice problems, and Final Round AI mock interviews."
+        },
+        {
+          "resource": "Student Developer Programs",
+          "description": "Information about student developer programs from major tech companies including Google Developer Student Clubs, GitHub Campus Experts, Postman Student Leader Program, Microsoft Learn Student Ambassadors, and AWS Cloud Clubs."
+        },
+        {
+          "resource": "Community Resource Sharing",
+          "description": "Members are encouraged to contribute and share resources with the BC tech community through the club's GitHub repository at github.com/bc-compsci-club"
+        }
+      ]
+    },
+    {
+      "title": "Get Involved",
+      "content": [
+        {
+          "section": "Join as a Member",
+          "description": "Officially sign up through the Brooklyn College clubs portal at clubs.brooklyn.cuny.edu/ComputerScienceClub/club_signup. Join the Discord community, WhatsApp group, and follow on Instagram and LinkedIn to stay connected. Membership is completely free for all Brooklyn College students."
+        },
+        {
+          "section": "Volunteer with the Club",
+          "description": "The club is always looking for volunteers to help build and grow the BC tech community. Open roles include Web Developer, Event Coordinator, and Graphic Designer. Reach out through Discord or WhatsApp to get started."
+        },
+        {
+          "section": "Join the Executive Board",
+          "description": "E-board positions open up through elections held each semester. Start by getting involved as a volunteer or active member, then run for a position when elections happen. Discord: https://discord.gg/C77eXN8bHT or WhatsApp: https://chat.whatsapp.com/ISU51DWQHSL0wQ7SoEAKa0"
+        },
+        {
+          "section": "Contribute to Open Source",
+          "description": "Collaborate with club developers to build open-source projects on the club's GitHub organization at github.com/bc-compsci-club. Great way to gain real-world development experience and contribute to the community."
+        }
+      ]
+    },
+    {
+      "title": "Contact and Social Media",
+      "content": [
+        {
+          "platform": "Email",
+          "contact": "bc.cis.club@gmail.com",
+          "description": "Reach out to us via email for any questions or inquiries about the club."
+        },
+        {
+          "platform": "In Person",
+          "location": "Room 0317, Ingersoll Hall basement",
+          "description": "Visit us during Club Hours on Wednesdays and Thursdays from 5-6pm to meet members, work on projects, and connect with the community."
+        },
+        {
+          "platform": "Website",
+          "link": "https://bccs.club/",
+          "description": "Visit our official website for the latest news, events, and information."
+        },
+        {
+          "platform": "LinkedIn",
+          "link": "https://www.linkedin.com/company/bc-compsci-club/",
+          "username": "bc-compsci-club",
+          "description": "Connect with us professionally and stay updated on career opportunities and club news."
+        },
+        {
+          "platform": "Instagram",
+          "link": "https://www.instagram.com/bccs.club/",
+          "username": "@bccs.club",
+          "description": "Follow us for event updates, photos, and club announcements."
+        },
+        {
+          "platform": "Discord",
+          "link": "https://discord.gg/C77eXN8bHT",
+          "description": "Join our Discord community server to chat with members, get help, and participate in discussions. Main hub for club communication."
+        },
+        {
+          "platform": "WhatsApp",
+          "link": "https://chat.whatsapp.com/ISU51DWQHSL0wQ7SoEAKa0",
+          "description": "Join our WhatsApp group to get event updates, chat with members, and stay connected with the club community."
+        },
+        {
+          "platform": "GitHub",
+          "link": "https://github.com/bc-compsci-club",
+          "description": "Check out our open-source projects and contribute to club development initiatives."
+        }
+      ]
+    },
+    {
+      "title": "Frequently Asked Questions",
+      "content": [
+        {
+          "question": "What is the Brooklyn College Computer Science Club?",
+          "answer": "BCCS is a student-run club at Brooklyn College. We host hackathons, workshops, tech talks, company visits, and LeetCode sessions. We also share internship opportunities, interview prep resources, and help you connect with other students in tech. Open to all majors and experience levels!"
+        },
+        {
+          "question": "What is BCCS?",
+          "answer": "BCCS (Brooklyn College Computer Science Club) is a student-run club at BC. We run events like hackathons, workshops, company visits, and LeetCode sessions. We also share career resources and help students break into tech. All majors welcome!"
+        },
+        {
+          "question": "What is this club?",
+          "answer": "This is the Brooklyn College Computer Science Club (BCCS) - a student-run club. We host events like hackathons, workshops, tech talks, and company visits. We also share internship opportunities and career resources."
+        },
+        {
+          "question": "Who can join the club?",
+          "answer": "The club is open to all Brooklyn College students interested in computer science and technology, regardless of major or experience level. Whether you're a CS major or just curious about tech, you're welcome!"
+        },
+        {
+          "question": "How do I join the club?",
+          "answer": "You can officially sign up through the Brooklyn College clubs portal at clubs.brooklyn.cuny.edu/ComputerScienceClub/club_signup. To get involved immediately, join our Discord community at discord.gg/C77eXN8bHT, our WhatsApp group at chat.whatsapp.com/ISU51DWQHSL0wQ7SoEAKa0, and follow us on Instagram @bccs.club and LinkedIn at linkedin.com/company/bc-compsci-club"
+        },
+        {
+          "question": "Do I need programming experience to join?",
+          "answer": "No! The club welcomes students of all skill levels, from complete beginners to experienced developers. We have events and resources tailored for everyone, no matter where you are in your tech journey."
+        },
+        {
+          "question": "What kind of events does the club organize?",
+          "answer": "We organize Alumni Talk Series (hear from BC grads in tech), Tech Talk Series (learn cutting-edge tech), Hackathons (build projects and compete), Company Visits (tour tech companies), Club Hours (meet members and work on projects on Wednesdays and Thursdays 5-6pm in Room 0317, Ingersoll Hall basement), Game Jams (create games in a beginner-friendly competition), LeetCode sessions (Tuesday coding practice), Workshops (hands-on technical training), Girls Who Code events, Google Developer Group events, and Info Sessions."
+        },
+        {
+          "question": "Does the club help with internships and jobs?",
+          "answer": "The club shares curated resources and links to help you find opportunities. We provide information about CUNY internship programs (Spring Forward, Career Launch, I2E), fellowship programs (CUNY Tech Prep, Break Through Tech, Basta, CodePath), student developer programs (GDSC, GitHub Campus Experts, Microsoft, AWS), and tech interview prep resources (LeetCode, NeetCode, Tech Interview Handbook). We also host company visits and networking events with alumni and industry professionals. Visit bccs.club/resources for the full list."
+        },
+        {
+          "question": "When and where does the club meet?",
+          "answer": "We hold regular Club Hours on Wednesdays and Thursdays from 5-6pm in Room 0317, Ingersoll Hall basement, where members can gather, work on projects, get help with coursework, and socialize. Check our Instagram @bccs.club, Discord at discord.gg/C77eXN8bHT, or website at bccs.club/events for the latest schedule of all events."
+        },
+        {
+          "question": "Where is the club located?",
+          "answer": "The club meets in Room 0317, Ingersoll Hall basement at Brooklyn College. Club Hours are Wednesdays and Thursdays from 5-6pm. Come hang out, work on projects, or just meet other tech enthusiasts!"
+        },
+        {
+          "question": "Can I volunteer or contribute to the club?",
+          "answer": "Yes! Volunteer roles include Web Developer, Event Coordinator, and Graphic Designer. Discord: https://discord.gg/C77eXN8bHT or WhatsApp: https://chat.whatsapp.com/ISU51DWQHSL0wQ7SoEAKa0"
+        },
+        {
+          "question": "How do I join the executive board or e-board?",
+          "answer": "E-board positions are filled through elections each semester. Get involved as a volunteer or active member first, then run when elections are announced. Discord: https://discord.gg/C77eXN8bHT or WhatsApp: https://chat.whatsapp.com/ISU51DWQHSL0wQ7SoEAKa0"
+        },
+        {
+          "question": "Who are the current executive board members?",
+          "answer": "The current executive board includes Anna Belenko (President), Pawel Cieslak (Vice President), Faizan Khan (Treasurer), Jessica Livchits (Secretary), and Lu Gonzalez (Club Connector). You can find their LinkedIn profiles and contact info on our team page at bccs.club/team"
+        },
+        {
+          "question": "How can I contact the club or ask questions?",
+          "answer": "You can reach us through Discord at discord.gg/C77eXN8bHT, WhatsApp at chat.whatsapp.com/ISU51DWQHSL0wQ7SoEAKa0, email at bc.cis.club@gmail.com, Instagram @bccs.club, or visit us in person during Club Hours in Room 0317, Ingersoll Hall basement. Check bccs.club/contact for more options."
+        },
+        {
+          "question": "Are there any membership fees?",
+          "answer": "No, membership in the Brooklyn College Computer Science Club is completely free for all Brooklyn College students!"
+        },
+        {
+          "question": "Does the club collaborate with other organizations?",
+          "answer": "Yes! The club collaborates with Brooklyn College student organizations and participates in events with Girls Who Code, Google Developer Group, and other tech communities. We also partner with tech companies for workshops, company visits, and professional development opportunities."
+        },
+        {
+          "question": "Where can I find the club's open-source projects?",
+          "answer": "Check out our GitHub organization at github.com/bc-compsci-club where you can view and contribute to our open-source projects including the club website and other club initiatives."
+        },
+        {
+          "question": "What are LeetCode sessions?",
+          "answer": "LeetCode sessions are weekly coding practice events held on Tuesdays where club members work through algorithm and data structure problems together. It's a great way to prepare for technical interviews and improve your problem-solving skills in a supportive environment. All skill levels are welcome!"
+        },
+        {
+          "question": "How do I stay updated on club events?",
+          "answer": "Join our Discord at discord.gg/C77eXN8bHT for updates and discussions, follow us on Instagram @bccs.club for event photos and announcements, join the WhatsApp group for event notifications, and check bccs.club/events for the full event calendar."
+        }
+      ]
+    }
+  ]
+}
