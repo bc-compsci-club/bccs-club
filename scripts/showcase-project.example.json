@@ -1,0 +1,12 @@
+{
+  "title": "FocusFlow",
+  "shortDescription": "A gentle study planner built around focused work sessions.",
+  "description": "FocusFlow helps students break an assignment into calm, achievable work blocks and track finished sessions.",
+  "authorName": "Maya Rodriguez",
+  "techStack": "Next.js, TypeScript, Tailwind CSS",
+  "websiteUrl": "https://example.com/focusflow",
+  "githubUrl": "https://github.com/bc-compsci-club",
+  "coverTheme": "rose",
+  "featured": true,
+  "isActive": true
+}

@@ -69,3 +69,24 @@ python3 dynamic_update_calendar.py --api-url http://localhost:8090/v1/calendar/e
 ---
 
 For questions or issues, contact the BCCS Club team.
+
+---
+
+## Add a showcase project
+
+`add_showcase_project.py` validates a single project JSON file and creates it through the showcase API. Project writes require the server's `SHOWCASE_ADMIN_API_KEY` and send that value in the `X-Showcase-Admin-Key` header.
+
+Install the script dependencies once if they are not already available:
+
+```sh
+python3 -m pip install -r requirements.txt
+```
+
+```sh
+export SHOWCASE_ADMIN_API_KEY="use-the-deployment-secret"
+python3 add_showcase_project.py \
+  --api-url http://localhost:8090/v1/showcase/projects \
+  --json showcase-project.example.json
+```
+
+The example JSON is a ready-to-edit starting point. Valid `coverTheme` values are `rose`, `gold`, `violet`, and `sky`. The website, GitHub, and optional demo links must be full `http` or `https` URLs.
