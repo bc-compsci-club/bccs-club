@@ -1,0 +1,16 @@
+{
+  "title": "Study Group Finder",
+  "shortDescription": "Find classmates who are available to study.",
+  "description": "Students can list the courses they are taking and compare availability to arrange a study session.",
+  "authorName": "Example Student",
+  "techStack": "Next.js, TypeScript, PostgreSQL",
+  "categories": [
+    "Web",
+    "Mobile"
+  ],
+  "demoVideoUrl": "https://developer.mozilla.org/shared-assets/videos/flower.mp4",
+  "githubUrl": "https://github.com/bc-compsci-club",
+  "featured": false,
+  "isActive": true,
+  "thumbnailUrl": "https://example.com/images/study-group-finder.png"
+}

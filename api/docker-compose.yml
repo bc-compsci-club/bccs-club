@@ -14,7 +14,8 @@ services:
       DB_PORT: 5432
       DB_NAME: bccsclubdb
       DB_USER: postgres
-      DB_PASSWORD: postgres
+      DB_PASS: postgres
+      ADMIN_API_KEY: ${ADMIN_API_KEY:-}
     networks:
       - bccsclub-network
 

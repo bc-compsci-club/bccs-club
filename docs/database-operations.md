@@ -60,3 +60,14 @@ bccsclubdb=# SELECT * FROM table_name;
 ```
 bccsclubdb=# \q
 ```
+
+## Inspect showcase projects
+
+```sql
+SELECT id, slug, featured, categories
+FROM project
+WHERE is_active
+ORDER BY id;
+```
+
+To add a record, follow the [upload guide and examples](upload-showcase-project.md). For a UI-only preview, run `npm run dev --demo` from `frontend/`. The demo generates sample records in memory, so they will not appear in SQL queries.

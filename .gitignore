@@ -20,6 +20,8 @@ node_modules/
 .next/
 dist/
 build/
+.build/
+deployment/api-deployment/.env
 
 # OS/Editor
 .idea/

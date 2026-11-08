@@ -19,7 +19,7 @@ server {
     listen 80;
 
     # Define the domain name.
-    server name api.bccs.club;
+    server_name api.bccs.club;
 
     # Define the location for the root URL
     location / {

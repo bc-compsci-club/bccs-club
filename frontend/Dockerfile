@@ -1,20 +1,25 @@
-# Use official Node.js LTS version as the base image
-FROM node:20-alpine
-
-# Set working directory inside the container
+FROM node:22-alpine AS dependencies
 WORKDIR /app
-
-# Copy package.json and package-lock.json to the container current working directory (/app)
 COPY package.json package-lock.json ./
+RUN npm ci
 
-# Install dependencies inside the container
-RUN npm install
-
-# Copy all files to the container working directory
+FROM dependencies AS dev
 COPY . .
-
-# Expose the port (to the host) that Next.js will run on
 EXPOSE 3000
-
-# Run the development server
 CMD ["npm", "run", "dev"]
+
+FROM dependencies AS build
+COPY . .
+ARG NEXT_PUBLIC_AI_BACKEND_URL
+ENV NEXT_PUBLIC_AI_BACKEND_URL=${NEXT_PUBLIC_AI_BACKEND_URL}
+RUN npm run build
+
+FROM node:22-alpine AS production
+WORKDIR /app
+ENV NODE_ENV=production HOSTNAME=0.0.0.0 PORT=3000
+COPY --from=build --chown=node:node /app/public ./public
+COPY --from=build --chown=node:node /app/.next/standalone ./
+COPY --from=build --chown=node:node /app/.next/static ./.next/static
+USER node
+EXPOSE 3000
+CMD ["node", "server.js"]

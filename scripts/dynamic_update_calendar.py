@@ -48,6 +48,10 @@ def main():
     parser.add_argument('--rsvp-link', dest='rsvp_link', default='', help='RSVP link (optional)')
     parser.add_argument('--flier-link', dest='flier_link', default='', help='Flier link (optional)')
     args = parser.parse_args()
+    admin_key = os.getenv("ADMIN_API_KEY")
+    if not admin_key:
+        parser.error("Set ADMIN_API_KEY to the calendar API's admin key.")
+    headers = {"X-Admin-Key": admin_key}
 
     success = 0
     failed = 0
@@ -82,8 +86,8 @@ def main():
             if valid:
                 print(f"[{i}] ✅ Event valid: {event['title']} ({event['startTime']} - {event['endTime']}) Sending to API...")
                 try:
-                    resp = requests.post(args.api_url, json=event, timeout=10)
-                    if resp.ok:
+                    resp = requests.post(args.api_url, json=event, headers=headers, timeout=10, allow_redirects=False)
+                    if resp.status_code == 201:
                         print(f"    ✅ Sent successfully.")
                         success += 1
                     else:
@@ -156,8 +160,8 @@ def main():
         if valid:
             print(f"[{i}] ✅ Event valid: {event['title']} ({event['startTime']} - {event['endTime']}) Sending to API...")
             try:
-                resp = requests.post(args.api_url, json=event, timeout=10)
-                if resp.ok:
+                resp = requests.post(args.api_url, json=event, headers=headers, timeout=10, allow_redirects=False)
+                if resp.status_code == 201:
                     print(f"    ✅ Sent successfully.")
                     success += 1
                 else:

@@ -4,15 +4,20 @@ services:
     container_name: bccsclub-api
     restart: always
     ports:
-      - "8090:8080"
+      - "127.0.0.1:8090:8080"
     depends_on:
-      - db
+      db:
+        condition: service_healthy
     environment:
       DB_HOST: db
       DB_PORT: 5432
       DB_NAME: bccsclubdb
       DB_USER: postgres
-      DB_PASSWORD: postgres
+      DB_PASS: ${DB_PASS:?Set DB_PASS to the existing PostgreSQL role password}
+      ADMIN_API_KEY: ${ADMIN_API_KEY:?Set ADMIN_API_KEY to a private admin key}
+      SPRING_JPA_HIBERNATE_DDL_AUTO: ${DB_DDL_AUTO:-validate}
+      SPRINGDOC_API_DOCS_ENABLED: "false"
+      SPRINGDOC_SWAGGER_UI_ENABLED: "false"
     networks:
       - bccsclub-network
 
@@ -23,7 +28,12 @@ services:
     environment:
       POSTGRES_DB: bccsclubdb
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
+      POSTGRES_PASSWORD: ${DB_PASS:?Set DB_PASS to the existing PostgreSQL role password}
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d bccsclubdb"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
     volumes:
       - db-data:/var/lib/postgresql/data
     networks:

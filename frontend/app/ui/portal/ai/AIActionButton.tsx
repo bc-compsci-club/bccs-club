@@ -3,7 +3,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import Image from "next/image";
 import clubIcon from "../../../images/logo/club-logo-hd.png"
 import React, { Fragment, useState } from "react";
-import ReactMarkdown, {} from "react-markdown";
+import ReactMarkdown from "react-markdown";
 export default function AIActionButton() {
   const [isOpen, setIsOpen] = useState(false);
   const handleOpen = () => setIsOpen(!isOpen);
@@ -225,17 +225,13 @@ export function AIChat({
                       <div className="typing-dot"></div>
                     </div>
                   )}
-                  <p
+                  <div
                     className={`${
                       message.role !== "user" ? "bg-none" : " bg-bc-red/15"
                     } rounded-lg p-2`}
                   >
-                    <div>
-                    <ReactMarkdown>
-                      {message.content}
-                    </ReactMarkdown>
-                    </div>
-                  </p>
+                    <ReactMarkdown>{message.content}</ReactMarkdown>
+                  </div>
                 </div>
               ))}
             </div>
