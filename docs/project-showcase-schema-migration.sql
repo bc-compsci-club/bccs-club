@@ -27,6 +27,11 @@ BEGIN
         ALTER TABLE project ALTER COLUMN cover_theme DROP NOT NULL;
     END IF;
 END $$;
+-- Assign a real thumbnail to every existing row before applying the constraint.
+-- Rows without an image receive a temporary public placeholder that can be edited.
+UPDATE project SET thumbnail_url = 'https://picsum.photos/id/180/800/600'
+WHERE thumbnail_url IS NULL OR trim(thumbnail_url) = '';
+ALTER TABLE project ALTER COLUMN thumbnail_url SET NOT NULL;
 ALTER TABLE project ADD COLUMN IF NOT EXISTS categories VARCHAR(255)[];
 ALTER TABLE project ALTER COLUMN website_url DROP NOT NULL;
 

@@ -11,7 +11,7 @@ export type Project = {
   presentationUrl?: string | null;
   websiteUrl?: string;
   githubUrl?: string;
-  thumbnailUrl?: string | null;
+  thumbnailUrl: string;
   featured: boolean;
   isActive: boolean;
 };

@@ -64,6 +64,8 @@ public class Project {
     @Pattern(regexp = "^$|^https?://.+$", message = "GitHub URL must use http or https")
     private String githubUrl;
 
+    @NotBlank(message = "Thumbnail URL is mandatory")
+    @Column(nullable = false)
     @Length(max = 500, message = "Thumbnail URL must be 500 characters or fewer")
     @Pattern(regexp = "^$|^https?://[^\\s]+$|^/images/showcase/[a-zA-Z0-9_-]+\\.(png|jpe?g|webp)$",
             message = "Thumbnail must be an HTTP(S) URL or a bundled showcase image path")

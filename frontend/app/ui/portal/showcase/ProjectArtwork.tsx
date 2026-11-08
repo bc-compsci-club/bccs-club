@@ -1,13 +1,11 @@
 import Image from "next/image";
 import { Project } from "@/app/utils/projectTypes";
 
-const fallbackImage = "/images/showcase/focusflow-study-desk.png";
-
 export default function ProjectArtwork({ project, compact = false }: { project: Project; compact?: boolean }) {
   return (
     <div className={`relative overflow-hidden bg-gray-100 ${compact ? "h-44" : "h-full min-h-72"}`}>
       <Image
-        src={project.thumbnailUrl || fallbackImage}
+        src={project.thumbnailUrl}
         unoptimized={Boolean(project.thumbnailUrl?.startsWith("http"))}
         alt={`Photograph representing ${project.title}`}
         fill

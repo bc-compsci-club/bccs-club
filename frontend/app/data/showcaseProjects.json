@@ -16,7 +16,7 @@
     "githubUrl": "https://github.com/bc-compsci-club",
     "featured": true,
     "isActive": true,
-    "thumbnailUrl": "/images/showcase/focusflow-study-desk.png"
+    "thumbnailUrl": "https://picsum.photos/id/180/800/600"
   },
   {
     "title": "Campus Cart",
@@ -33,13 +33,13 @@
     "githubUrl": "https://github.com/bc-compsci-club",
     "featured": false,
     "isActive": true,
-    "thumbnailUrl": "/images/showcase/campus-cart-groceries.png"
+    "thumbnailUrl": "https://picsum.photos/id/292/800/600"
   },
   {
     "title": "Weather Window",
     "slug": "weather-window",
     "shortDescription": "A focused forecast for planning your commute.",
-    "description": "Weather Window gives students a quick read on today\u00e2\u20ac\u2122s conditions, rain windows, and the best time to leave for campus\u00e2\u20ac\u201dwithout the noise of a full weather dashboard.",
+    "description": "Weather Window gives students a quick read on todayâ€™s conditions, rain windows, and the best time to leave for campusâ€”without the noise of a full weather dashboard.",
     "authorName": "Avery Chen",
     "techStack": "JavaScript, Weather API, CSS",
     "categories": [
@@ -52,7 +52,7 @@
     "featured": false,
     "isActive": true,
     "presentationUrl": "https://1drv.ms/p/c/f215589c0197fcbd/IQSa_Y1TiiMlRYML-sQwS7y4ARSUnY1MOuPAu7_koNgfLps?em=2&wdAr=1.7777777777777777",
-    "thumbnailUrl": "/images/showcase/weather-window-commute.png"
+    "thumbnailUrl": "https://picsum.photos/id/1015/800/600"
   },
   {
     "title": "Budget Bites",
@@ -69,6 +69,6 @@
     "featured": false,
     "isActive": true,
     "presentationUrl": "https://docs.google.com/presentation/d/e/2PACX-1vTXAscvczin3nwtsSNsCufao3J7jnzQ9BacxTdL88_VpxA_YTTa0WlqZpETpjlqA7jU_FCmBmPNI_K9/pubembed?start=false&loop=false&delayms=3000",
-    "thumbnailUrl": "/images/showcase/budget-bites-desk.png"
+    "thumbnailUrl": "https://picsum.photos/id/1060/800/600"
   }
 ]

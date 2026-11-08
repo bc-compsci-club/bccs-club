@@ -20,6 +20,7 @@ REQUIRED_FIELDS = {
     "description",
     "authorName",
     "techStack",
+    "thumbnailUrl",
 }
 VALID_CATEGORIES = {"Web", "Mobile", "Browser Extension"}
 

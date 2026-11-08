@@ -79,6 +79,9 @@ class ApiApplicationTests {
 				}
 				""";
 
+		mockMvc.perform(post(endpoint).header("X-Admin-Key", "test-admin-key")
+				.contentType("application/json").content(project.replace("https://example.com/thumbnail.png", "")))
+				.andExpect(status().isBadRequest());
 		mockMvc.perform(post(endpoint).contentType("application/json").content(project))
 				.andExpect(status().isForbidden());
 		MvcResult created = mockMvc.perform(post(endpoint).header("X-Showcase-Admin-Key", "test-showcase-key")
