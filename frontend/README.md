@@ -1,61 +1,43 @@
 # Frontend
 
-## Run the `fontend` project locally with Docker (for faster setup)
+Use Node.js 22 and run these commands from the `frontend` directory:
 
-### Prerequisites:
-
-- [Docker](https://www.docker.com/get-started/)
-
-### Build and run the Docker container:
-
-```bash
-cd path/to/bccs-club/frontend
-docker-compose up --build
-````
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-### Stop the Docker container:
-
-```bash
-cd path/to/bccs-club/frontend
-docker-compose down
+```sh
+npm ci
+npm run dev --demo
 ```
 
+Open [the local showcase](http://localhost:3000/showcase). To pass Next.js options, add them after `--`, for example `npm run dev --demo -- --port 3001`.
 
-## Run the `frontend` project locally without Docker
+## Choose a data source
 
-### Prerequisites:
+| Command | Showcase data | When to use it |
+| --- | --- | --- |
+| `npm run dev --demo` | 23 generated examples, including one featured project | Review the UI without starting Spring or PostgreSQL |
+| `npm run dev` | Records from the API configured in `BACKEND_URL` | Test database-backed reads, search, and uploads |
 
-- [Node.js](https://nodejs.org/) 18.18 or later (please check the Node.js version requirement in [Next.js documentation](https://nextjs.org/docs/getting-started/installation))
+Demo mode takes precedence over `BACKEND_URL` for showcase routes. The fixtures are generated in the frontend server process and disappear when you stop it. Their demo videos and embedded slides use external URLs and need an internet connection. Calendar and AI features still use their configured backends.
 
-### Install the dependencies:
+Restart the server to switch modes. To use real data, copy [the environment example](.env.example) to `.env.local` and set:
 
-```bash
-cd path/to/bccs-club/frontend
-npm install
+```dotenv
+BACKEND_URL=http://127.0.0.1:8090
 ```
 
-### Set up the environment variables:
+Start the Spring API and PostgreSQL using the [API setup guide](../api/README.md). For example, the development Docker Compose file in `api/` publishes the API on port 8090. Then use the [upload guide](../docs/upload-showcase-project.md) to add a project.
 
-Create a `.env.local` file in the root directory of the `frontend` project and add the environment variables from the `.env.local.example` file.
-You can copy the `.env.local.example` file to `.env.local` using the following command if you are using a Unix-based system:
-```
-cp .env.local.example .env.local
-```
+## Try the showcase
 
-### Run the development server:
+- In demo mode, the More projects grid shows 10, 10, and 2 cards across three pages. FocusFlow stays featured as you browse.
+- Select **Mobile** and search for `photo walk`. The results should contain **Campus Photo Walk**.
+- Open [FocusFlow](http://localhost:3000/showcase/focusflow) to test the presentation viewer, or [Campus Cart](http://localhost:3000/showcase/campus-cart) to see a project without a presentation.
+- In database mode, an empty catalog shows “No projects have been published yet.” If projects fail to load, open `http://127.0.0.1:8090/v1/showcase/projects/browse` and check the API process, PostgreSQL connection, and `BACKEND_URL`.
 
-```bash
-cd path/to/bccs-club/frontend
-npm run dev
-```
+## Build and deploy
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-### Build the project locally (for testing purposes):
-
-```bash
-cd path/to/bccs-club/frontend
+```sh
+npm run lint
 npm run build
 ```
+
+For a local Docker development server, run `docker compose up --build` from `frontend/`. Its default backend URL points to the host API. The [frontend deployment guide](../deployment/frontend-deployment/README.md) covers the standalone production image.

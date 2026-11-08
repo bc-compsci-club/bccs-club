@@ -7,8 +7,6 @@ import Link from "next/link";
 import { Event } from "@/app/utils/types";
 import getEventAction from "@/app/lib/actions/getEventAction";
 
-export const runtime = "edge";
-
 export default function Page() {
   const { event: eventName } = useParams();
 

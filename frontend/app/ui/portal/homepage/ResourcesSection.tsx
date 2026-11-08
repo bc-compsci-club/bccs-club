@@ -42,9 +42,9 @@ export default function TeamSection() {
                 ))}
               </ul>
               <div className="mt-10 flex">
-                <a href="/resources" className="text-sm font-semibold leading-6 text-bc-red hover:text-bc-yellow">
+                <Link href="/resources" className="text-sm font-semibold leading-6 text-bc-red hover:text-bc-yellow">
                   Check out the resources <span aria-hidden="true">&rarr;</span>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -65,3 +65,4 @@ export default function TeamSection() {
     </div>
   );
 }
+import Link from "next/link";

@@ -1,12 +1,13 @@
 {
-  "title": "FocusFlow",
-  "shortDescription": "A gentle study planner built around focused work sessions.",
-  "description": "FocusFlow helps students break an assignment into calm, achievable work blocks and track finished sessions.",
-  "authorName": "Maya Rodriguez",
-  "techStack": "Next.js, TypeScript, Tailwind CSS",
-  "websiteUrl": "https://example.com/focusflow",
+  "title": "Study Group Finder",
+  "shortDescription": "Find classmates who are available to study.",
+  "description": "Students can list the courses they are taking and compare availability to arrange a study session.",
+  "authorName": "Example Student",
+  "techStack": "Next.js, TypeScript, PostgreSQL",
+  "categories": ["Web", "Mobile"],
+  "demoVideoUrl": "https://developer.mozilla.org/shared-assets/videos/flower.mp4",
   "githubUrl": "https://github.com/bc-compsci-club",
   "coverTheme": "rose",
-  "featured": true,
+  "featured": false,
   "isActive": true
 }

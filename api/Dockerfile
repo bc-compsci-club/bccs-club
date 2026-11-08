@@ -39,4 +39,5 @@ COPY --from=builder /build/target/*.jar app.jar
 EXPOSE 8080
 
 # Run the JAR file
+USER 10001:10001
 CMD ["java", "-jar", "app.jar"]

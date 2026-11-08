@@ -1,6 +1,6 @@
 "use client"; // This makes it a Client Component
 
-import { useState, useEffect, useMemo } from "react";
+import { Suspense, useState, useEffect, useMemo } from "react";
 import { useRouter, useSearchParams } from "next/navigation"; // For navigation
 import HeroSection from "@/app/ui/portal/events/HeroSection";
 import CalendarSection from "@/app/ui/portal/events/CalendarSection";
@@ -9,14 +9,20 @@ import getEventAction from "@/app/lib/actions/getEventsAction";
 import { getEventTags, tagColorClasses, Tag } from "@/app/utils/eventTags";
 
 
-export const runtime = 'edge';
-
 export default function Page() {
+  return (
+    <Suspense fallback={<HeroSection />}>
+      <EventsPage />
+    </Suspense>
+  );
+}
+
+function EventsPage() {
   const [events, setEvents] = useState<Event[]>([]);
-  const [activeTag, setActiveTag] = useState<Tag | null>(null);
 
   const router = useRouter(); // Initialize useRouter for navigation
   const search = useSearchParams();
+  const activeTag = search.get("tag") as Tag | null;
 
   useEffect(() => {
     // Fetch events from the backend
@@ -30,12 +36,6 @@ export default function Page() {
     };
     eventFn();
   }, []);
-
-  // Sync activeTag with URL query param
-  useEffect(() => {
-    const tagParam = search.get("tag") as Tag | null;
-    setActiveTag(tagParam ?? null);
-  }, [search]);
 
   const filtered = useMemo(() => {
     if (!activeTag) return events;

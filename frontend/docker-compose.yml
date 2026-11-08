@@ -3,6 +3,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      target: dev
     ports:
       - "3000:3000" # container:host. Map the container port 3000 to the host port 3000
     volumes:

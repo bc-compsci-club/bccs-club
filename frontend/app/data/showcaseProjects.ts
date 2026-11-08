@@ -1,74 +1,63 @@
-import { Project } from "@/app/utils/projectTypes";
+import type { Project, ProjectBrowseResult } from "@/app/utils/projectTypes";
+import { filterProjects } from "@/app/utils/showcaseSearch";
+import projects from "./showcaseProjects.json";
 
-// Shown when a local database has not been seeded yet. These make the
-// showcase immediately reviewable and can be replaced by API-managed projects.
-export const sampleProjects: Project[] = [
-  {
-    id: "sample-focusflow",
-    title: "FocusFlow",
-    slug: "focusflow",
-    shortDescription: "A gentle study planner built around focused work sessions.",
-    description:
-      "FocusFlow helps students turn a large assignment into a calm, achievable plan. Create a task, choose a focus block, and keep a short history of completed sessions.",
-    authorName: "Maya Rodriguez",
-    techStack: "Next.js, TypeScript, Tailwind CSS",
-    websiteUrl: "https://example.com/focusflow",
-    githubUrl: "https://github.com/bc-compsci-club",
-    imageSrc: "/images/showcase/focusflow-study-desk.png",
-    coverTheme: "rose",
-    featured: true,
-    isActive: true,
-  },
-  {
-    id: "sample-campus-cart",
-    title: "Campus Cart",
-    slug: "campus-cart",
-    shortDescription: "Find affordable meals and groceries near campus.",
-    description:
-      "Campus Cart is a map-first guide to student-friendly food options. It groups places by walk time and lets members save a short list for busy days.",
-    authorName: "Jordan Lee",
-    techStack: "React, Node.js, PostgreSQL",
-    websiteUrl: "https://example.com/campus-cart",
-    githubUrl: "https://github.com/bc-compsci-club",
-    imageSrc: "/images/showcase/campus-cart-groceries.png",
-    coverTheme: "gold",
-    featured: false,
-    isActive: true,
-  },
-  {
-    id: "sample-weather-window",
-    title: "Weather Window",
-    slug: "weather-window",
-    shortDescription: "A focused forecast for planning your commute.",
-    description:
-      "Weather Window gives students a quick read on today’s conditions, rain windows, and the best time to leave for campus—without the noise of a full weather dashboard.",
-    authorName: "Avery Chen",
-    techStack: "JavaScript, Weather API, CSS",
-    websiteUrl: "https://example.com/weather-window",
-    githubUrl: "https://github.com/bc-compsci-club",
-    imageSrc: "/images/showcase/weather-window-commute.png",
-    coverTheme: "sky",
-    featured: false,
-    isActive: true,
-  },
-  {
-    id: "sample-budget-bites",
-    title: "Budget Bites",
-    slug: "budget-bites",
-    shortDescription: "Small spending insights for the week ahead.",
-    description:
-      "Budget Bites turns a handful of purchases into a simple weekly picture. The prototype keeps categories approachable and shows one useful next step instead of a wall of charts.",
-    authorName: "Nia Williams",
-    techStack: "Python, Flask, Chart.js",
-    websiteUrl: "https://example.com/budget-bites",
-    githubUrl: "https://github.com/bc-compsci-club",
-    imageSrc: "/images/showcase/budget-bites-desk.png",
-    coverTheme: "violet",
-    featured: false,
-    isActive: true,
-  },
+const extraExamples: [string, string[], string][] = [
+  ["Study Room Finder", ["Web"], "Find group study rooms by building, capacity, and time."],
+  ["Campus Shuttle Tracker", ["Mobile"], "See sample shuttle arrivals and save a favorite stop."],
+  ["Tab Tidy", ["Browser Extension"], "Group tabs by course and restore a saved study session."],
+  ["Lab Partner Match", ["Web", "Mobile"], "Find classmates with matching lab availability."],
+  ["Syllabus Sync", ["Web"], "Turn a sample syllabus into an assignment checklist."],
+  ["Lecture Bookmark", ["Browser Extension"], "Save timestamps and notes while watching recorded lectures."],
+  ["Quiet Campus", ["Mobile"], "Browse quiet study spots and compare their amenities."],
+  ["Club Fair Map", ["Web", "Mobile"], "Plan a route past club tables at a sample campus fair."],
+  ["Reading Queue", ["Web", "Browser Extension"], "Save articles and organize them by course."],
+  ["Pocket Pantry", ["Mobile"], "Build a grocery list from pantry staples that are running low."],
+  ["Office Hours Queue", ["Web"], "Join a virtual office-hours line and see how many students are ahead."],
+  ["Code Snippet Shelf", ["Browser Extension"], "Save code snippets with searchable notes and tags."],
+  ["Campus Accessibility Map", ["Web", "Mobile"], "Browse step-free routes and accessible campus entrances."],
+  ["Flashcard Sprint", ["Mobile"], "Review flashcard sets and revisit cards that need practice."],
+  ["Course Link Checker", ["Browser Extension"], "Spot broken links on a course page."],
+  ["Hack Night Planner", ["Web"], "Organize project ideas, teams, and milestones for a club hack night."],
+  ["Assignment Focus", ["Web", "Browser Extension"], "Pin an assignment and hide distracting page sections."],
+  ["Book Swap Board", ["Web"], "Match used textbook offers with student wish lists."],
+  ["Campus Photo Walk", ["Mobile"], "Follow a sample photo route and check off stops as you visit."],
+];
+
+const sampleProjects: Project[] = [
+  ...projects,
+  ...extraExamples.map(([title, categories, description], index): Project => {
+    const media = projects[index % projects.length];
+    return {
+      title,
+      slug: `sample-${title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`,
+      shortDescription: description,
+      description,
+      authorName: "BCCS Sample Team",
+      techStack: categories.includes("Web") ? "TypeScript, Next.js"
+        : categories.includes("Mobile") ? "React Native, TypeScript" : "JavaScript, WebExtensions",
+      categories,
+      demoVideoUrl: media.demoVideoUrl,
+      imageSrc: media.imageSrc,
+      coverTheme: media.coverTheme,
+      featured: false,
+      isActive: true,
+    };
+  }),
 ];
 
 export function projectBySlug(slug: string) {
   return sampleProjects.find((project) => project.slug === slug);
+}
+
+export function browseSampleProjects(page: number, category: string, query: string): ProjectBrowseResult {
+  const pageSize = 10;
+  const featured = sampleProjects.find((project) => project.featured) ?? sampleProjects[0];
+  const matching = filterProjects(sampleProjects.filter((project) => project.slug !== featured.slug), category, query);
+  const offset = (Math.max(1, page) - 1) * pageSize;
+  return {
+    featured,
+    projects: matching.slice(offset, offset + pageSize),
+    totalPages: Math.ceil(matching.length / pageSize),
+  };
 }
