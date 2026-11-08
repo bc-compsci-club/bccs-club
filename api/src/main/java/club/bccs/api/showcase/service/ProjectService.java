@@ -77,8 +77,7 @@ public class ProjectService {
         project.setPresentationUrl(replacement.getPresentationUrl());
         project.setWebsiteUrl(replacement.getWebsiteUrl());
         project.setGithubUrl(replacement.getGithubUrl());
-        project.setImageSrc(replacement.getImageSrc());
-        project.setCoverTheme(replacement.getCoverTheme());
+        project.setThumbnailUrl(replacement.getThumbnailUrl());
         project.setFeatured(replacement.getFeatured());
         project.setIsActive(replacement.getIsActive());
         project.setUpdatedAt(LocalDateTime.now());

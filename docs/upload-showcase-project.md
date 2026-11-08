@@ -24,7 +24,7 @@ The upload script sends one JSON record to the Spring API. The API writes the re
 - `categories` is an optional JSON array of `"Web"`, `"Mobile"`, and `"Browser Extension"`. Use each category at most once. Set `featured: true` to add the **Featured Project** label. The site joins the labels with ` · `.
 - For `demoVideoUrl`, use a direct, publicly accessible MP4 or WebM URL. A bundled video under `frontend/public/videos/showcase/` can use a path such as `/videos/showcase/my-demo.mp4`.
 - For `presentationUrl`, copy the iframe's `src` from OneDrive or Google Slides. A publicly accessible PowerPoint file URL also works.
-- `websiteUrl`, `githubUrl`, and `imageSrc` are optional. A bundled cover image in `frontend/public/images/showcase/` can use a path such as `/images/showcase/my-project.png`.
+- `websiteUrl`, `githubUrl`, and `thumbnailUrl` are optional. Use a publicly accessible image URL for the thumbnail, or a bundled image path such as `/images/showcase/my-project.png`. Without one, the showcase uses a fallback image.
 - Set `isActive: false` to keep an entry off the showcase listing while preparing it.
 
 The script creates one new entry per call. Use a unique title or slug for each upload.
@@ -43,7 +43,7 @@ Save this as `my-project.json`. The cover path refers to an existing image and t
   "techStack": "TypeScript, WebExtensions",
   "categories": ["Browser Extension"],
   "demoVideoUrl": "https://developer.mozilla.org/shared-assets/videos/flower.mp4",
-  "imageSrc": "/images/showcase/focusflow-study-desk.png"
+  "thumbnailUrl": "/images/showcase/focusflow-study-desk.png"
 }
 ```
 

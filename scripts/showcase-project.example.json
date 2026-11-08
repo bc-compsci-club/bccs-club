@@ -4,10 +4,13 @@
   "description": "Students can list the courses they are taking and compare availability to arrange a study session.",
   "authorName": "Example Student",
   "techStack": "Next.js, TypeScript, PostgreSQL",
-  "categories": ["Web", "Mobile"],
+  "categories": [
+    "Web",
+    "Mobile"
+  ],
   "demoVideoUrl": "https://developer.mozilla.org/shared-assets/videos/flower.mp4",
   "githubUrl": "https://github.com/bc-compsci-club",
-  "coverTheme": "rose",
   "featured": false,
-  "isActive": true
+  "isActive": true,
+  "thumbnailUrl": "https://example.com/images/study-group-finder.png"
 }

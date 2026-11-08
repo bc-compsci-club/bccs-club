@@ -21,7 +21,6 @@ REQUIRED_FIELDS = {
     "authorName",
     "techStack",
 }
-VALID_THEMES = {"rose", "gold", "violet", "sky"}
 VALID_CATEGORIES = {"Web", "Mobile", "Browser Extension"}
 
 
@@ -70,9 +69,12 @@ def load_project(path: Path) -> dict:
     ):
         raise ValueError("demoVideoUrl must be an http(s) URL or a bundled showcase video path.")
 
-    project.setdefault("coverTheme", "rose")
-    if not isinstance(project["coverTheme"], str) or project["coverTheme"] not in VALID_THEMES:
-        raise ValueError("coverTheme must be one of: " + ", ".join(sorted(VALID_THEMES)))
+    thumbnail = project.get("thumbnailUrl")
+    if thumbnail not in (None, "") and not (
+        is_http_url(thumbnail)
+        or (isinstance(thumbnail, str) and re.fullmatch(r"/images/showcase/[a-zA-Z0-9_-]+\.(png|jpe?g|webp)", thumbnail))
+    ):
+        raise ValueError("thumbnailUrl must be an http(s) URL or a bundled showcase image path.")
     project.setdefault("featured", False)
     project.setdefault("isActive", True)
     return project

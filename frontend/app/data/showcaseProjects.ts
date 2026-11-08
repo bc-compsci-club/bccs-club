@@ -38,8 +38,7 @@ const sampleProjects: Project[] = [
         : categories.includes("Mobile") ? "React Native, TypeScript" : "JavaScript, WebExtensions",
       categories,
       demoVideoUrl: media.demoVideoUrl,
-      imageSrc: media.imageSrc,
-      coverTheme: media.coverTheme,
+      thumbnailUrl: media.thumbnailUrl,
       featured: false,
       isActive: true,
     };

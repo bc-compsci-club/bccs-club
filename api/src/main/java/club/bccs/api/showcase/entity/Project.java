@@ -64,15 +64,10 @@ public class Project {
     @Pattern(regexp = "^$|^https?://.+$", message = "GitHub URL must use http or https")
     private String githubUrl;
 
-    @Length(max = 500)
-    @Pattern(regexp = "^/images/showcase/[a-zA-Z0-9_-]+\\.(png|jpe?g|webp)$",
-            message = "Image source must be a bundled showcase image path")
-    private String imageSrc;
-
-    @NotBlank(message = "Cover theme is mandatory")
-    @Length(max = 30, message = "Cover theme must be 30 characters or fewer")
-    @Pattern(regexp = "rose|gold|violet|sky", message = "Cover theme must be rose, gold, violet, or sky")
-    private String coverTheme = "rose";
+    @Length(max = 500, message = "Thumbnail URL must be 500 characters or fewer")
+    @Pattern(regexp = "^$|^https?://[^\\s]+$|^/images/showcase/[a-zA-Z0-9_-]+\\.(png|jpe?g|webp)$",
+            message = "Thumbnail must be an HTTP(S) URL or a bundled showcase image path")
+    private String thumbnailUrl;
 
     @NotNull(message = "Featured status is mandatory")
     private Boolean featured = false;
@@ -118,10 +113,8 @@ public class Project {
     public void setWebsiteUrl(String websiteUrl) { this.websiteUrl = websiteUrl; }
     public String getGithubUrl() { return githubUrl; }
     public void setGithubUrl(String githubUrl) { this.githubUrl = githubUrl; }
-    public String getImageSrc() { return imageSrc; }
-    public void setImageSrc(String imageSrc) { this.imageSrc = imageSrc; }
-    public String getCoverTheme() { return coverTheme; }
-    public void setCoverTheme(String coverTheme) { this.coverTheme = coverTheme; }
+    public String getThumbnailUrl() { return thumbnailUrl; }
+    public void setThumbnailUrl(String thumbnailUrl) { this.thumbnailUrl = thumbnailUrl; }
     public Boolean getFeatured() { return featured; }
     public void setFeatured(Boolean featured) { this.featured = featured; }
     public Boolean getIsActive() { return isActive; }

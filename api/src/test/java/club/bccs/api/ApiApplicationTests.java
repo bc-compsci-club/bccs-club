@@ -74,7 +74,8 @@ class ApiApplicationTests {
 				  "description": "Test project",
 				  "authorName": "Test author",
 				  "techStack": "Java",
-				  "categories": ["Web", "Mobile"]
+				  "categories": ["Web", "Mobile"],
+				  "thumbnailUrl": "https://example.com/thumbnail.png"
 				}
 				""";
 
@@ -84,6 +85,7 @@ class ApiApplicationTests {
 				.contentType("application/json").content(project))
 				.andExpect(status().isCreated())
 				.andExpect(jsonPath("$.slug").value("authentication-test"))
+				.andExpect(jsonPath("$.thumbnailUrl").value("https://example.com/thumbnail.png"))
 				.andReturn();
 		mockMvc.perform(post(endpoint).header("X-Admin-Key", "test-admin-key")
 				.contentType("application/json").content(project))

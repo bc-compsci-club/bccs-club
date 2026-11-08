@@ -6,15 +6,17 @@
     "description": "FocusFlow helps students turn a large assignment into a calm, achievable plan. Create a task, choose a focus block, and keep a short history of completed sessions.",
     "authorName": "Maya Rodriguez",
     "techStack": "Next.js, TypeScript, Tailwind CSS",
-    "categories": ["Web", "Mobile"],
+    "categories": [
+      "Web",
+      "Mobile"
+    ],
     "demoVideoUrl": "https://developer.mozilla.org/shared-assets/videos/flower.mp4",
     "presentationUrl": "https://1drv.ms/p/c/f215589c0197fcbd/IQSa_Y1TiiMlRYML-sQwS7y4ARSUnY1MOuPAu7_koNgfLps?em=2&wdAr=1.7777777777777777",
     "websiteUrl": "https://example.com/focusflow",
     "githubUrl": "https://github.com/bc-compsci-club",
-    "imageSrc": "/images/showcase/focusflow-study-desk.png",
-    "coverTheme": "rose",
     "featured": true,
-    "isActive": true
+    "isActive": true,
+    "thumbnailUrl": "/images/showcase/focusflow-study-desk.png"
   },
   {
     "title": "Campus Cart",
@@ -23,31 +25,34 @@
     "description": "Campus Cart is a map-first guide to student-friendly food options. It groups places by walk time and lets members save a short list for busy days.",
     "authorName": "Jordan Lee",
     "techStack": "React, Node.js, PostgreSQL",
-    "categories": ["Mobile"],
+    "categories": [
+      "Mobile"
+    ],
     "demoVideoUrl": "https://mdn.github.io/learning-area/html/multimedia-and-embedding/video-and-audio-content/rabbit320.webm",
     "websiteUrl": "https://example.com/campus-cart",
     "githubUrl": "https://github.com/bc-compsci-club",
-    "imageSrc": "/images/showcase/campus-cart-groceries.png",
-    "coverTheme": "gold",
     "featured": false,
-    "isActive": true
+    "isActive": true,
+    "thumbnailUrl": "/images/showcase/campus-cart-groceries.png"
   },
   {
     "title": "Weather Window",
     "slug": "weather-window",
     "shortDescription": "A focused forecast for planning your commute.",
-    "description": "Weather Window gives students a quick read on today’s conditions, rain windows, and the best time to leave for campus—without the noise of a full weather dashboard.",
+    "description": "Weather Window gives students a quick read on today\u00e2\u20ac\u2122s conditions, rain windows, and the best time to leave for campus\u00e2\u20ac\u201dwithout the noise of a full weather dashboard.",
     "authorName": "Avery Chen",
     "techStack": "JavaScript, Weather API, CSS",
-    "categories": ["Web", "Browser Extension"],
+    "categories": [
+      "Web",
+      "Browser Extension"
+    ],
     "demoVideoUrl": "https://raw.githubusercontent.com/chromium/chromium/main/media/test/data/bear.mp4",
     "websiteUrl": "https://example.com/weather-window",
     "githubUrl": "https://github.com/bc-compsci-club",
-    "imageSrc": "/images/showcase/weather-window-commute.png",
-    "coverTheme": "sky",
     "featured": false,
     "isActive": true,
-    "presentationUrl": "https://1drv.ms/p/c/f215589c0197fcbd/IQSa_Y1TiiMlRYML-sQwS7y4ARSUnY1MOuPAu7_koNgfLps?em=2&wdAr=1.7777777777777777"
+    "presentationUrl": "https://1drv.ms/p/c/f215589c0197fcbd/IQSa_Y1TiiMlRYML-sQwS7y4ARSUnY1MOuPAu7_koNgfLps?em=2&wdAr=1.7777777777777777",
+    "thumbnailUrl": "/images/showcase/weather-window-commute.png"
   },
   {
     "title": "Budget Bites",
@@ -56,13 +61,14 @@
     "description": "Budget Bites turns a handful of purchases into a simple weekly picture. The prototype keeps categories approachable and shows one useful next step instead of a wall of charts.",
     "authorName": "Nia Williams",
     "techStack": "Python, Flask, Chart.js",
-    "categories": ["Web"],
+    "categories": [
+      "Web"
+    ],
     "demoVideoUrl": "https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/360/Big_Buck_Bunny_360_10s_1MB.mp4",
     "githubUrl": "https://github.com/bc-compsci-club",
-    "imageSrc": "/images/showcase/budget-bites-desk.png",
-    "coverTheme": "violet",
     "featured": false,
     "isActive": true,
-    "presentationUrl": "https://docs.google.com/presentation/d/e/2PACX-1vTXAscvczin3nwtsSNsCufao3J7jnzQ9BacxTdL88_VpxA_YTTa0WlqZpETpjlqA7jU_FCmBmPNI_K9/pubembed?start=false&loop=false&delayms=3000"
+    "presentationUrl": "https://docs.google.com/presentation/d/e/2PACX-1vTXAscvczin3nwtsSNsCufao3J7jnzQ9BacxTdL88_VpxA_YTTa0WlqZpETpjlqA7jU_FCmBmPNI_K9/pubembed?start=false&loop=false&delayms=3000",
+    "thumbnailUrl": "/images/showcase/budget-bites-desk.png"
   }
 ]

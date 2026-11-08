@@ -7,7 +7,8 @@ export default function ProjectArtwork({ project, compact = false }: { project: 
   return (
     <div className={`relative overflow-hidden bg-gray-100 ${compact ? "h-44" : "h-full min-h-72"}`}>
       <Image
-        src={project.imageSrc ?? fallbackImage}
+        src={project.thumbnailUrl || fallbackImage}
+        unoptimized={Boolean(project.thumbnailUrl?.startsWith("http"))}
         alt={`Photograph representing ${project.title}`}
         fill
         sizes={compact ? "(max-width: 768px) 100vw, 33vw" : "(max-width: 1024px) 100vw, 55vw"}

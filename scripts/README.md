@@ -93,7 +93,7 @@ python3 add_showcase_project.py \
   --json showcase-project.json
 ```
 
-The example JSON is a ready-to-edit starting point. Valid `coverTheme` values are `rose`, `gold`, `violet`, and `sky`. Website and GitHub links use full `http` or `https` URLs.
+The example JSON is a ready-to-edit starting point. Use `thumbnailUrl` for a public image URL or a bundled showcase image path. Website and GitHub links use full `http` or `https` URLs.
 
 `websiteUrl`, `demoVideoUrl`, and `presentationUrl` are optional. For a demo, supply a full video URL or a bundled MP4/WebM path under `/videos/showcase/`. For a presentation, paste the iframe's `src` URL from OneDrive or Google Slides, or supply a publicly reachable `.pptx` URL for Microsoft's web viewer. If a project has source code but no website, the showcase makes **Source code** its primary action.
 
